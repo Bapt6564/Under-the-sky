@@ -161,6 +161,17 @@
     border-bottom: 1px dotted var(--vega);
   }
   article a:hover { color: var(--or); border-color: var(--or); }
+  article figure.illustration {
+    margin: 18px 0; padding: 0;
+  }
+  article figure.illustration img {
+    display: block; width: 100%; height: auto;
+    border-radius: 14px; border: 1px solid var(--bord);
+  }
+  article figure.illustration figcaption {
+    margin-top: 8px; font-size: 0.85rem; font-style: italic;
+    color: var(--encre-douce); text-align: center;
+  }
   .chiffre-cle {
     border-left: 3px solid var(--or); border-radius: 0 12px 12px 0;
     background: rgba(242,193,78,0.07);
