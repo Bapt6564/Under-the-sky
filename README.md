@@ -1,8 +1,9 @@
-# 🔭 Sous les étoiles — Mémo & Quiz
+# 🔭 Sous les étoiles — Mémo, Quiz & Contes
 
 Application web pour les soirées d'observation : un **mémo** pour les
-animateurs (une fiche par sujet) et un **quiz** pour le public (10
-questions tirées au hasard à chaque partie).
+animateurs (une fiche par sujet), un **quiz** pour le public (10
+questions tirées au hasard à chaque partie), et des **Contes du ciel**
+(les mythes racontés en entier, à lire d'une traite).
 
 👉 **Voir le site en ligne :** `https://VOTRE-PSEUDO.github.io/NOM-DU-DEPOT/`
 *(à activer une fois, voir plus bas)*
@@ -16,13 +17,14 @@ index.html      → la page, ne contient (presque) pas de contenu à modifier
 style.css       → toute l'apparence (couleurs, mise en page, mode nuit rouge)
 sujets.js       → 📖 LE CONTENU DU MÉMO — c'est ici que vous ajoutez des sujets
 questions.js    → 🌠 LA RÉSERVE DE QUESTIONS DU QUIZ — c'est ici que vous en ajoutez
+contes.js       → 📜 LES CONTES DU CIEL — c'est ici que vous ajoutez des récits
 app.js          → le moteur (navigation, affichage, tirage aléatoire du quiz)
 images/         → 🖼️ vos photos/illustrations pour les fiches (à créer au besoin)
 ```
 
-**Pour ajouter du contenu, vous n'avez besoin d'ouvrir que `sujets.js`
-ou `questions.js`.** Les deux fichiers ont un mode d'emploi en commentaire
-tout en haut.
+**Pour ajouter du contenu, vous n'avez besoin d'ouvrir que `sujets.js`,
+`questions.js` ou `contes.js`.** Les trois fichiers ont un mode d'emploi
+en commentaire tout en haut.
 
 ---
 
@@ -102,13 +104,30 @@ différentes.
 Pour changer le nombre de questions tirées (ex. 15 au lieu de 10),
 modifiez la constante `NB_QUESTIONS_QUIZ` tout en haut de `app.js`.
 
+### Ajouter un conte (`contes.js`)
+
+Copiez un bloc entier et changez :
+- le **slug**, `titre` et `resume`, comme pour une fiche du mémo ;
+- `texte` : un tableau de paragraphes `<p>...</p>` — contrairement au
+  mémo, pas besoin de sous-titres ni de structure imposée, laissez le
+  récit couler sur autant de paragraphes que nécessaire ;
+- `voirAussi` : peut pointer vers des fiches du mémo **ou** vers
+  d'autres contes, ça fonctionne pour les deux.
+
+Vous pouvez aussi faire un lien vers une fiche du mémo directement
+dans le texte du conte (`<a href="#/memo/slug">...</a>`), et
+inversement, ajouter dans une fiche du mémo un lien vers le conte
+complet (`<a href="#/contes/slug">...</a>`) — c'est ce qui a été fait
+entre la fiche « La saga de Persée » et le conte du même nom, pour que
+les deux se répondent.
+
 ---
 
 ## Héberger le site avec GitHub Pages
 
-1. Déposez ces 5 fichiers (`index.html`, `style.css`, `sujets.js`,
-   `questions.js`, `app.js`) à la racine du dépôt GitHub, et un dossier
-   `images/` si vous illustrez des fiches.
+1. Déposez ces 6 fichiers (`index.html`, `style.css`, `sujets.js`,
+   `questions.js`, `contes.js`, `app.js`) à la racine du dépôt GitHub,
+   et un dossier `images/` si vous illustrez des fiches.
 2. Dans le dépôt : **Settings → Pages**.
 3. Sous « Build and deployment » → Source : **Deploy from a branch**.
 4. Branch : `main`, dossier `/ (root)` → **Save**.
