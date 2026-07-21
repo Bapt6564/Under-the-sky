@@ -1,5 +1,5 @@
 /* =====================================================================
-   SUJETS.JS — le contenu du mémo
+   SUJETS.JS, le contenu du mémo
    ---------------------------------------------------------------------
    Ce fichier ne contient QUE les fiches du mémo : aucun code technique
    ici, vous pouvez modifier ou ajouter un sujet sans rien casser.
@@ -23,9 +23,9 @@
 
    📏 GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) :
    la plupart des fiches ci-dessous suivent 3 sections courtes :
-   1. Repérage — comment trouver l'objet dans le ciel
-   2. Chiffres clés — distance / âge / température-couleur en un bloc
-   3. Anecdotes — 1 ou 2 faits qui marquent les esprits
+   1. Repérage, comment trouver l'objet dans le ciel
+   2. Chiffres clés, distance / âge / température-couleur en un bloc
+   3. Anecdotes, 1 ou 2 faits qui marquent les esprits
    Libre à vous de vous en écarter si un sujet s'y prête mal.
    ===================================================================== */
 const SUJETS = {
@@ -35,7 +35,9 @@ const SUJETS = {
   "lune": {
     titre: "La Lune",
     icone: "",
-    resume: "Le satelite naturel de la Terre.",
+    wiki: "https://fr.wikipedia.org/wiki/Lune",
+    conte: "lune",
+    resume: "Le satellite naturel de la Terre.",
     sections: [
       `<h2>Surface</h2>
        <p>
@@ -68,17 +70,18 @@ const SUJETS = {
   "venus": {
     titre: "Vénus",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/V%C3%A9nus_(plan%C3%A8te)",
     resume: "L'étoile du Berger.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Toujours proche du Soleil dans le ciel : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), jamais en pleine nuit. Très brillante, blanc-jaunâtre, elle <strong>ne scintille presque pas</strong> — bon moyen de la distinguer d'une étoile.</p>`,
+       <p>Toujours proche du Soleil dans le ciel : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), jamais en pleine nuit. Très brillante, blanc-jaunâtre, elle <strong>ne scintille presque pas</strong>, bon moyen de la distinguer d'une étoile.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Âge : <strong>4,6 milliards d'années</strong> · Distance à la Terre : variable, de 40 à 260 millions de km · Température de surface : <strong>~465 °C</strong>, sous une atmosphère de CO₂ et des nuages d'acide sulfurique.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
          <li>Si brillante qu'on la signale régulièrement comme <strong>OVNI</strong> à la police.</li>
          <li>Elle tourne « à l'envers » (rotation rétrograde), et si lentement qu'un <strong>jour vénusien dure plus longtemps qu'une année vénusienne</strong>.</li>
-         <li>Au <a href="#/memo/types-telescopes">télescope</a>, elle montre des phases comme la Lune — c'est en les observant que Galilée a achevé de démontrer que Vénus tourne autour du Soleil.</li>
+         <li>Au <a href="#/memo/types-telescopes">télescope</a>, elle montre des phases comme la Lune, c'est en les observant que Galilée a achevé de démontrer que Vénus tourne autour du Soleil.</li>
        </ul>`
     ],
     voirAussi: ["types-telescopes"]
@@ -87,6 +90,7 @@ const SUJETS = {
   "jupiter": {
     titre: "Jupiter et ses lunes",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Jupiter_(plan%C3%A8te)",
     resume: "La plus grosse planète du système solaire.",
     sections: [
       `<h2>Repérage</h2>
@@ -115,12 +119,13 @@ const SUJETS = {
   "saturne": {
     titre: "Saturne",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)",
     resume: "Les plus beaux anneaux.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Jaune pâle à l'œil nu, sans rien de spécial. Mais dès un petit télescope, ses <strong>anneaux</strong> apparaissent nettement — l'un des spectacles les plus sûrs d'une soirée d'observation.</p>`,
+       <p>Jaune pâle à l'œil nu, sans rien de spécial. Mais dès un petit télescope, ses <strong>anneaux</strong> apparaissent nettement, l'un des spectacles les plus sûrs d'une soirée d'observation.</p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~9 à 10 UA · Les anneaux s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur — proportionnellement plus fins qu'une feuille de papier.</div>`,
+       <div class="chiffre-cle">Distance : ~9 à 10 UA · Les anneaux s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur, proportionnellement plus fins qu'une feuille de papier.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
          <li>Les anneaux sont faits de <strong>milliards de blocs de glace</strong>, du grain de sable à la maison, chacun en orbite indépendante.</li>
@@ -136,7 +141,9 @@ const SUJETS = {
   "voie-lactee": {
     titre: "La Voie lactée",
     icone: "",
-    resume: "Notre galaxie vue de l'intérieur, par la tranche — visible seulement loin des villes.",
+    wiki: "https://fr.wikipedia.org/wiki/Voie_lact%C3%A9e",
+    conte: "voie-lactee",
+    resume: "Notre galaxie vue de l'intérieur, par la tranche, visible seulement loin des villes.",
     sections: [
       `<h2>Repérage</h2>
        <p>Il faut un <strong>ciel bien noir</strong>, loin de la <a href="#/memo/pollution-lumineuse">pollution lumineuse</a> : une bande floue et laiteuse qui traverse le ciel. En été, elle est spectaculaire vers le Sagittaire (on regarde alors vers le <strong>centre de la Galaxie</strong>) ; en hiver, plus discrète, vers Persée et Cassiopée (on regarde vers l'extérieur).</p>`,
@@ -154,10 +161,12 @@ const SUJETS = {
   "triangle-ete": {
     titre: "Le Triangle d'été",
     icone: "",
-    resume: "Trois étoiles brillantes de trois constellations différentes — le meilleur point de départ pour s'orienter en été.",
+    wiki: "https://fr.wikipedia.org/wiki/Triangle_de_l%27%C3%A9t%C3%A9",
+    conte: "triangle-ete",
+    resume: "Trois étoiles brillantes de trois constellations différentes, le meilleur point de départ pour s'orienter en été.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Formé par <strong>Véga</strong> (Lyre), <strong>Deneb</strong> (Cygne) et <strong>Altaïr</strong> (Aigle) : un vaste triangle très haut dans le ciel les soirées d'été. Ce n'est pas une constellation officielle, juste un repère bien pratique — un <em>astérisme</em>.</p>`,
+       <p>Formé par <strong>Véga</strong> (Lyre), <strong>Deneb</strong> (Cygne) et <strong>Altaïr</strong> (Aigle) : un vaste triangle très haut dans le ciel les soirées d'été. Ce n'est pas une constellation officielle, juste un repère bien pratique, un <em>astérisme</em>.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Véga : 25 années-lumière, blanche-bleutée, ~9 600 °C · Altaïr : seulement 17 années-lumière, blanche, ~7 500 °C · Deneb : ~2 600 années-lumière (très incertain, elle est si loin qu'on peine à la mesurer), blanche-bleutée, ~8 500 °C.</div>`,
       `<h2>Anecdotes</h2>
@@ -172,14 +181,15 @@ const SUJETS = {
   "etoile-polaire": {
     titre: "L'étoile polaire",
     icone: "",
-    resume: "Pas la plus brillante du ciel — juste celle qui a la bonne adresse, et pour un temps limité.",
+    wiki: "https://fr.wikipedia.org/wiki/%C3%89toile_polaire",
+    resume: "Pas la plus brillante du ciel, juste celle qui a la bonne adresse, et pour un temps limité.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Prolongez environ 5 fois la distance entre les deux étoiles du bord de la « casserole » de la Grande Ourse (les « pointeurs ») : vous tombez sur Polaris. Contrairement à une idée reçue, ce <strong>n'est pas l'étoile la plus brillante</strong> du ciel — elle n'arrive qu'en ~50e position. Son seul talent : l'axe de la Terre pointe presque exactement vers elle, donc elle ne bouge quasiment pas de la nuit.</p>`,
+       <p>Prolongez environ 5 fois la distance entre les deux étoiles du bord de la « casserole » de la Grande Ourse (les « pointeurs ») : vous tombez sur Polaris. Contrairement à une idée reçue, ce <strong>n'est pas l'étoile la plus brillante</strong> du ciel, elle n'arrive qu'en ~50e position. Son seul talent : l'axe de la Terre pointe presque exactement vers elle, donc elle ne bouge quasiment pas de la nuit.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~433 années-lumière · Température : ~6 000 °C, jaune-blanc (une supergéante) · Magnitude : ~2, discrète pour son rôle.</div>`,
       `<h2>La précession des équinoxes</h2>
-       <p>Comme une toupie qui ralentit, l'axe de la Terre décrit lentement un grand cercle dans le ciel en <strong>26 000 ans</strong>. « L'étoile polaire » change donc au fil des millénaires : il y a 4 700 ans, c'était Thuban (dans le Dragon) ; dans <strong>~12 000 ans</strong>, ce sera <a href="#/memo/triangle-ete">Véga</a>, bien plus brillante — la future « étoile polaire de luxe ».</p>`
+       <p>Comme une toupie qui ralentit, l'axe de la Terre décrit lentement un grand cercle dans le ciel en <strong>26 000 ans</strong>. « L'étoile polaire » change donc au fil des millénaires : il y a 4 700 ans, c'était Thuban (dans le Dragon) ; dans <strong>~12 000 ans</strong>, ce sera <a href="#/memo/triangle-ete">Véga</a>, bien plus brillante, la future « étoile polaire de luxe ».</p>`
     ],
     voirAussi: ["triangle-ete", "voie-lactee"]
   },
@@ -187,7 +197,9 @@ const SUJETS = {
   "couronne-boreale": {
     titre: "La Couronne boréale & Gemma",
     icone: "",
-    resume: "Un petit demi-cercle discret entre le Bouvier et Hercule — surnommé sans façon « le bol des pauvres ».",
+    wiki: "https://fr.wikipedia.org/wiki/Couronne_bor%C3%A9ale",
+    conte: "couronne-boreale",
+    resume: "Un petit demi-cercle discret entre le Bouvier et Hercule, surnommé sans façon « le bol des pauvres ».",
     sections: [
       `<h2>Repérage</h2>
        <p>Un arc de 7 étoiles en demi-cercle, entre <strong>Arcturus</strong> (Bouvier) et <a href="#/memo/m13">Hercule</a>. Discrète mais reconnaissable une fois repérée : une vraie petite couronne dans le ciel.</p>`,
@@ -205,12 +217,14 @@ const SUJETS = {
   "pleiades": {
     titre: "Les Pléiades (M45)",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Pl%C3%A9iades_(astronomie)",
+    conte: "pleiades",
     resume: "Un amas de jeunes étoiles bleues, si célèbre qu'il a donné son nom à une marque de voitures.",
     sections: [
       `<h2>Repérage</h2>
        <p>Visible en hiver, près d'Orion et du Taureau : un petit amas compact à l'œil nu, souvent pris pour une « mini casserole ». Classique test de vue : combien d'étoiles distinguez-vous (en général 6 à 7, jusqu'à une douzaine sous un ciel exceptionnel) ?</p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~444 années-lumière · Âge : environ <strong>100 millions d'années</strong> — les dinosaures existaient déjà quand ces étoiles sont nées · Étoiles bleues très chaudes (types B), ~10 000 à 25 000 °C.</div>`,
+       <div class="chiffre-cle">Distance : ~444 années-lumière · Âge : environ <strong>100 millions d'années</strong>, les dinosaures existaient déjà quand ces étoiles sont nées · Étoiles bleues très chaudes (types B), ~10 000 à 25 000 °C.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
          <li>Au télescope, on distingue une fine <strong>nébulosité bleutée</strong> autour des étoiles : un nuage de poussière qui ne fait que réfléchir leur lumière (<a href="#/memo/types-nebuleuses">nébuleuse par réflexion</a>).</li>
@@ -228,29 +242,35 @@ const SUJETS = {
     resume: "Supergéante rouge, cœur du Scorpion.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg">
-           <!-- tracé du Scorpion : tête en haut, corps descendant, queue recourbée vers le dard -->
-           <polyline points="60,35 78,50 95,42 112,80 120,120 135,160 160,185 195,195 225,180 235,150 220,125 200,120"
-                     fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.45"/>
-           <!-- tête (trois étoiles alignées) -->
-           <circle cx="60" cy="35" r="2.3"/><text x="52" y="30" class="etoile-nom" text-anchor="end">Acrab</text>
-           <circle cx="78" cy="50" r="2.8"/><text x="78" y="66" class="etoile-nom" text-anchor="middle">Dschubba</text>
-           <circle cx="95" cy="42" r="2"/>
+         <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+           <!-- Scorpion : orienté comme dans le ciel (tête en haut à droite, queue en crochet vers le bas-gauche) -->
+           <!-- tracé principal -->
+           <polyline points="300,30 295,55 285,80 250,95 235,120 220,150 195,175 165,195 135,200 110,185 105,160 120,140"
+                     fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <!-- tête : ligne de 3 étoiles -->
+           <line x1="300" y1="30" x2="300" y2="80" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <circle cx="300" cy="30" r="2.4"/><text x="308" y="30" class="etoile-nom">Acrab</text>
+           <circle cx="295" cy="55" r="2.8"/><text x="303" y="56" class="etoile-nom">Dschubba</text>
+           <circle cx="300" cy="80" r="2"/><text x="308" y="82" class="etoile-nom">Pi</text>
            <!-- cœur : Antarès -->
-           <circle cx="112" cy="80" r="4.5" class="etoile-phare"/>
-           <text x="122" y="80" class="etoile-nom etoile-phare">Antarès</text>
+           <circle cx="250" cy="95" r="4.5" class="etoile-phare"/>
+           <text x="250" y="86" class="etoile-nom etoile-phare" text-anchor="middle">Antarès</text>
+           <!-- objets du ciel profond -->
+           <circle cx="268" cy="105" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="274" y="115" class="etoile-nom">M4</text>
            <!-- corps -->
-           <circle cx="120" cy="120" r="2"/><circle cx="135" cy="160" r="2"/>
-           <!-- coude de la queue -->
-           <circle cx="160" cy="185" r="2"/><circle cx="195" cy="195" r="2"/>
-           <circle cx="225" cy="180" r="2.3"/><text x="233" y="178" class="etoile-nom">Sargas</text>
+           <circle cx="235" cy="120" r="2"/><circle cx="220" cy="150" r="2"/><circle cx="195" cy="175" r="2"/>
+           <!-- queue en crochet -->
+           <circle cx="165" cy="195" r="2"/>
+           <circle cx="135" cy="200" r="2.4"/><text x="135" y="216" class="etoile-nom" text-anchor="middle">Sargas</text>
+           <circle cx="110" cy="185" r="2"/>
            <!-- dard -->
-           <circle cx="235" cy="150" r="2.3"/>
-           <circle cx="220" cy="125" r="3" class="etoile-phare"/>
-           <text x="228" y="120" class="etoile-nom">Shaula</text>
-           <circle cx="200" cy="120" r="2"/><text x="198" y="112" class="etoile-nom" text-anchor="end">Lesath</text>
+           <circle cx="105" cy="160" r="3" class="etoile-phare"/><text x="97" y="158" class="etoile-nom" text-anchor="end">Shaula</text>
+           <circle cx="120" cy="140" r="2"/><text x="112" y="135" class="etoile-nom" text-anchor="end">Lesath</text>
+           <!-- amas M6/M7 vers le dard -->
+           <circle cx="150" cy="165" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="156" y="163" class="etoile-nom">M6</text>
+           <circle cx="165" cy="150" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="171" y="148" class="etoile-nom">M7</text>
          </svg>
-         <figcaption>Le Scorpion : de la tête (Dschubba) au cœur rouge (Antarès), puis la queue recourbée jusqu'au dard (Shaula, Lesath).</figcaption>
+         <figcaption>Le Scorpion : tête (Dschubba, Acrab) en haut, cœur rouge Antarès, queue en crochet jusqu'au dard (Shaula, Lesath). Cercles dorés : amas visibles aux jumelles (M4, M6, M7).</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, d'une couleur rouge-orangé nette même à l'œil nu. La constellation pointe vers le centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
@@ -266,7 +286,8 @@ const SUJETS = {
       `<h2>Anecdotes</h2>
        <ul>
          <li>Son nom vient du grec <strong>Anti-Arès</strong>, «&nbsp;la rivale de Mars&nbsp;». Les astronomes grecs comparaient déjà sa couleur rouge à celle de la planète, avec laquelle on peut la confondre quand Mars passe dans les parages.</li>
-         <li>La queue recourbée du Scorpion se termine par deux étoiles, <strong>Shaula</strong> et <strong>Lesath</strong>, qui marquent le dard prêt à piquer.</li>
+         <li>La queue recourbée du Scorpion se termine par deux étoiles, <strong>Shaula</strong> et <strong>Lesath</strong>, qui marquent le dard prêt à piquer, avec <strong>Sargas</strong> juste avant.</li>
+         <li>La région regorge d'amas d'étoiles visibles aux jumelles : <strong>M4</strong> (un amas globulaire tout près d'Antarès), <strong>M6</strong> (l'amas du Papillon) et <strong>M7</strong> (l'amas de Ptolémée) vers le dard.</li>
        </ul>`
     ],
     voirAussi: ["cycle-vie-etoiles", "voie-lactee"]
@@ -275,7 +296,8 @@ const SUJETS = {
   "cintre": {
     titre: "L'astérisme du Cintre",
     icone: "",
-    resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles — et qui n'ont presque rien à voir entre elles.",
+    wiki: "https://fr.wikipedia.org/wiki/Amas_de_Brocchi",
+    resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles, et qui n'ont presque rien à voir entre elles.",
     sections: [
       `<h2>Repérage</h2>
        <p>Aux jumelles, entre le <a href="#/memo/triangle-ete">Cygne et l'Aigle</a>, près de la petite constellation de la Flèche : dix étoiles dessinent un <strong>cintre</strong> (ou une pipe, selon les yeux) étonnamment net. Connu aussi sous le nom d'amas de Brocchi.</p>`,
@@ -293,18 +315,39 @@ const SUJETS = {
   "alcor-mizar": {
     titre: "Alcor & Mizar",
     icone: "",
-    resume: "Le plus vieux test de vue de l'humanité, caché dans le manche de la Grande Casserole.",
+    wiki: "https://fr.wikipedia.org/wiki/Mizar_(%C3%A9toile)",
+    conte: "deux-ourses",
+    resume: "Le test de vue caché dans la Grande Ourse.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+           <!-- Grande Casserole : bol (Dubhe, Merak, Phecda, Megrez) + manche (Alioth, Mizar, Alkaid) -->
+           <polyline points="60,40 55,95 130,110 140,55 60,40" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <polyline points="140,55 200,60 255,80 300,120" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <circle cx="60" cy="40" r="2.6"/><text x="60" y="32" class="etoile-nom" text-anchor="middle">Dubhe</text>
+           <circle cx="55" cy="95" r="2.4"/><text x="48" y="108" class="etoile-nom" text-anchor="end">Merak</text>
+           <circle cx="130" cy="110" r="2.2"/><text x="130" y="126" class="etoile-nom" text-anchor="middle">Phecda</text>
+           <circle cx="140" cy="55" r="2"/><text x="145" y="48" class="etoile-nom">Megrez</text>
+           <circle cx="200" cy="60" r="2.4"/><text x="200" y="52" class="etoile-nom" text-anchor="middle">Alioth</text>
+           <circle cx="255" cy="80" r="3" class="etoile-phare"/><text x="255" y="72" class="etoile-nom" text-anchor="middle">Mizar</text>
+           <circle cx="264" cy="72" r="1.6" class="etoile-phare"/><text x="278" y="66" class="etoile-nom">Alcor</text>
+           <circle cx="300" cy="120" r="2.4"/><text x="300" y="136" class="etoile-nom" text-anchor="middle">Alkaïd</text>
+         </svg>
+         <figcaption>La Grande Casserole. Mizar et sa voisine Alcor se trouvent au milieu du manche.</figcaption>
+       </figure>`,
       `<h2>Le test de vue des anciens</h2>
-       <p>Regardez la deuxième étoile du manche de la Grande Ourse : c'est <strong>Mizar</strong>. Juste à côté, une étoile plus faible : <strong>Alcor</strong>. Chez les Arabes du Moyen Âge comme chez les Romains, distinguer les deux à l'œil nu était un test de bonne vue — on l'appelait « le cavalier et son cheval ».</p>`,
+       <p>Regardez la deuxième étoile du manche de la Grande Ourse : c'est <strong>Mizar</strong>. Juste à côté, une étoile plus faible : <strong>Alcor</strong>. Distinguer les deux à l'œil nu demande une bonne vue, et servait de test dans de nombreuses cultures : chez les Romains, chez les Arabes (qui appelaient Alcor «&nbsp;l'Oubliée&nbsp;»), et au Japon pour évaluer la vue des archers samouraïs.</p>`,
       `<h2>La surprise au télescope</h2>
-       <p>Pointez un <a href="#/memo/types-telescopes">télescope</a> sur Mizar : elle se dédouble ! Mizar fut la <strong>première étoile double découverte au télescope</strong> (vers 1617). Et ce n'est pas fini : chacune de ces deux étoiles est elle-même double, et Alcor aussi.</p>
-       <div class="chiffre-cle">Ce point de lumière est en réalité un système de <strong>6 étoiles</strong> liées par la gravité, à environ 80 années-lumière de nous.</div>`,
+       <p>Pointez un <a href="#/memo/types-telescopes">télescope</a> sur Mizar : elle se dédouble. Mizar fut la <strong>première étoile double découverte au télescope</strong>, vers 1617. Et ce n'est pas fini : chacune de ces deux étoiles est elle-même double, et Alcor aussi.</p>
+       <div class="chiffre-cle">
+         Distance : ~80 années-lumière<br>
+         Ce point de lumière est en réalité un système de <strong>6 étoiles</strong> liées par la gravité.
+       </div>`,
       `<h2>À raconter au public</h2>
        <ul>
-         <li>Faire faire le test à l'œil nu avant de montrer le télescope — effet garanti quand Mizar se dédouble.</li>
-         <li>La lumière qu'on reçoit ce soir est partie il y a ~80 ans : demander aux gens ce qui se passait sur Terre à l'époque.</li>
-         <li>La majorité des étoiles de la Galaxie vivent en couple ou en famille — notre Soleil solitaire est plutôt l'exception.</li>
+         <li>Faire faire le test à l'œil nu avant de montrer le télescope : l'effet est garanti quand Mizar se dédouble.</li>
+         <li>Attention, Alcor et Mizar sont bien un système lié, mais Alcor n'est pas exactement là où on la voit : la paire visible à l'œil nu (Mizar et Alcor) est parfois présentée comme un simple alignement, un débat qui a longtemps agité les astronomes.</li>
+         <li>La majorité des étoiles de la Galaxie vivent en couple ou en famille. Notre Soleil, solitaire, est plutôt l'exception.</li>
        </ul>`
     ],
     voirAussi: ["types-telescopes", "cycle-vie-etoiles", "epsilon-lyre"]
@@ -313,14 +356,15 @@ const SUJETS = {
   "epsilon-lyre": {
     titre: "Epsilon de la Lyre, la « Double-Double »",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Epsilon_Lyrae",
     resume: "Une étoile, puis deux, puis quatre : ça dépend juste de la puissance de votre instrument.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Juste à côté de Véga (<a href="#/memo/triangle-ete">Triangle d'été</a>). À l'œil nu, une seule étoile ; aux <strong>jumelles</strong>, elle se sépare déjà en deux ; au <strong>télescope</strong> avec un bon grossissement, chacune de ces deux étoiles se sépare à son tour en deux — quatre étoiles en tout, d'où son surnom.</p>`,
+       <p>Juste à côté de Véga (<a href="#/memo/triangle-ete">Triangle d'été</a>). À l'œil nu, une seule étoile ; aux <strong>jumelles</strong>, elle se sépare déjà en deux ; au <strong>télescope</strong> avec un bon grossissement, chacune de ces deux étoiles se sépare à son tour en deux, quatre étoiles en tout, d'où son surnom.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~160 années-lumière · Étoiles blanches chaudes (type A), ~9 000 °C.</div>`,
       `<h2>Anecdote</h2>
-       <p>Les quatre étoiles sont réellement liées par la gravité : un vrai système à quatre, comme <a href="#/memo/alcor-mizar">Mizar et Alcor</a> un peu plus loin dans le ciel — de bons doublons pour comparer les deux tests de résolution en une même soirée.</p>`
+       <p>Les quatre étoiles sont réellement liées par la gravité : un vrai système à quatre, comme <a href="#/memo/alcor-mizar">Mizar et Alcor</a> un peu plus loin dans le ciel, de bons doublons pour comparer les deux tests de résolution en une même soirée.</p>`
     ],
     voirAussi: ["triangle-ete", "alcor-mizar"]
   },
@@ -328,10 +372,11 @@ const SUJETS = {
   "albireo": {
     titre: "Albireo",
     icone: "",
-    resume: "Une étoile dorée et une étoile bleue, côte à côte — l'une des plus belles doubles du ciel.",
+    wiki: "https://fr.wikipedia.org/wiki/Albireo",
+    resume: "Une étoile dorée et une étoile bleue, côte à côte, l'une des plus belles doubles du ciel.",
     sections: [
       `<h2>Repérage</h2>
-       <p>À la tête du Cygne, à l'opposé de Deneb (<a href="#/memo/triangle-ete">Triangle d'été</a>). Au télescope, même à faible grossissement, elle se sépare en deux couleurs franches : une étoile <strong>orangée</strong> et une étoile <strong>bleue</strong> — l'un des contrastes les plus spectaculaires du ciel, même pour un œil non entraîné.</p>`,
+       <p>À la tête du Cygne, à l'opposé de Deneb (<a href="#/memo/triangle-ete">Triangle d'été</a>). Au télescope, même à faible grossissement, elle se sépare en deux couleurs franches : une étoile <strong>orangée</strong> et une étoile <strong>bleue</strong>, l'un des contrastes les plus spectaculaires du ciel, même pour un œil non entraîné.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~430 années-lumière · Composante orange : géante, ~4 300 °C · Composante bleue : ~13 000 °C. La couleur trahit directement la température, exactement comme un métal qu'on chauffe.</div>`,
       `<h2>Anecdote</h2>
@@ -343,12 +388,13 @@ const SUJETS = {
   "double-amas-perse": {
     titre: "Le double amas de Persée",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Double_amas_de_Pers%C3%A9e",
     resume: "Deux amas d'étoiles jeunes, côte à côte, connus depuis l'Antiquité et spectaculaires aux jumelles.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Entre les constellations de Persée et Cassiopée : une tache floue visible à l'œil nu sous un ciel correct, qui explose en centaines d'étoiles aux <strong>jumelles</strong> ou au télescope à faible grossissement — l'un des plus beaux champs du ciel d'automne-hiver.</p>`,
+       <p>Entre les constellations de Persée et Cassiopée : une tache floue visible à l'œil nu sous un ciel correct, qui explose en centaines d'étoiles aux <strong>jumelles</strong> ou au télescope à faible grossissement, l'un des plus beaux champs du ciel d'automne-hiver.</p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~7 500 années-lumière · Âge : quelques millions d'années seulement — des <strong>bébés</strong> à l'échelle stellaire, comparés aux <a href="#/memo/m13">12 milliards d'années</a> d'un amas globulaire.</div>`,
+       <div class="chiffre-cle">Distance : ~7 500 années-lumière · Âge : quelques millions d'années seulement, des <strong>bébés</strong> à l'échelle stellaire, comparés aux <a href="#/memo/m13">12 milliards d'années</a> d'un amas globulaire.</div>`,
       `<h2>Anecdote</h2>
        <p>Connu et catalogué depuis l'Antiquité : l'astronome grec <strong>Hipparque</strong> le mentionnait déjà vers 130 av. J.-C., bien avant l'invention du télescope. Il se trouve dans la même région du ciel que <a href="#/memo/mythe-persee">Persée et Andromède</a>.</p>`
     ],
@@ -358,14 +404,15 @@ const SUJETS = {
   "amas-et": {
     titre: "L'amas E.T. (NGC 457)",
     icone: "",
-    resume: "Un amas d'étoiles qui dessine un petit bonhomme — rebaptisé E.T. pour sa bouille extraterrestre.",
+    wiki: "https://fr.wikipedia.org/wiki/NGC_457",
+    resume: "Un amas d'étoiles qui dessine un petit bonhomme, rebaptisé E.T. pour sa bouille extraterrestre.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Dans Cassiopée, juste à côté de l'étoile Delta Cassiopeiae. Aux jumelles ou au petit télescope, deux étoiles brillantes forment les <strong>« yeux »</strong>, et une traînée d'étoiles plus faibles dessine le <strong>corps et les jambes</strong> — d'abord surnommé « amas de la Chouette », puis rebaptisé « E.T. » pour sa ressemblance avec le personnage du film.</p>`,
+       <p>Dans Cassiopée, juste à côté de l'étoile Delta Cassiopeiae. Aux jumelles ou au petit télescope, deux étoiles brillantes forment les <strong>« yeux »</strong>, et une traînée d'étoiles plus faibles dessine le <strong>corps et les jambes</strong>, d'abord surnommé « amas de la Chouette », puis rebaptisé « E.T. » pour sa ressemblance avec le personnage du film.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~7 900 à 9 000 années-lumière · Âge : environ <strong>20 millions d'années</strong>, un amas ouvert jeune.</div>`,
       `<h2>Anecdote</h2>
-       <p>L'une des deux étoiles « yeux » (Phi Cassiopeiae) est en réalité une <strong>supergéante en avant-plan</strong>, pas physiquement membre de l'amas — elle se trouve juste alignée par hasard sur la ligne de visée, un peu comme <a href="#/memo/albireo">Albireo</a>. Cassiopée fait partie de la <a href="#/memo/mythe-persee">saga de Persée</a>.</p>`
+       <p>L'une des deux étoiles « yeux » (Phi Cassiopeiae) est en réalité une <strong>supergéante en avant-plan</strong>, pas physiquement membre de l'amas, elle se trouve juste alignée par hasard sur la ligne de visée, un peu comme <a href="#/memo/albireo">Albireo</a>. Cassiopée fait partie de la <a href="#/memo/mythe-persee">saga de Persée</a>.</p>`
     ],
     voirAussi: ["types-amas", "mythe-persee"]
   },
@@ -375,6 +422,7 @@ const SUJETS = {
   "types-nebuleuses": {
     titre: "Les types de nébuleuses",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse",
     resume: "Même mot, familles très différentes : pouponnières d'étoiles, poussière éclairée, ou cadavres stellaires.",
     sections: [
       `<h2>Les grandes familles</h2>
@@ -382,7 +430,7 @@ const SUJETS = {
          <li><strong>À émission</strong> : du gaz chauffé et ionisé par de jeunes étoiles brûlantes, typiquement rose/rouge sur les photos (la <a href="#/memo/nebuleuse-orion">nébuleuse d'Orion</a>). Ce sont des <a href="#/memo/cycle-vie-etoiles">pouponnières d'étoiles</a>.</li>
          <li><strong>Par réflexion</strong> : un simple nuage de poussière qui réfléchit la lumière d'une étoile proche, teinte bleutée (autour des <a href="#/memo/pleiades">Pléiades</a>).</li>
          <li><strong>Obscure</strong> : un nuage assez dense pour masquer les étoiles derrière lui (le Sac à charbon, près de la Croix du Sud).</li>
-         <li><strong>Planétaire</strong> : les couches externes soufflées par une étoile en fin de vie comme le Soleil (<a href="#/memo/nebuleuse-lyre">M57</a>, <a href="#/memo/nebuleuse-haltere">M27</a>) — malgré leur nom, elles n'ont <strong>aucun rapport avec les planètes</strong> ; le nom vient juste de leur forme ronde vue dans les petits télescopes du 18e siècle.</li>
+         <li><strong>Planétaire</strong> : les couches externes soufflées par une étoile en fin de vie comme le Soleil (<a href="#/memo/nebuleuse-lyre">M57</a>, <a href="#/memo/nebuleuse-haltere">M27</a>), malgré leur nom, elles n'ont <strong>aucun rapport avec les planètes</strong> ; le nom vient juste de leur forme ronde vue dans les petits télescopes du 18e siècle.</li>
          <li><strong>Rémanent de supernova</strong> : les débris de l'explosion d'une étoile massive (la nébuleuse du Crabe).</li>
        </ul>`,
       `<h2>Anecdote</h2>
@@ -394,6 +442,7 @@ const SUJETS = {
   "nebuleuse-orion": {
     titre: "La nébuleuse d'Orion (M42)",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_d%27Orion",
     resume: "Une pouponnière d'étoiles à l'œil nu, juste sous la ceinture d'Orion.",
     sections: [
       `<h2>Repérage</h2>
@@ -402,8 +451,8 @@ const SUJETS = {
        <div class="chiffre-cle">Distance : ~1 350 années-lumière · L'une des <a href="#/memo/types-nebuleuses">nébuleuses à émission</a> les plus proches de nous · En son cœur, le <strong>Trapèze</strong>, un groupe de jeunes étoiles chaudes qui éclairent tout le nuage.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Ici, des étoiles sont <strong>littéralement en train de naître</strong> sous nos yeux (à l'échelle de quelques centaines de milliers d'années) — un des rares endroits où l'on peut montrer au public une <a href="#/memo/cycle-vie-etoiles">pouponnière stellaire</a> en direct.</li>
-         <li>Sur les photos, elle est rouge/rose ; au télescope à l'œil, elle paraît plutôt <strong>verdâtre</strong> — l'œil humain en vision nocturne est plus sensible au vert qu'au rouge.</li>
+         <li>Ici, des étoiles sont <strong>littéralement en train de naître</strong> sous nos yeux (à l'échelle de quelques centaines de milliers d'années), un des rares endroits où l'on peut montrer au public une <a href="#/memo/cycle-vie-etoiles">pouponnière stellaire</a> en direct.</li>
+         <li>Sur les photos, elle est rouge/rose ; au télescope à l'œil, elle paraît plutôt <strong>verdâtre</strong>, l'œil humain en vision nocturne est plus sensible au vert qu'au rouge.</li>
        </ul>`
     ],
     voirAussi: ["types-nebuleuses", "cycle-vie-etoiles"]
@@ -412,12 +461,13 @@ const SUJETS = {
   "nebuleuse-lyre": {
     titre: "La nébuleuse de la Lyre (M57)",
     icone: "",
-    resume: "Un petit anneau de fumée cosmique — l'avenir du Soleil, dans environ 5 milliards d'années.",
+    wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_la_Lyre",
+    resume: "Un petit anneau de fumée cosmique, l'avenir du Soleil, dans environ 5 milliards d'années.",
     sections: [
       `<h2>Repérage</h2>
        <p>Entre les deux étoiles inférieures du petit parallélogramme de la Lyre, près de <a href="#/memo/triangle-ete">Véga</a>. Nécessite un télescope : un tout petit anneau flou, difficile à grossir davantage.</p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~2 600 années-lumière · Âge : quelques milliers d'années seulement depuis l'éjection du gaz — une <a href="#/memo/types-nebuleuses">nébuleuse planétaire</a>, donc un cadavre d'étoile toute récente à l'échelle cosmique.</div>`,
+       <div class="chiffre-cle">Distance : ~2 600 années-lumière · Âge : quelques milliers d'années seulement depuis l'éjection du gaz, une <a href="#/memo/types-nebuleuses">nébuleuse planétaire</a>, donc un cadavre d'étoile toute récente à l'échelle cosmique.</div>`,
       `<h2>Anecdote</h2>
        <p>C'est exactement ce à quoi devrait ressembler notre <a href="#/memo/cycle-vie-etoiles">Soleil</a> dans environ 5 milliards d'années : ses couches externes soufflées en un bel anneau, autour d'un cœur devenu naine blanche.</p>`
     ],
@@ -427,14 +477,15 @@ const SUJETS = {
   "nebuleuse-haltere": {
     titre: "La nébuleuse de l'Haltère (M27)",
     icone: "",
-    resume: "La toute première nébuleuse planétaire jamais découverte — en forme de sablier de sport.",
+    wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_l%27Halt%C3%A8re",
+    resume: "La toute première nébuleuse planétaire jamais découverte, en forme de sablier de sport.",
     sections: [
       `<h2>Repérage</h2>
        <p>Dans la petite constellation du Petit Renard, non loin de la <a href="#/memo/cintre">Flèche et du Cygne</a>. Plus grande et plus lumineuse que <a href="#/memo/nebuleuse-lyre">M57</a> : un des objets les plus faciles de sa catégorie, même en petit télescope.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~1 300 années-lumière · Vestige d'une étoile de type solaire, comme <a href="#/memo/nebuleuse-lyre">M57</a>.</div>`,
       `<h2>Anecdote</h2>
-       <p>Découverte par Charles Messier en 1764, c'est la <strong>toute première nébuleuse planétaire identifiée</strong> — elle a ouvert toute une catégorie d'objets qu'on ne savait pas encore classer à l'époque.</p>`
+       <p>Découverte par Charles Messier en 1764, c'est la <strong>toute première nébuleuse planétaire identifiée</strong>, elle a ouvert toute une catégorie d'objets qu'on ne savait pas encore classer à l'époque.</p>`
     ],
     voirAussi: ["nebuleuse-lyre", "types-nebuleuses", "cycle-vie-etoiles"]
   },
@@ -444,6 +495,7 @@ const SUJETS = {
   "types-amas": {
     titre: "Les types d'amas d'étoiles",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Amas_stellaire",
     resume: "Amas ouverts : des crèches d'étoiles jeunes. Amas globulaires : plutôt des maisons de retraite.",
     sections: [
       `<h2>Amas ouverts</h2>
@@ -459,14 +511,16 @@ const SUJETS = {
   "m13": {
     titre: "Le grand amas d'Hercule (M13)",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Amas_globulaire_d%27Hercule",
+    conte: "hercule-dragon",
     resume: "Une boule de 300 000 étoiles presque aussi vieilles que l'Univers.",
     sections: [
       `<h2>Une ruche d'étoiles</h2>
        <p>Dans la constellation d'Hercule, ce petit flocon flou au télescope est un <a href="#/memo/types-amas">amas globulaire</a> : environ <strong>300 000 étoiles</strong> serrées dans une sphère de 150 années-lumière, à ~23 000 années-lumière de nous. Au centre, les étoiles sont des centaines de fois plus proches les unes des autres que dans notre voisinage : là-bas, la nuit n'existe presque pas.</p>`,
       `<h2>Des fossiles du ciel</h2>
-       <p>Ses étoiles ont environ <strong>12 milliards d'années</strong> — presque l'âge de l'Univers. Ce sont des survivantes de la petite enfance de la Galaxie, qui n'ont jamais explosé car les étoiles peu massives <a href="#/memo/cycle-vie-etoiles">vivent très longtemps</a>. La Voie lactée compte ~150 amas globulaires en orbite autour d'elle, comme des abeilles autour de la ruche.</p>`,
+       <p>Ses étoiles ont environ <strong>12 milliards d'années</strong>, presque l'âge de l'Univers. Ce sont des survivantes de la petite enfance de la Galaxie, qui n'ont jamais explosé car les étoiles peu massives <a href="#/memo/cycle-vie-etoiles">vivent très longtemps</a>. La Voie lactée compte ~150 amas globulaires en orbite autour d'elle, comme des abeilles autour de la ruche.</p>`,
       `<h2>Le message d'Arecibo</h2>
-       <p>En 1974, le radiotélescope d'Arecibo a envoyé vers M13 un message décrivant l'humanité : notre ADN, notre système solaire, notre silhouette. Réponse au plus tôt dans… <strong>46 000 ans</strong>. C'était surtout un geste symbolique — et une belle façon de parler des distances.</p>`
+       <p>En 1974, le radiotélescope d'Arecibo a envoyé vers M13 un message décrivant l'humanité : notre ADN, notre système solaire, notre silhouette. Réponse au plus tôt dans… <strong>46 000 ans</strong>. C'était surtout un geste symbolique, et une belle façon de parler des distances.</p>`
     ],
     voirAussi: ["cycle-vie-etoiles", "types-telescopes", "types-amas", "couronne-boreale"]
   },
@@ -476,7 +530,9 @@ const SUJETS = {
   "andromede": {
     titre: "La galaxie d'Andromède (M31)",
     icone: "",
-    resume: "L'objet le plus lointain visible à l'œil nu — et notre future compagne de fusion.",
+    wiki: "https://fr.wikipedia.org/wiki/Galaxie_d%27Androm%C3%A8de",
+    conte: "saga-persee",
+    resume: "L'objet le plus lointain visible à l'œil nu, et notre future compagne de fusion.",
     sections: [
       `<h2>Repérage</h2>
        <p>Sous un ciel bien noir, dans la constellation d'Andromède, près de Cassiopée : une petite tache floue et allongée à l'œil nu. C'est l'objet le plus lointain que l'œil humain peut voir sans instrument.</p>`,
@@ -484,8 +540,8 @@ const SUJETS = {
        <div class="chiffre-cle">Distance : <strong>2,5 millions d'années-lumière</strong> · Environ 1 000 milliards d'étoiles · Se rapproche de nous à ~110 km/s.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Étonnamment, le disque que l'on observe aujourd'hui se serait largement <strong>reformé après une collision majeure il y a environ 2 milliards d'années</strong> — plus jeune, donc, que notre Soleil et notre Terre (4,6 milliards d'années) !</li>
-         <li>Dans environ 4,5 milliards d'années, elle entrera en collision avec la <a href="#/memo/voie-lactee">Voie lactée</a>. Les étoiles étant si espacées, presque aucune ne s'entrechoquera vraiment — mais les deux galaxies fusionneront en une seule, parfois surnommée <strong>« Lactomède »</strong> (Milkomeda pour les anglophones).</li>
+         <li>Étonnamment, le disque que l'on observe aujourd'hui se serait largement <strong>reformé après une collision majeure il y a environ 2 milliards d'années</strong>, plus jeune, donc, que notre Soleil et notre Terre (4,6 milliards d'années) !</li>
+         <li>Dans environ 4,5 milliards d'années, elle entrera en collision avec la <a href="#/memo/voie-lactee">Voie lactée</a>. Les étoiles étant si espacées, presque aucune ne s'entrechoquera vraiment, mais les deux galaxies fusionneront en une seule, parfois surnommée <strong>« Lactomède »</strong> (Milkomeda pour les anglophones).</li>
          <li>Cette princesse mythologique donne son nom à la galaxie via la <a href="#/memo/mythe-persee">saga de Persée</a>, qui se déroule juste à côté dans le ciel.</li>
        </ul>`
     ],
@@ -497,14 +553,16 @@ const SUJETS = {
   "mythe-persee": {
     titre: "La saga de Persée",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Pers%C3%A9e_(constellation)",
+    conte: "saga-persee",
     resume: "Cassiopée, Andromède, Persée, Pégase : plusieurs constellations d'automne qui racontent une seule et même histoire.",
     sections: [
       `<h2>L'histoire</h2>
-       <p>La reine <strong>Cassiopée</strong> se vante d'être plus belle que les Néréides ; Poséidon envoie le monstre marin Cétus se venger. Pour l'apaiser, la princesse <strong>Andromède</strong> est enchaînée à un rocher en sacrifice. <strong>Persée</strong>, revenant tout juste avec la tête de la Gorgone Méduse, la découvre, tue le monstre et la libère — puis l'épouse. Tous les personnages de cette histoire se retrouvent aujourd'hui côte à côte dans le ciel d'automne. Le récit complet est à retrouver dans les <a href="#/contes/saga-persee">Contes du ciel</a>.</p>`,
+       <p>La reine <strong>Cassiopée</strong> se vante d'être plus belle que les Néréides ; Poséidon envoie le monstre marin Cétus se venger. Pour l'apaiser, la princesse <strong>Andromède</strong> est enchaînée à un rocher en sacrifice. <strong>Persée</strong>, revenant tout juste avec la tête de la Gorgone Méduse, la découvre, tue le monstre et la libère, puis l'épouse. Tous les personnages de cette histoire se retrouvent aujourd'hui côte à côte dans le ciel d'automne. Le récit complet est à retrouver dans les <a href="#/contes/saga-persee">Contes du ciel</a>.</p>`,
       `<h2>Repérage</h2>
-       <p>Cassiopée (le grand « W »), <a href="#/memo/andromede">Andromède</a> et Persée se suivent dans le ciel du soir en automne, non loin l'une de l'autre — une bonne trame pour enchaîner plusieurs objets d'une même soirée (dont l'<a href="#/memo/amas-et">amas E.T.</a> et le <a href="#/memo/double-amas-perse">double amas de Persée</a>, tous deux dans ce coin de ciel).</p>`,
+       <p>Cassiopée (le grand « W »), <a href="#/memo/andromede">Andromède</a> et Persée se suivent dans le ciel du soir en automne, non loin l'une de l'autre, une bonne trame pour enchaîner plusieurs objets d'une même soirée (dont l'<a href="#/memo/amas-et">amas E.T.</a> et le <a href="#/memo/double-amas-perse">double amas de Persée</a>, tous deux dans ce coin de ciel).</p>`,
       `<h2>Anecdote</h2>
-       <p>Dans la tête de Méduse tenue par Persée se trouve <strong>Algol</strong>, « l'œil du démon » — une étoile dont l'éclat baisse nettement puis remonte toutes les ~69 heures. Les astronomes arabes l'avaient déjà repérée comme une étoile pas comme les autres ; on sait aujourd'hui que c'est un système à deux étoiles qui s'éclipsent mutuellement.</p>`
+       <p>Dans la tête de Méduse tenue par Persée se trouve <strong>Algol</strong>, « l'œil du démon », une étoile dont l'éclat baisse nettement puis remonte toutes les ~69 heures. Les astronomes arabes l'avaient déjà repérée comme une étoile pas comme les autres ; on sait aujourd'hui que c'est un système à deux étoiles qui s'éclipsent mutuellement.</p>`
     ],
     voirAussi: ["andromede", "amas-et", "double-amas-perse"]
   },
@@ -514,10 +572,12 @@ const SUJETS = {
   "eclipses": {
     titre: "Les éclipses",
     icone: "",
-    resume: "Une coïncidence géométrique extraordinaire rend possibles les éclipses totales de Soleil — et elle ne durera pas éternellement.",
+    wiki: "https://fr.wikipedia.org/wiki/%C3%89clipse",
+    conte: "eclipses",
+    resume: "Une coïncidence géométrique extraordinaire rend possibles les éclipses totales de Soleil, et elle ne durera pas éternellement.",
     sections: [
       `<h2>Les deux types</h2>
-       <p>Une <strong>éclipse de Soleil</strong> se produit quand la <a href="#/memo/lune">Lune</a> passe exactement devant le Soleil, forcément à la nouvelle lune — mais ça n'arrive pas tous les mois, car l'orbite de la Lune est légèrement inclinée. Une <strong>éclipse de Lune</strong> se produit quand la Lune traverse l'ombre de la Terre, à la pleine lune : elle prend alors une teinte rougeâtre (« lune de sang »), et se voit partout où la Lune est visible, pendant plusieurs heures.</p>`,
+       <p>Une <strong>éclipse de Soleil</strong> se produit quand la <a href="#/memo/lune">Lune</a> passe exactement devant le Soleil, forcément à la nouvelle lune, mais ça n'arrive pas tous les mois, car l'orbite de la Lune est légèrement inclinée. Une <strong>éclipse de Lune</strong> se produit quand la Lune traverse l'ombre de la Terre, à la pleine lune : elle prend alors une teinte rougeâtre (« lune de sang »), et se voit partout où la Lune est visible, pendant plusieurs heures.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Une éclipse totale de Soleil ne dure que quelques minutes, visible sur une bande étroite au sol · Une éclipse de Lune totale peut durer plus d'une heure, visible par toute la moitié de la Terre plongée dans la nuit.</div>`,
       `<h2>Anecdote</h2>
@@ -529,15 +589,16 @@ const SUJETS = {
   "cometes-etoiles-filantes": {
     titre: "Comètes et étoiles filantes",
     icone: "",
-    resume: "Un grain de poussière qui brûle, ou un vrai vagabond glacé venu des confins du système solaire — deux choses bien différentes.",
+    wiki: "https://fr.wikipedia.org/wiki/%C3%89toile_filante",
+    resume: "Un grain de poussière qui brûle, ou un vrai vagabond glacé venu des confins du système solaire, deux choses bien différentes.",
     sections: [
       `<h2>Étoiles filantes</h2>
-       <p>Une étoile filante n'est <strong>ni une étoile ni en train de tomber</strong> : c'est un grain de poussière, souvent plus petit qu'un petit pois, qui se consume en entrant dans l'atmosphère à environ 60 km/s. Les grandes « pluies » d'étoiles filantes ont lieu quand la Terre traverse le sillage de poussière laissé par une comète — les <strong>Perséides</strong> (mi-août) viennent ainsi de la comète Swift-Tuttle.</p>`,
+       <p>Une étoile filante n'est <strong>ni une étoile ni en train de tomber</strong> : c'est un grain de poussière, souvent plus petit qu'un petit pois, qui se consume en entrant dans l'atmosphère à environ 60 km/s. Les grandes « pluies » d'étoiles filantes ont lieu quand la Terre traverse le sillage de poussière laissé par une comète, les <strong>Perséides</strong> (mi-août) viennent ainsi de la comète Swift-Tuttle.</p>`,
       `<h2>Comètes</h2>
        <p>Une comète, elle, est un vrai petit corps glacé de quelques kilomètres, qui ne devient visible que lorsqu'elle s'approche du Soleil : la chaleur vaporise sa glace et forme une <strong>queue</strong>, toujours dirigée à l'opposé du Soleil (donc pas forcément « derrière » la comète dans son mouvement).</p>
-       <div class="chiffre-cle">La plus célèbre, la <strong>comète de Halley</strong>, revient tous les 76 ans — prochain passage visible depuis la Terre : <strong>2061</strong>.</div>`,
+       <div class="chiffre-cle">La plus célèbre, la <strong>comète de Halley</strong>, revient tous les 76 ans, prochain passage visible depuis la Terre : <strong>2061</strong>.</div>`,
       `<h2>Anecdote</h2>
-       <p>Une comète vraiment brillante à l'œil nu ne se présente qu'une ou deux fois par décennie : quand ça arrive, c'est un événement — contrairement aux étoiles filantes, qu'on peut voir n'importe quelle nuit avec un peu de patience.</p>`
+       <p>Une comète vraiment brillante à l'œil nu ne se présente qu'une ou deux fois par décennie : quand ça arrive, c'est un événement, contrairement aux étoiles filantes, qu'on peut voir n'importe quelle nuit avec un peu de patience.</p>`
     ],
     voirAussi: []
   },
@@ -547,14 +608,15 @@ const SUJETS = {
   "big-bang": {
     titre: "Le Big Bang et l'expansion de l'Univers",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Big_Bang",
     resume: "Pas une explosion dans l'espace : une expansion de l'espace lui-même, depuis 13,8 milliards d'années.",
     sections: [
       `<h2>Le concept</h2>
-       <p>Il y a <strong>13,8 milliards d'années</strong>, l'Univers observable était concentré dans un état extrêmement dense et chaud, puis s'est mis à se dilater — et il continue de le faire aujourd'hui. Il n'y a pas eu d'explosion <em>dans</em> l'espace : c'est l'<strong>espace lui-même qui s'étire</strong>, et il n'y a pas de centre de l'explosion à chercher.</p>`,
+       <p>Il y a <strong>13,8 milliards d'années</strong>, l'Univers observable était concentré dans un état extrêmement dense et chaud, puis s'est mis à se dilater, et il continue de le faire aujourd'hui. Il n'y a pas eu d'explosion <em>dans</em> l'espace : c'est l'<strong>espace lui-même qui s'étire</strong>, et il n'y a pas de centre de l'explosion à chercher.</p>`,
       `<h2>Les preuves</h2>
        <p>Trois grandes preuves convergent : les galaxies lointaines s'éloignent de nous (mesuré par le <a href="#/memo/redshift">décalage vers le rouge</a>), un rayonnement fossile emplit tout le ciel (découvert par hasard en 1965), et les proportions d'hydrogène et d'hélium observées collent aux calculs des toutes premières minutes de l'Univers.</p>`,
       `<h2>Anecdote</h2>
-       <p>Le nom « Big Bang » a été inventé par <strong>Fred Hoyle</strong>, un astronome qui n'y croyait pas et le disait sur un ton moqueur à la radio en 1949 — le surnom lui est resté, alors même que la théorie a fini par s'imposer.</p>`
+       <p>Le nom « Big Bang » a été inventé par <strong>Fred Hoyle</strong>, un astronome qui n'y croyait pas et le disait sur un ton moqueur à la radio en 1949, le surnom lui est resté, alors même que la théorie a fini par s'imposer.</p>`
     ],
     voirAussi: ["redshift", "cycle-vie-etoiles"]
   },
@@ -562,14 +624,15 @@ const SUJETS = {
   "redshift": {
     titre: "Le décalage vers le rouge (redshift)",
     icone: "",
-    resume: "Le même effet qui change le son d'une sirène qui s'éloigne — appliqué à la lumière des galaxies.",
+    wiki: "https://fr.wikipedia.org/wiki/D%C3%A9calage_vers_le_rouge",
+    resume: "Le même effet qui change le son d'une sirène qui s'éloigne, appliqué à la lumière des galaxies.",
     sections: [
       `<h2>Le principe</h2>
        <p>Quand une source de lumière s'éloigne de nous, ses longueurs d'onde s'étirent : sa lumière devient légèrement plus rouge qu'elle ne l'est réellement (l'inverse, un décalage vers le bleu, se produit si elle se rapproche). C'est un effet Doppler, le même phénomène qui fait qu'une sirène d'ambulance semble plus grave une fois qu'elle s'est éloignée.</p>`,
       `<h2>Ce que ça a révélé</h2>
        <p>En mesurant ce décalage sur des dizaines de galaxies, on a découvert que <strong>presque toutes s'éloignent de nous</strong>, et d'autant plus vite qu'elles sont lointaines : la preuve observationnelle que l'Univers est en <a href="#/memo/big-bang">expansion</a>.</p>`,
       `<h2>Anecdote</h2>
-       <p>Cette relation (galaxies lointaines = éloignement plus rapide) porte le nom de <strong>loi de Hubble-Lemaître</strong> : l'astronome et physicien belge <strong>Georges Lemaître</strong> l'avait proposée dès 1927, deux ans avant Edwin Hubble — mais son travail, publié en français dans une revue peu diffusée, est resté longtemps sous-reconnu.</p>`
+       <p>Cette relation (galaxies lointaines = éloignement plus rapide) porte le nom de <strong>loi de Hubble-Lemaître</strong> : l'astronome et physicien belge <strong>Georges Lemaître</strong> l'avait proposée dès 1927, deux ans avant Edwin Hubble, mais son travail, publié en français dans une revue peu diffusée, est resté longtemps sous-reconnu.</p>`
     ],
     voirAussi: ["big-bang", "exoplanetes"]
   },
@@ -577,20 +640,21 @@ const SUJETS = {
   "trous-noirs": {
     titre: "Les trous noirs",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Trou_noir",
     resume: "Ni trous, ni aspirateurs cosmiques : des astres si denses que même la lumière n'en sort pas.",
     sections: [
       `<h2>C'est quoi, au juste ?</h2>
        <p>Un trou noir, c'est de la matière tellement comprimée que sa gravité empêche tout de s'échapper, <strong>même la lumière</strong>. La frontière de non-retour s'appelle <strong>l'horizon des événements</strong>. Pour transformer la Terre en trou noir, il faudrait la compresser à la taille… d'une bille de 2 cm.</p>`,
       `<h2>Non, ils n'aspirent pas tout</h2>
-       <p>Idée reçue tenace ! Si le Soleil devenait un trou noir de même masse, la Terre <strong>continuerait exactement la même orbite</strong> (il ferait juste très froid et très noir). Un trou noir n'attire pas plus qu'une étoile de même masse — il faut vraiment s'en approcher pour être en danger.</p>`,
+       <p>Idée reçue tenace ! Si le Soleil devenait un trou noir de même masse, la Terre <strong>continuerait exactement la même orbite</strong> (il ferait juste très froid et très noir). Un trou noir n'attire pas plus qu'une étoile de même masse, il faut vraiment s'en approcher pour être en danger.</p>`,
       `<h2>Le disque d'accrétion</h2>
-       <p>La matière qui tombe vers un trou noir ne plonge pas en ligne droite : elle s'accumule en un disque tourbillonnant, le <strong>disque d'accrétion</strong>, où les frottements la chauffent à des millions de degrés avant qu'elle ne franchisse l'horizon. C'est cette matière incandescente — et non le trou noir lui-même, invisible par définition — qu'on parvient à observer.</p>`,
+       <p>La matière qui tombe vers un trou noir ne plonge pas en ligne droite : elle s'accumule en un disque tourbillonnant, le <strong>disque d'accrétion</strong>, où les frottements la chauffent à des millions de degrés avant qu'elle ne franchisse l'horizon. C'est cette matière incandescente, et non le trou noir lui-même, invisible par définition, qu'on parvient à observer.</p>`,
       `<h2>D'où viennent-ils ?</h2>
        <p>Les trous noirs « ordinaires » naissent à la <a href="#/memo/cycle-vie-etoiles">mort des étoiles très massives</a>, quand le cœur s'effondre sur lui-même. Mais il existe aussi des <strong>trous noirs supermassifs</strong> au centre des galaxies : le nôtre, Sagittarius A*, pèse 4 millions de Soleils.</p>`,
       `<h2>Les observer</h2>
-       <p>Longtemps « vus » seulement indirectement (étoiles en orbite autour de rien, gaz surchauffé émettant des rayons X). Deux avancées récentes ont changé la donne : en <strong>2019</strong>, le réseau de radiotélescopes Event Horizon Telescope a produit la première <strong>image directe</strong> de l'ombre d'un trou noir (M87*, puis Sagittarius A* en 2022) ; et depuis <strong>2015</strong>, les détecteurs LIGO/Virgo captent les <strong>ondes gravitationnelles</strong> émises quand deux trous noirs fusionnent — on les « entend » littéralement.</p>`,
+       <p>Longtemps « vus » seulement indirectement (étoiles en orbite autour de rien, gaz surchauffé émettant des rayons X). Deux avancées récentes ont changé la donne : en <strong>2019</strong>, le réseau de radiotélescopes Event Horizon Telescope a produit la première <strong>image directe</strong> de l'ombre d'un trou noir (M87*, puis Sagittarius A* en 2022) ; et depuis <strong>2015</strong>, les détecteurs LIGO/Virgo captent les <strong>ondes gravitationnelles</strong> émises quand deux trous noirs fusionnent, on les « entend » littéralement.</p>`,
       `<h2>La question qui revient toujours</h2>
-       <p>« Que se passe-t-il si on tombe dedans ? » Près d'un petit trou noir, la gravité tire tellement plus fort sur les pieds que sur la tête qu'on serait étiré comme un spaghetti — le terme scientifique est vraiment <strong>« spaghettification »</strong>. Vu de dehors, paradoxe : on verrait la personne ralentir et se figer pour toujours sur l'horizon.</p>`
+       <p>« Que se passe-t-il si on tombe dedans ? » Près d'un petit trou noir, la gravité tire tellement plus fort sur les pieds que sur la tête qu'on serait étiré comme un spaghetti, le terme scientifique est vraiment <strong>« spaghettification »</strong>. Vu de dehors, paradoxe : on verrait la personne ralentir et se figer pour toujours sur l'horizon.</p>`
     ],
     voirAussi: ["cycle-vie-etoiles", "big-bang"]
   },
@@ -598,7 +662,8 @@ const SUJETS = {
   "cycle-vie-etoiles": {
     titre: "Le cycle de vie d'une étoile",
     icone: "",
-    resume: "De nuage de gaz à naine blanche, étoile à neutrons ou trou noir — et nous au milieu.",
+    wiki: "https://fr.wikipedia.org/wiki/%C3%89volution_stellaire",
+    resume: "De nuage de gaz à naine blanche, étoile à neutrons ou trou noir, et nous au milieu.",
     sections: [
       `<h2>1. La naissance</h2>
        <p>Tout commence par un nuage de gaz et de poussière qui s'effondre sous sa propre gravité. Quand le cœur atteint ~10 millions de degrés, la <strong>fusion de l'hydrogène s'allume</strong> : une étoile est née. La <a href="#/memo/nebuleuse-orion">nébuleuse d'Orion</a>, visible l'hiver, est une pouponnière où ça se passe en ce moment.</p>`,
@@ -620,14 +685,15 @@ const SUJETS = {
   "exoplanetes": {
     titre: "Les exoplanètes",
     icone: "",
-    resume: "Des milliers de mondes découverts autour d'autres étoiles — et une histoire qui commence en France.",
+    wiki: "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
+    resume: "Des milliers de mondes découverts autour d'autres étoiles, et une histoire qui commence en France.",
     sections: [
       `<h2>Une découverte récente</h2>
-       <p>La première exoplanète autour d'une étoile semblable au Soleil, <strong>51 Pegasi b</strong>, a été découverte en <strong>1995</strong> par Michel Mayor et Didier Queloz, depuis l'observatoire de Haute-Provence — un travail récompensé par le <strong>prix Nobel de physique 2019</strong>. On en connaît aujourd'hui plus de <strong>5 000</strong>.</p>`,
+       <p>La première exoplanète autour d'une étoile semblable au Soleil, <strong>51 Pegasi b</strong>, a été découverte en <strong>1995</strong> par Michel Mayor et Didier Queloz, depuis l'observatoire de Haute-Provence, un travail récompensé par le <strong>prix Nobel de physique 2019</strong>. On en connaît aujourd'hui plus de <strong>5 000</strong>.</p>`,
       `<h2>Comment on les détecte</h2>
        <p>On ne les voit presque jamais directement (trop proches de leur étoile, trop faibles) : on repère plutôt une étoile qui <strong>vacille légèrement</strong> sous l'attraction de sa planète (la même logique que le <a href="#/memo/redshift">décalage Doppler</a>), ou une baisse infime de sa luminosité quand la planète passe devant elle.</p>`,
       `<h2>Anecdote</h2>
-       <p>Le système <strong>TRAPPIST-1</strong> compte <strong>7 planètes</strong> de la taille de la Terre autour d'une petite étoile froide, dont plusieurs dans la zone où l'eau liquide serait possible — l'un des systèmes les plus étudiés pour la recherche de vie ailleurs.</p>`
+       <p>Le système <strong>TRAPPIST-1</strong> compte <strong>7 planètes</strong> de la taille de la Terre autour d'une petite étoile froide, dont plusieurs dans la zone où l'eau liquide serait possible, l'un des systèmes les plus étudiés pour la recherche de vie ailleurs.</p>`
     ],
     voirAussi: ["redshift"]
   },
@@ -637,16 +703,17 @@ const SUJETS = {
   "types-telescopes": {
     titre: "Les types de télescopes",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/T%C3%A9lescope",
     resume: "Lentilles ou miroirs ? Ce qui compte, ce n'est pas le grossissement : c'est le diamètre.",
     sections: [
       `<h2>Deux grandes familles</h2>
        <ul>
          <li><strong>La lunette (réfracteur)</strong> : des lentilles, comme celle de Galilée en 1609. Images très contrastées, idéale pour la Lune et les planètes, mais chère au-delà de 10 cm de diamètre.</li>
-         <li><strong>Le télescope (réflecteur)</strong> : un miroir au fond du tube, inventé par Newton en 1668. C'est la formule de tous les grands instruments — beaucoup de diamètre pour beaucoup moins cher.</li>
+         <li><strong>Le télescope (réflecteur)</strong> : un miroir au fond du tube, inventé par Newton en 1668. C'est la formule de tous les grands instruments, beaucoup de diamètre pour beaucoup moins cher.</li>
        </ul>
        <p>Le fameux <strong>Dobson</strong>, star des soirées publiques, est un télescope de Newton posé sur une monture ultra-simple : tout le budget passe dans le miroir.</p>`,
       `<h2>Ce qui compte vraiment : le diamètre</h2>
-       <p>Un télescope est avant tout un <strong>entonnoir à lumière</strong>. Plus le miroir est grand, plus on capte de lumière et de détails. Le grossissement, lui, se change simplement avec l'oculaire — et trop grossir ne donne qu'une image sombre et floue.</p>
+       <p>Un télescope est avant tout un <strong>entonnoir à lumière</strong>. Plus le miroir est grand, plus on capte de lumière et de détails. Le grossissement, lui, se change simplement avec l'oculaire, et trop grossir ne donne qu'une image sombre et floue.</p>
        <div class="chiffre-cle">Un miroir de 200 mm collecte environ <strong>800 fois plus de lumière que l'œil</strong> : c'est ce qui rend visibles les nébuleuses et les <a href="#/memo/m13">amas d'étoiles</a>.</div>`,
       `<h2>Pourquoi l'image est à l'envers ?</h2>
        <p>Question favorite du public ! Optiquement, l'image est renversée, et on ne la redresse pas exprès : chaque lentille ajoutée mange de la lumière, et dans l'espace… il n'y a ni haut ni bas.</p>`,
@@ -659,6 +726,7 @@ const SUJETS = {
   "pollution-lumineuse": {
     titre: "La pollution lumineuse",
     icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Pollution_lumineuse",
     resume: "Le plus grand obstacle à l'observation n'est pas dans le ciel : il est au sol.",
     sections: [
       `<h2>Le constat</h2>
@@ -666,7 +734,7 @@ const SUJETS = {
       `<h2>Pourquoi ça compte</h2>
        <p>Au-delà de l'observation, la lumière artificielle perturbe la faune nocturne : oiseaux migrateurs désorientés, insectes attirés puis épuisés autour des lampadaires, cycles biologiques dérangés chez de nombreuses espèces.</p>`,
       `<h2>Anecdote</h2>
-       <p>C'est aussi pour préserver la vision nocturne — la nôtre, cette fois — qu'on utilise des <strong>lampes rouges</strong> en soirée d'observation : l'œil met 20 à 30 minutes à s'adapter à l'obscurité, et quelques secondes de lumière blanche suffisent à tout annuler.</p>`
+       <p>C'est aussi pour préserver la vision nocturne, la nôtre, cette fois, qu'on utilise des <strong>lampes rouges</strong> en soirée d'observation : l'œil met 20 à 30 minutes à s'adapter à l'obscurité, et quelques secondes de lumière blanche suffisent à tout annuler.</p>`
     ],
     voirAussi: ["voie-lactee"]
   },
@@ -676,22 +744,72 @@ const SUJETS = {
   "iss": {
     titre: "La Station spatiale internationale",
     icone: "",
-    resume: "Le troisième objet le plus brillant du ciel est habité — et il passe peut-être ce soir.",
+    wiki: "https://fr.wikipedia.org/wiki/Station_spatiale_internationale",
+    resume: "Le troisième objet le plus brillant du ciel est habité, et il passe peut-être ce soir.",
     sections: [
       `<h2>Une maison en orbite</h2>
-       <p>L'ISS est habitée <strong>en permanence depuis novembre 2000</strong> : depuis cette date, il y a toujours eu des humains dans l'espace. Grande comme un terrain de football, elle tourne à environ <strong>400 km</strong> d'altitude — la distance Paris–Lyon, mais à la verticale.</p>
+       <p>L'ISS est habitée <strong>en permanence depuis novembre 2000</strong> : depuis cette date, il y a toujours eu des humains dans l'espace. Grande comme un terrain de football, elle tourne à environ <strong>400 km</strong> d'altitude, la distance Paris–Lyon, mais à la verticale.</p>
        <div class="chiffre-cle">Vitesse : <strong>28 000 km/h</strong>, soit un tour de la Terre en 90 minutes. Les astronautes voient <strong>16 levers de soleil par jour</strong>.</div>`,
       `<h2>Comment la repérer</h2>
        <ul>
          <li>Un point très brillant qui <strong>glisse lentement</strong> et régulièrement, sans clignoter (ce qui clignote, c'est un avion).</li>
          <li>Visible seulement en début ou fin de nuit : il faut qu'elle soit éclairée par le Soleil pendant que nous sommes dans l'ombre.</li>
-         <li>Quand elle entre dans l'ombre de la Terre, elle rougit puis <strong>s'éteint en quelques secondes</strong> — spectaculaire.</li>
+         <li>Quand elle entre dans l'ombre de la Terre, elle rougit puis <strong>s'éteint en quelques secondes</strong>, spectaculaire.</li>
          <li>Les passages se prévoient à la minute près (heavens-above.com, appli Spot the Station) : à vérifier avant chaque soirée.</li>
        </ul>`,
       `<h2>Bon à savoir</h2>
-       <p>À bord, la gravité n'est pas nulle : elle vaut ~90 % de celle au sol ! Les astronautes flottent parce qu'ils sont en <strong>chute libre permanente</strong> — la station tombe autour de la Terre sans jamais la toucher. C'est aussi ce qui arrive à la <a href="#/memo/lune">Lune</a>.</p>`
+       <p>À bord, la gravité n'est pas nulle : elle vaut ~90 % de celle au sol ! Les astronautes flottent parce qu'ils sont en <strong>chute libre permanente</strong>, la station tombe autour de la Terre sans jamais la toucher. C'est aussi ce qui arrive à la <a href="#/memo/lune">Lune</a>.</p>`
     ],
     voirAussi: ["lune"]
+  },
+
+  /* ===================== DIRECTION DU CENTRE GALACTIQUE ===================== */
+
+  "sagittaire": {
+    titre: "Le Sagittaire et le centre galactique",
+    icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Sagittaire_(constellation)",
+    conte: "sagittaire",
+    resume: "La direction du cœur de la Voie lactée.",
+    sections: [
+      `<h2>Repérage</h2>
+       <p>Constellation d'été, basse sur l'horizon sud. Son astérisme le plus reconnaissable est <strong>la Théière</strong> : un motif d'étoiles évoquant une théière de profil (bec, couvercle, anse), dont la «&nbsp;vapeur&nbsp;» sortant du bec correspond justement à la bande la plus dense de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
+      `<h2>Pourquoi c'est important</h2>
+       <p>C'est dans cette direction que se trouve le <strong>centre de notre Galaxie</strong>, à environ 26 000 années-lumière. En son cœur se cache <strong>Sagittarius A*</strong>, un <a href="#/memo/trous-noirs">trou noir supermassif</a> de 4 millions de fois la masse du Soleil. On ne le voit pas directement (masqué par les nuages de poussière), mais on observe les étoiles qui l'orbitent à toute vitesse.</p>
+       <div class="chiffre-cle">
+         Distance au centre galactique : ~26 000 années-lumière<br>
+         C'est la région la plus riche du ciel en amas et nébuleuses, idéale aux jumelles.
+       </div>`,
+      `<h2>Anecdotes</h2>
+       <ul>
+         <li>C'est de cette direction qu'est venu le mystérieux <a href="#/memo/signal-wow">Signal Wow</a>, en 1977.</li>
+         <li>Balayer cette zone aux jumelles sous un ciel noir montre une profusion d'objets : amas ouverts, amas globulaires et nébuleuses se succèdent le long de la Voie lactée.</li>
+       </ul>`
+    ],
+    voirAussi: ["voie-lactee", "trous-noirs", "signal-wow"]
+  },
+
+  "signal-wow": {
+    titre: "Le Signal Wow",
+    icone: "",
+    wiki: "https://fr.wikipedia.org/wiki/Signal_Wow!",
+    resume: "Le signal radio le plus intrigant jamais capté.",
+    sections: [
+      `<h2>Que s'est-il passé ?</h2>
+       <p>Le 15 août 1977, le radiotélescope <strong>Big Ear</strong> de l'université de l'Ohio capte un signal radio puissant et bref, venu de la direction du <a href="#/memo/sagittaire">Sagittaire</a>. Quelques jours plus tard, l'astronome Jerry Ehman découvre la trace sur les impressions papier, l'entoure au stylo rouge et écrit dans la marge un seul mot : «&nbsp;<strong>Wow!</strong>&nbsp;». Le nom est resté.</p>`,
+      `<h2>Chiffres clés</h2>
+       <div class="chiffre-cle">
+         Durée : <strong>72 secondes</strong> (le maximum que le télescope fixe pouvait observer au passage)<br>
+         Fréquence : ~<strong>1420 MHz</strong>, la «&nbsp;raie de l'hydrogène&nbsp;»<br>
+         Intensité : jusqu'à ~30 fois le bruit de fond<br>
+         Jamais recapté depuis, malgré de nombreuses tentatives
+       </div>`,
+      `<h2>Pourquoi il intrigue autant</h2>
+       <p>La fréquence de 1420 MHz est celle qu'émet naturellement l'hydrogène, l'élément le plus répandu de l'Univers. C'est aussi une bande protégée, interdite aux émissions terrestres. Beaucoup pensaient qu'une civilisation cherchant à se signaler choisirait logiquement cette «&nbsp;fréquence universelle&nbsp;», ce qui a fait du Signal Wow un candidat célèbre pour un message extraterrestre.</p>`,
+      `<h2>Les explications récentes</h2>
+       <p>Le mystère reste ouvert, mais des pistes naturelles ont été proposées. En 2017, l'hypothèse d'un nuage d'hydrogène autour de comètes de passage a fait débat, avant d'être largement contestée. Une réanalyse des archives (2024-2025) suggère plutôt un <strong>bref sursaut d'un petit nuage d'hydrogène froid</strong>, brièvement éclairé par un événement violent (une éruption d'étoile à neutrons, par exemple). Un phénomène rare, mais naturel. Aucune conclusion n'est définitive : l'origine artificielle n'est pas formellement exclue, mais elle n'est plus la piste privilégiée.</p>`
+    ],
+    voirAussi: ["sagittaire", "voie-lactee", "exoplanetes"]
   }
 
 };
