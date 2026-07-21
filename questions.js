@@ -1,49 +1,46 @@
 /* =====================================================================
    QUESTIONS.JS — la réserve de questions du quiz
    ---------------------------------------------------------------------
-   Toutes les questions ci-dessous forment une RÉSERVE : à chaque lancement du quiz, l'app en tire 10 au hasard (réglable dans app.js, constante NB_QUESTIONS_QUIZ). 
-   Plus la réserve est grande, plus le quiz change d'un essai à l'autre.
+   Toutes les questions ci-dessous forment une RÉSERVE : à chaque
+   lancement du quiz, l'app en tire 10 au hasard (réglable dans
+   app.js, constante NB_QUESTIONS_QUIZ). Ajoutez-en autant que vous
+   voulez, sans limite — plus la réserve est grande, plus le quiz
+   change d'une soirée à l'autre.
 
-   POUR AJOUTER UNE QUESTION : copiez un bloc { ... },
+   ➕ POUR AJOUTER UNE QUESTION : copiez un bloc { ... },
    - cat : la catégorie affichée au-dessus de la question
    - q : la question
-   - r : les propositions (2 à 4) — pensez à en glisser une un peu fun !
+   - r : les propositions (2 à 4) — pensez à en glisser une décalée !
    - bonne : la position de la bonne réponse (0 = première, 1 = deuxième…)
    - e : l'explication affichée après la réponse
    ===================================================================== */
 const QUESTIONS_POOL = [
   {
     cat: "Lumière", q: "Combien de temps met la lumière du Soleil pour arriver jusqu'à nous ?",
-    r: ["Aucun, c'est instantané", "8 minutes", "8 heures", "Le temps d'une sieste"],
+    r: ["Aucun, c'est instantané", "8 minutes", "8 heures", "Le temps de cuire une pizza"],
     bonne: 1,
-    e: "8 minutes et 20 secondes. Vous voyez donc le Soleil tel qu'il était il y a 8 minutes. Regarder loin, c'est regarder dans le passé..."
+    e: "8 minutes et 20 secondes (une pizza, c'est 12 minutes : la lumière gagne). Vous voyez donc le Soleil tel qu'il était il y a 8 minutes — regarder loin, c'est regarder dans le passé."
   },
   {
     cat: "Étoiles filantes", q: "Une étoile filante, c'est…",
-    r: ["Une étoile qui tombe", "Un extraterrestre qui a raté une marche", "Un grain de poussière qui brûle", "Un satellite pressé"],
+    r: ["Une étoile qui tombe", "Une étoile qui a raté une marche", "Un grain de poussière qui brûle", "Un satellite pressé"],
     bonne: 2,
     e: "Un simple grain de poussière, souvent plus petit qu'un petit pois, qui entre dans l'atmosphère à ~60 km/s et se consume. Les grandes « pluies » ? La Terre traverse le sillage poussiéreux d'une comète."
   },
   {
     cat: "Saturne", q: "Les anneaux de Saturne font 280 000 km de large. Et en épaisseur ?",
-    r: ["Quelques dizaines de mètres", "Quelques kilomètres", "Quelques milliers de kilomètres", "C'est juste une tâche sur le télescope"],
+    r: ["Quelques dizaines de mètres", "Quelques milliers de kilomètres", "C'est un disque plein", "C'est un autocollant sur le télescope"],
     bonne: 0,
-    e: "Quelques dizaines de mètres par endroits : proportionnellement plus fins qu'une feuille de papier. Des milliards de blocs de glace en orbite, du grain de sable à la maison."
+    e: "Quelques dizaines de mètres par endroits : proportionnellement plus fins qu'une feuille de papier. Des milliards de blocs de glace en orbite, du grain de sable à la maison. Et non, ce n'est pas un autocollant — on nous pose vraiment la question."
   },
   {
     cat: "La Lune", q: "Combien d'humains ont marché sur la Lune ?",
-    r: ["2", "12", "27", "Aucun"],
+    r: ["2", "12", "27", "Aucun, c'était un plateau de cinéma"],
     bonne: 1,
     e: "Douze, entre 1969 et 1972. Et pour les amateurs de plateau de cinéma : les réflecteurs laser déposés là-haut permettent encore aujourd'hui de mesurer la distance Terre-Lune au centimètre près."
   },
   {
-    cat: "La Lune", q: "Au fil des années, la distance Terre–Lune :",
-    r: ["Augmente", "Diminue", "Ne change pas"],
-    bonne: 1,
-    e: "En moyenne, la Lune s'éloigne de la Terre de 3,8cm/an. La Lune tombe vers la Terre, mais en s'éloignant !"
-  },
-  {
-    cat: "Planètes", q: "La très connue « étoile du Berger », c'est en fait…",
+    cat: "Planètes", q: "La très brillante « étoile du Berger », c'est en fait…",
     r: ["La planète Vénus", "Sirius", "L'étoile d'un berger nommé Gérard", "L'étoile polaire"],
     bonne: 0,
     e: "C'est Vénus, qui ne produit aucune lumière : elle réfléchit celle du Soleil. Si brillante qu'on la signale régulièrement comme OVNI. Sous ses jolis nuages : 460 °C et des pluies d'acide."
@@ -70,7 +67,7 @@ const QUESTIONS_POOL = [
     cat: "Nous", q: "Le fer de votre sang a été fabriqué…",
     r: ["Au cœur d'étoiles disparues", "Dans le noyau de la Terre", "Pendant le Big Bang", "Dans une usine en Lorraine"],
     bonne: 0,
-    e: "Le Big Bang n'a produit que de l'hydrogène et de l'hélium. Tout le reste (carbone, oxygène, calcium, fer, ...) a été forgé dans des étoiles puis dispersé par leurs explosions. Nous sommes littéralement des poussières d'étoiles (désolé pour la Lorraine)."
+    e: "Le Big Bang n'a produit que de l'hydrogène et de l'hélium. Tout le reste — carbone, oxygène, calcium, fer — a été forgé dans des étoiles puis dispersé par leurs explosions. Nous sommes littéralement des poussières d'étoiles (désolé pour la Lorraine)."
   },
   {
     cat: "Repères", q: "L'étoile polaire est…",
@@ -86,7 +83,7 @@ const QUESTIONS_POOL = [
   },
   {
     cat: "Étoiles", q: "Plus une étoile est massive…",
-    r: ["Plus elle vit longtemps", "Moins elle vit longtemps", "Plus elle est paresseuse", "Sa masse ne change rien"],
+    r: ["Plus elle vit longtemps", "Plus elle vit court", "Plus elle est paresseuse", "Sa masse ne change rien"],
     bonne: 1,
     e: "Les étoiles massives dévorent leur carburant à toute vitesse : quelques millions d'années à peine avant d'exploser en supernova. Les petites naines rouges, économes, vivront des centaines de milliards d'années. Vivre vite ou vivre longtemps, il faut choisir."
   }
