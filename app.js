@@ -67,7 +67,7 @@ function pageAccueil() {
   app.innerHTML = `
     <header class="hero">
       <h1>Sous les <span class="or">étoiles</span></h1>
-      <p class="sous-titre">Le compagnon de la soirée : des histoires du ciel à explorer,<br>et un quiz pour se tester entre deux télescopes.</p>
+      <p class="sous-titre">Pour une soirée d'astronomie réussie : le ciel à explorer,<br>et un quiz pour se tester !</p>
     </header>
     <div class="portes">
       <a class="porte" href="#/memo">
