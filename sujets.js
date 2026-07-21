@@ -1,31 +1,27 @@
 /* =====================================================================
    SUJETS.JS — le contenu du mémo
    ---------------------------------------------------------------------
-   Ce fichier ne contient QUE les fiches du mémo : aucun code technique
-   ici, vous pouvez modifier ou ajouter un sujet sans rien casser.
-
-   ➕ POUR AJOUTER UN SUJET : copiez un bloc entre accolades { ... },
-   changez le slug (l'identifiant entre guillemets, sans espaces ni
-   accents), le titre, l'icône, le résumé et les sections.
-   ➕ POUR FAIRE UN LIEN INTERNE vers un autre sujet, écrivez dans le
-   texte : <a href="#/memo/slug-du-sujet">texte du lien</a>
+   Ce fichier ne contient QUE les fiches du mémo : aucun code technique ici, vous pouvez modifier ou ajouter un sujet sans rien casser.
+   
+   POUR AJOUTER UN SUJET : copiez un bloc entre accolades { ... }, changez le slug (l'identifiant entre guillemets, sans espaces ni accents), 
+   le titre, l'icône, le résumé et les sections.
+   
+   POUR FAIRE UN LIEN INTERNE vers un autre sujet, écrivez dans le texte : <a href="#/memo/slug-du-sujet">texte du lien</a>
    Les sections acceptent du HTML : <strong>, <ul><li>, etc.
    La classe "chiffre-cle" met un paragraphe en évidence (encadré doré).
 
-   🖼️ POUR AJOUTER UNE IMAGE dans une fiche, déposez le fichier image
-   dans le dossier /images du dépôt, puis écrivez dans une section :
+   POUR AJOUTER UNE IMAGE dans une fiche, déposez le fichier image dans le dossier /images du dépôt, puis écrivez dans une section :
      <figure class="illustration">
        <img src="images/nom-du-fichier.jpg" alt="description de l'image">
        <figcaption>Légende courte (facultative)</figcaption>
      </figure>
-   L'image s'adapte automatiquement à la largeur de la fiche. Voir le
-   README.md du dépôt pour plus de détails (formats, poids conseillé).
+   L'image s'adapte automatiquement à la largeur de la fiche. Voir le README.md du dépôt pour plus de détails (formats, poids conseillé).
 
-   📏 GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) :
+   GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) :
    la plupart des fiches ci-dessous suivent 3 sections courtes :
-   1. Repérage — comment trouver l'objet dans le ciel
-   2. Chiffres clés — distance / âge / température-couleur en un bloc
-   3. Anecdotes — 1 ou 2 faits qui marquent les esprits
+      1. Repérage — comment trouver l'objet dans le ciel
+      2. Chiffres clés — distance / âge / température-couleur en un bloc
+      3. Anecdotes — 1 ou 2 faits qui marquent les esprits
    Libre à vous de vous en écarter si un sujet s'y prête mal.
    ===================================================================== */
 const SUJETS = {
@@ -38,7 +34,11 @@ const SUJETS = {
     resume: "Le seul astre où l'on distingue du relief à l'œil nu — et le meilleur objet pour débuter.",
     sections: [
       `<h2>Surface</h2>
-       <p>Zones claires (« terres », très cratérisées) et zones sombres (« mers », d'anciennes coulées de lave sans eau). Les cratères se voient bien mieux au <strong>terminateur</strong> (limite jour/nuit) : les ombres rasantes révèlent le relief. La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
+       <p>
+       <strong>Cratères :</strong> essentiellement des résidus d'impacts de météorites.<br>
+       <strong>Mers et océans :</strong> anciennes coulées de lave, preuve de l'activité volcanique de la Lune.<br>
+       Les cratères se voient bien mieux au <strong>terminateur</strong> (limite jour/nuit) : les ombres rasantes révèlent le relief. 
+       La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
       `<h2>Phases, marées, mouvement</h2>
        <p>Les phases suivent l'angle Terre-Soleil-Lune sur <strong>29,5 jours</strong> — ce n'est pas l'ombre de la Terre (ça, c'est une <a href="#/memo/eclipses">éclipse</a>, un phénomène différent et bien plus rare). La Lune provoque l'essentiel des marées, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps que son tour de Terre.</p>
        <div class="chiffre-cle">Âge : <strong>4,5 milliards d'années</strong> (née d'un impact géant peu après la Terre) · Distance : <strong>384 400 km</strong> (1,3 s-lumière) · Température : de +127 °C en plein jour à −173 °C la nuit, faute d'atmosphère.</div>`,
