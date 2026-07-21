@@ -91,5 +91,4 @@ public — accessible sans compte GitHub.
 
 Le bouton 🔴 en haut à droite bascule tout l'écran en rouge (texte,
 étoiles, boutons) pour préserver la vision nocturne pendant les
-observations — comme les applications d'astronomie. Réglages dans
-`style.css`, section *« filtre rouge intégral »*.
+observations. Réglages dans `style.css`, section *« filtre rouge intégral »*.
