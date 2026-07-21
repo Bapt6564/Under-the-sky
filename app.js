@@ -118,6 +118,9 @@ function pageSujet(slug) {
   const wiki = s.wiki
     ? `<p class="wiki-lien"><a href="${s.wiki}" target="_blank" rel="noopener">Pour aller plus loin : article Wikipédia ↗</a></p>`
     : "";
+  const conteLie = (s.conte && CONTES[s.conte])
+    ? `<p class="wiki-lien"><a href="#/contes/${s.conte}">Découvrir le conte : ${CONTES[s.conte].titre}</a></p>`
+    : "";
   app.innerHTML = `
     <a class="retour" href="#/memo">← Tous les sujets</a>
     <article class="carte">
@@ -125,6 +128,7 @@ function pageSujet(slug) {
       <h1>${s.titre}</h1>
       <p class="resume">${s.resume}</p>
       ${s.sections.map(sec => `<section>${sec}</section>`).join("")}
+      ${conteLie}
       ${wiki}
       ${liens}
     </article>`;
