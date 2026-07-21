@@ -80,7 +80,7 @@ modifiez la constante `NB_QUESTIONS_QUIZ` tout en haut de `app.js`.
 3. Sous « Build and deployment » → Source : **Deploy from a branch**.
 4. Branch : `main`, dossier `/ (root)` → **Save**.
 5. Après 1 à 2 minutes, l'URL du site apparaît en haut de cette même
-   page (`https://votre-pseudo.github.io/nom-du-depot/`).
+   page (`https://bapt6564.github.io/Under-the-sky/`).
 
 C'est cette URL que vous pouvez partager ou mettre en QR code pour le
 public — accessible sans compte GitHub.
