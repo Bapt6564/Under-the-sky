@@ -71,12 +71,10 @@ function pageAccueil() {
     </header>
     <div class="portes">
       <a class="porte" href="#/memo">
-        <div class="icone">📖</div>
         <h2>Le mémo</h2>
         <p>Les objets et les idées du ciel, sujet par sujet : distances, records, histoires et idées reçues.</p>
       </a>
       <a class="porte" href="#/quiz">
-        <div class="icone">🌠</div>
         <h2>Le quiz du ciel</h2>
         <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard parmi ${QUESTIONS_POOL.length}, à chaque partie. Attention aux pièges.</p>
       </a>
