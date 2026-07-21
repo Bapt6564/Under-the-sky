@@ -96,7 +96,7 @@
     font-family: 'Fraunces', serif; font-weight: 700;
     font-size: clamp(1.9rem, 7vw, 2.7rem); line-height: 1.12;
   }
-  h1 .or { color: var(--or); font-style: italic; }
+  h1 .or { color: var(--or); }
   .sous-titre { color: var(--encre-douce); margin-top: 12px; font-size: 1rem; line-height: 1.5; }
 
   /* ---------- cartes génériques ---------- */
@@ -179,6 +179,12 @@
   }
   article figure.constellation svg {
     display: block; width: 100%; height: auto;
+  }
+  article figure.constellation svg circle {
+    fill: var(--encre);
+  }
+  article figure.constellation svg circle.etoile-phare {
+    fill: var(--or);
   }
   article figure.constellation figcaption {
     margin-top: 10px; font-size: 0.85rem; font-style: italic;
