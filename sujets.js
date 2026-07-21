@@ -12,6 +12,15 @@
    Les sections acceptent du HTML : <strong>, <ul><li>, etc.
    La classe "chiffre-cle" met un paragraphe en évidence (encadré doré).
 
+   🖼️ POUR AJOUTER UNE IMAGE dans une fiche, déposez le fichier image
+   dans le dossier /images du dépôt, puis écrivez dans une section :
+     <figure class="illustration">
+       <img src="images/nom-du-fichier.jpg" alt="description de l'image">
+       <figcaption>Légende courte (facultative)</figcaption>
+     </figure>
+   L'image s'adapte automatiquement à la largeur de la fiche. Voir le
+   README.md du dépôt pour plus de détails (formats, poids conseillé).
+
    📏 GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) :
    la plupart des fiches ci-dessous suivent 3 sections courtes :
    1. Repérage — comment trouver l'objet dans le ciel
@@ -25,7 +34,7 @@ const SUJETS = {
 
   "lune": {
     titre: "La Lune",
-    icone: "🌕",
+    icone: "",
     resume: "Le seul astre où l'on distingue du relief à l'œil nu — et le meilleur objet pour débuter.",
     sections: [
       `<h2>Surface</h2>
@@ -44,7 +53,7 @@ const SUJETS = {
 
   "venus": {
     titre: "Vénus",
-    icone: "♀️",
+    icone: "",
     resume: "« L'étoile du Berger » n'est pas une étoile — et cache un enfer sous ses jolis nuages.",
     sections: [
       `<h2>Repérage</h2>
@@ -63,7 +72,7 @@ const SUJETS = {
 
   "jupiter": {
     titre: "Jupiter et ses lunes",
-    icone: "🪐",
+    icone: "",
     resume: "La plus grosse planète du système solaire — et un petit système solaire à elle seule, avec ses quatre lunes visibles aux jumelles.",
     sections: [
       `<h2>Repérage</h2>
@@ -82,7 +91,7 @@ const SUJETS = {
 
   "saturne": {
     titre: "Saturne",
-    icone: "🪐",
+    icone: "",
     resume: "L'objet qui fait dire « waouh » — le public croit souvent voir un autocollant sur le télescope.",
     sections: [
       `<h2>Repérage</h2>
@@ -103,7 +112,7 @@ const SUJETS = {
 
   "voie-lactee": {
     titre: "La Voie lactée",
-    icone: "🌌",
+    icone: "",
     resume: "Notre galaxie vue de l'intérieur, par la tranche — visible seulement loin des villes.",
     sections: [
       `<h2>Repérage</h2>
@@ -121,7 +130,7 @@ const SUJETS = {
 
   "triangle-ete": {
     titre: "Le Triangle d'été",
-    icone: "🔺",
+    icone: "",
     resume: "Trois étoiles brillantes de trois constellations différentes — le meilleur point de départ pour s'orienter en été.",
     sections: [
       `<h2>Repérage</h2>
@@ -139,7 +148,7 @@ const SUJETS = {
 
   "etoile-polaire": {
     titre: "L'étoile polaire",
-    icone: "🧭",
+    icone: "",
     resume: "Pas la plus brillante du ciel — juste celle qui a la bonne adresse, et pour un temps limité.",
     sections: [
       `<h2>Repérage</h2>
@@ -154,7 +163,7 @@ const SUJETS = {
 
   "couronne-boreale": {
     titre: "La Couronne boréale & Gemma",
-    icone: "👑",
+    icone: "",
     resume: "Un petit demi-cercle discret entre le Bouvier et Hercule — surnommé sans façon « le bol des pauvres ».",
     sections: [
       `<h2>Repérage</h2>
@@ -172,7 +181,7 @@ const SUJETS = {
 
   "pleiades": {
     titre: "Les Pléiades (M45)",
-    icone: "♈",
+    icone: "",
     resume: "Un amas de jeunes étoiles bleues, si célèbre qu'il a donné son nom à une marque de voitures.",
     sections: [
       `<h2>Repérage</h2>
@@ -190,7 +199,7 @@ const SUJETS = {
 
   "antares-scorpion": {
     titre: "Antarès et le Scorpion",
-    icone: "🦂",
+    icone: "",
     resume: "Une supergéante rouge qui rivalise avec Mars — au cœur d'une constellation en forme d'hameçon.",
     sections: [
       `<h2>Repérage</h2>
@@ -208,7 +217,7 @@ const SUJETS = {
 
   "cintre": {
     titre: "L'astérisme du Cintre",
-    icone: "🪝",
+    icone: "",
     resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles — et qui n'ont presque rien à voir entre elles.",
     sections: [
       `<h2>Repérage</h2>
@@ -226,7 +235,7 @@ const SUJETS = {
 
   "alcor-mizar": {
     titre: "Alcor & Mizar",
-    icone: "👁️",
+    icone: "",
     resume: "Le plus vieux test de vue de l'humanité, caché dans le manche de la Grande Casserole.",
     sections: [
       `<h2>Le test de vue des anciens</h2>
@@ -246,7 +255,7 @@ const SUJETS = {
 
   "epsilon-lyre": {
     titre: "Epsilon de la Lyre, la « Double-Double »",
-    icone: "✨",
+    icone: "",
     resume: "Une étoile, puis deux, puis quatre : ça dépend juste de la puissance de votre instrument.",
     sections: [
       `<h2>Repérage</h2>
@@ -261,7 +270,7 @@ const SUJETS = {
 
   "albireo": {
     titre: "Albireo",
-    icone: "🔶",
+    icone: "",
     resume: "Une étoile dorée et une étoile bleue, côte à côte — l'une des plus belles doubles du ciel.",
     sections: [
       `<h2>Repérage</h2>
@@ -276,7 +285,7 @@ const SUJETS = {
 
   "double-amas-perse": {
     titre: "Le double amas de Persée",
-    icone: "✨",
+    icone: "",
     resume: "Deux amas d'étoiles jeunes, côte à côte, connus depuis l'Antiquité et spectaculaires aux jumelles.",
     sections: [
       `<h2>Repérage</h2>
@@ -291,7 +300,7 @@ const SUJETS = {
 
   "amas-et": {
     titre: "L'amas E.T. (NGC 457)",
-    icone: "👽",
+    icone: "",
     resume: "Un amas d'étoiles qui dessine un petit bonhomme — rebaptisé E.T. pour sa bouille extraterrestre.",
     sections: [
       `<h2>Repérage</h2>
@@ -308,7 +317,7 @@ const SUJETS = {
 
   "types-nebuleuses": {
     titre: "Les types de nébuleuses",
-    icone: "☁️",
+    icone: "",
     resume: "Même mot, familles très différentes : pouponnières d'étoiles, poussière éclairée, ou cadavres stellaires.",
     sections: [
       `<h2>Les grandes familles</h2>
@@ -327,7 +336,7 @@ const SUJETS = {
 
   "nebuleuse-orion": {
     titre: "La nébuleuse d'Orion (M42)",
-    icone: "🌫️",
+    icone: "",
     resume: "Une pouponnière d'étoiles à l'œil nu, juste sous la ceinture d'Orion.",
     sections: [
       `<h2>Repérage</h2>
@@ -345,7 +354,7 @@ const SUJETS = {
 
   "nebuleuse-lyre": {
     titre: "La nébuleuse de la Lyre (M57)",
-    icone: "💍",
+    icone: "",
     resume: "Un petit anneau de fumée cosmique — l'avenir du Soleil, dans environ 5 milliards d'années.",
     sections: [
       `<h2>Repérage</h2>
@@ -360,7 +369,7 @@ const SUJETS = {
 
   "nebuleuse-haltere": {
     titre: "La nébuleuse de l'Haltère (M27)",
-    icone: "🏋️",
+    icone: "",
     resume: "La toute première nébuleuse planétaire jamais découverte — en forme de sablier de sport.",
     sections: [
       `<h2>Repérage</h2>
@@ -377,7 +386,7 @@ const SUJETS = {
 
   "types-amas": {
     titre: "Les types d'amas d'étoiles",
-    icone: "🐝",
+    icone: "",
     resume: "Amas ouverts : des crèches d'étoiles jeunes. Amas globulaires : plutôt des maisons de retraite.",
     sections: [
       `<h2>Amas ouverts</h2>
@@ -392,7 +401,7 @@ const SUJETS = {
 
   "m13": {
     titre: "Le grand amas d'Hercule (M13)",
-    icone: "✨",
+    icone: "",
     resume: "Une boule de 300 000 étoiles presque aussi vieilles que l'Univers.",
     sections: [
       `<h2>Une ruche d'étoiles</h2>
@@ -409,7 +418,7 @@ const SUJETS = {
 
   "andromede": {
     titre: "La galaxie d'Andromède (M31)",
-    icone: "🌀",
+    icone: "",
     resume: "L'objet le plus lointain visible à l'œil nu — et notre future compagne de fusion.",
     sections: [
       `<h2>Repérage</h2>
@@ -430,7 +439,7 @@ const SUJETS = {
 
   "mythe-persee": {
     titre: "La saga de Persée",
-    icone: "🗡️",
+    icone: "",
     resume: "Cassiopée, Andromède, Persée, Pégase : plusieurs constellations d'automne qui racontent une seule et même histoire.",
     sections: [
       `<h2>L'histoire</h2>
@@ -447,7 +456,7 @@ const SUJETS = {
 
   "eclipses": {
     titre: "Les éclipses",
-    icone: "🌑",
+    icone: "",
     resume: "Une coïncidence géométrique extraordinaire rend possibles les éclipses totales de Soleil — et elle ne durera pas éternellement.",
     sections: [
       `<h2>Les deux types</h2>
@@ -462,7 +471,7 @@ const SUJETS = {
 
   "cometes-etoiles-filantes": {
     titre: "Comètes et étoiles filantes",
-    icone: "☄️",
+    icone: "",
     resume: "Un grain de poussière qui brûle, ou un vrai vagabond glacé venu des confins du système solaire — deux choses bien différentes.",
     sections: [
       `<h2>Étoiles filantes</h2>
@@ -480,7 +489,7 @@ const SUJETS = {
 
   "big-bang": {
     titre: "Le Big Bang et l'expansion de l'Univers",
-    icone: "💥",
+    icone: "",
     resume: "Pas une explosion dans l'espace : une expansion de l'espace lui-même, depuis 13,8 milliards d'années.",
     sections: [
       `<h2>Le concept</h2>
@@ -495,7 +504,7 @@ const SUJETS = {
 
   "redshift": {
     titre: "Le décalage vers le rouge (redshift)",
-    icone: "🌈",
+    icone: "",
     resume: "Le même effet qui change le son d'une sirène qui s'éloigne — appliqué à la lumière des galaxies.",
     sections: [
       `<h2>Le principe</h2>
@@ -510,7 +519,7 @@ const SUJETS = {
 
   "trous-noirs": {
     titre: "Les trous noirs",
-    icone: "🕳️",
+    icone: "",
     resume: "Ni trous, ni aspirateurs cosmiques : des astres si denses que même la lumière n'en sort pas.",
     sections: [
       `<h2>C'est quoi, au juste ?</h2>
@@ -531,7 +540,7 @@ const SUJETS = {
 
   "cycle-vie-etoiles": {
     titre: "Le cycle de vie d'une étoile",
-    icone: "⭐",
+    icone: "",
     resume: "De nuage de gaz à naine blanche, étoile à neutrons ou trou noir — et nous au milieu.",
     sections: [
       `<h2>1. La naissance</h2>
@@ -553,7 +562,7 @@ const SUJETS = {
 
   "exoplanetes": {
     titre: "Les exoplanètes",
-    icone: "🔭",
+    icone: "",
     resume: "Des milliers de mondes découverts autour d'autres étoiles — et une histoire qui commence en France.",
     sections: [
       `<h2>Une découverte récente</h2>
@@ -570,7 +579,7 @@ const SUJETS = {
 
   "types-telescopes": {
     titre: "Les types de télescopes",
-    icone: "🔭",
+    icone: "",
     resume: "Lentilles ou miroirs ? Ce qui compte, ce n'est pas le grossissement : c'est le diamètre.",
     sections: [
       `<h2>Deux grandes familles</h2>
@@ -592,7 +601,7 @@ const SUJETS = {
 
   "pollution-lumineuse": {
     titre: "La pollution lumineuse",
-    icone: "🏙️",
+    icone: "",
     resume: "Le plus grand obstacle à l'observation n'est pas dans le ciel : il est au sol.",
     sections: [
       `<h2>Le constat</h2>
@@ -609,7 +618,7 @@ const SUJETS = {
 
   "iss": {
     titre: "La Station spatiale internationale",
-    icone: "🛰️",
+    icone: "",
     resume: "Le troisième objet le plus brillant du ciel est habité — et il passe peut-être ce soir.",
     sections: [
       `<h2>Une maison en orbite</h2>
