@@ -243,23 +243,26 @@ const SUJETS = {
     sections: [
       `<figure class="constellation">
          <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
-           <!-- Scorpion : orienté comme dans le ciel (tête en haut à droite, queue en crochet vers le bas-gauche) -->
-           <!-- tracé principal -->
-           <polyline points="300,30 295,55 285,80 250,95 235,120 220,150 195,175 165,195 135,200 110,185 105,160 120,140"
+           <!-- Scorpion : tête (arc de 3 étoiles) reliée à Antarès, puis corps et queue en hameçon -->
+           <!-- arc de la tête : Acrab - Dschubba - Fang -->
+           <polyline points="300,35 292,60 298,88" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <!-- Dschubba reliée à Antarès -->
+           <line x1="292" y1="60" x2="250" y2="95" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <!-- corps et queue en hameçon depuis Antarès -->
+           <polyline points="250,95 235,120 220,150 195,175 165,195 135,200 110,185 105,160 120,140"
                      fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-           <!-- tête : ligne de 3 étoiles -->
-           <line x1="300" y1="30" x2="300" y2="80" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-           <circle cx="300" cy="30" r="2.4"/><text x="308" y="30" class="etoile-nom">Acrab</text>
-           <circle cx="295" cy="55" r="2.8"/><text x="303" y="56" class="etoile-nom">Dschubba</text>
-           <circle cx="300" cy="80" r="2"/><text x="308" y="82" class="etoile-nom">Pi</text>
+           <!-- tête -->
+           <circle cx="300" cy="35" r="2.4"/><text x="308" y="35" class="etoile-nom">Acrab</text>
+           <circle cx="292" cy="60" r="2.8"/><text x="300" y="61" class="etoile-nom">Dschubba</text>
+           <circle cx="298" cy="88" r="2"/><text x="306" y="90" class="etoile-nom">Fang</text>
            <!-- cœur : Antarès -->
            <circle cx="250" cy="95" r="4.5" class="etoile-phare"/>
            <text x="250" y="86" class="etoile-nom etoile-phare" text-anchor="middle">Antarès</text>
            <!-- objets du ciel profond -->
-           <circle cx="268" cy="105" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="274" y="115" class="etoile-nom">M4</text>
+           <circle cx="268" cy="108" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="274" y="118" class="etoile-nom">M4</text>
            <!-- corps -->
            <circle cx="235" cy="120" r="2"/><circle cx="220" cy="150" r="2"/><circle cx="195" cy="175" r="2"/>
-           <!-- queue en crochet -->
+           <!-- queue en hameçon -->
            <circle cx="165" cy="195" r="2"/>
            <circle cx="135" cy="200" r="2.4"/><text x="135" y="216" class="etoile-nom" text-anchor="middle">Sargas</text>
            <circle cx="110" cy="185" r="2"/>
@@ -270,7 +273,7 @@ const SUJETS = {
            <circle cx="150" cy="165" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="156" y="163" class="etoile-nom">M6</text>
            <circle cx="165" cy="150" r="3" fill="none" stroke="#c9a54a" stroke-width="1"/><text x="171" y="148" class="etoile-nom">M7</text>
          </svg>
-         <figcaption>Le Scorpion : tête (Dschubba, Acrab) en haut, cœur rouge Antarès, queue en crochet jusqu'au dard (Shaula, Lesath). Cercles dorés : amas visibles aux jumelles (M4, M6, M7).</figcaption>
+         <figcaption>Le Scorpion : la tête (arc Acrab, Dschubba, Fang) se relie au cœur rouge Antarès, puis le corps et la queue en hameçon jusqu'au dard (Shaula, Lesath). Cercles dorés : amas visibles aux jumelles (M4, M6, M7).</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, d'une couleur rouge-orangé nette même à l'œil nu. La constellation pointe vers le centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
