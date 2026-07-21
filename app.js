@@ -76,7 +76,7 @@ function pageAccueil() {
       </a>
       <a class="porte" href="#/quiz">
         <h2>Le quiz du ciel</h2>
-        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard parmi ${QUESTIONS_POOL.length}, à chaque partie. Attention aux pièges.</p>
+        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard à chaque partie. Attention aux pièges.</p>
       </a>
     </div>`;
 }
