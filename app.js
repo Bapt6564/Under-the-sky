@@ -66,7 +66,6 @@ document.addEventListener("click", (e) => {
 function pageAccueil() {
   app.innerHTML = `
     <header class="hero">
-      <div class="surtitre">Soirée d'observation</div>
       <h1>Sous les <span class="or">étoiles</span></h1>
       <p class="sous-titre">Le compagnon de la soirée : des histoires du ciel à explorer,<br>et un quiz pour se tester entre deux télescopes.</p>
     </header>
@@ -93,8 +92,8 @@ function pageMemo() {
     </a>`).join("");
   app.innerHTML = `
     <header class="hero">
-      <div class="surtitre">Le mémo</div>
-      <h1>Choisissez un <span class="or">sujet</span></h1>
+      <h1>Choisissez un sujet</h1>
+      <p class="sous-titre">Toutes les fiches, classées par thème.</p>
     </header>
     <div class="sujets">${cartes}</div>`;
 }
@@ -187,7 +186,6 @@ function pageQuizFinal() {
   else c = "Le ciel est plein de surprises, n'est-ce pas ? Bonne nouvelle : les vraies réponses sont juste au-dessus de vos têtes.";
   app.innerHTML = `
     <div class="carte final">
-      <div class="surtitre">Résultat</div>
       <div class="score">${quizEtat.score} / ${total}</div>
       <p>${c}</p>
       <button class="rejouer" id="rejouer">Rejouer</button>
