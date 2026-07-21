@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sous les étoiles — Mémo & Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ciel-haut: #0a0e23;
+    --ciel-bas: #151b3f;
+    --encre: #e9ebf7;
+    --encre-douce: #aab2d8;
+    --or: #f2c14e;
+    --vega: #8fa3e8;
+    --juste: #7fc98f;
+    --faux: #e07a6b;
+    --carte: rgba(21, 27, 63, 0.72);
+    --bord: rgba(143, 163, 232, 0.25);
+    --etoile-pt: #ffffff;
+  }
+  body.mode-rouge {
+    --ciel-haut: #12040a;
+    --ciel-bas: #1c060d;
+    --encre: #f0a0a0;
+    --encre-douce: #a86868;
+    --or: #e06060;
+    --vega: #b05050;
+    --juste: #d08080;
+    --faux: #ff5050;
+    --carte: rgba(30, 8, 14, 0.8);
+    --bord: rgba(176, 80, 80, 0.35);
+    --etoile-pt: #c46060;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: var(--encre);
+    background: linear-gradient(180deg, var(--ciel-haut) 0%, var(--ciel-bas) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: background 0.6s, color 0.6s;
+    overflow-x: hidden;
+  }
+  /* ---------- champ d'étoiles ---------- */
+  .etoiles { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+  .etoile-pt {
+    position: absolute; border-radius: 50%;
+    background: var(--etoile-pt);
+    animation: scintille var(--d, 4s) ease-in-out infinite;
+    opacity: var(--o, 0.7);
+  }
+  @keyframes scintille {
+    0%, 100% { opacity: var(--o, 0.7); }
+    50% { opacity: calc(var(--o, 0.7) * 0.3); }
+  }
+  @media (prefers-reduced-motion: reduce) { .etoile-pt { animation: none; } }
+
+  /* ---------- filtre rouge intégral (façon appli d'astro) ---------- */
+  /* Le contenu est d'abord passé en niveaux de gris, puis un calque
+     rouge en mode "multiply" recouvre tout l'écran : chaque pixel,
+     émojis compris, ne peut plus émettre que de la lumière rouge. */
+  #filtreRouge {
+    position: fixed; inset: 0; z-index: 999;
+    pointer-events: none;
+    background: #ff1e1e;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  body.mode-rouge #filtreRouge { opacity: 1; }
+  body.mode-rouge .barre,
+  body.mode-rouge main,
+  body.mode-rouge footer,
+  body.mode-rouge .etoiles { filter: grayscale(1) brightness(0.9); }
+
+  /* ---------- structure ---------- */
+  main { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 20px 20px 70px; }
+  .barre {
+    position: relative; z-index: 2;
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 680px; margin: 0 auto; padding: 14px 20px 0;
+  }
+  .marque {
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.05rem;
+    color: var(--encre); text-decoration: none;
+  }
+  .marque .or { color: var(--or); }
+  .bouton-rouge {
+    background: var(--carte); color: var(--encre);
+    border: 1px solid var(--bord); border-radius: 999px;
+    padding: 7px 13px; font-family: inherit; font-size: 0.8rem;
+    cursor: pointer; transition: border-color 0.3s;
+  }
+  .bouton-rouge:hover, .bouton-rouge:focus-visible { border-color: var(--or); }
+  .bouton-rouge:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; }
+
+  header.hero { text-align: center; padding: 34px 0 26px; }
+  .surtitre {
+    font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--vega); margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif; font-weight: 700;
+    font-size: clamp(1.9rem, 7vw, 2.7rem); line-height: 1.12;
+  }
+  h1 .or { color: var(--or); font-style: italic; }
+  .sous-titre { color: var(--encre-douce); margin-top: 12px; font-size: 1rem; line-height: 1.5; }
+
+  /* ---------- cartes génériques ---------- */
+  .carte {
+    background: var(--carte); border: 1px solid var(--bord);
+    border-radius: 18px; padding: 24px 22px;
+    backdrop-filter: blur(6px);
+    transition: background 0.6s, border-color 0.6s;
+  }
+
+  /* ---------- accueil ---------- */
+  .portes { display: grid; gap: 14px; margin-top: 8px; }
+  @media (min-width: 560px) { .portes { grid-template-columns: 1fr 1fr; } }
+  .porte {
+    display: block; text-decoration: none; color: var(--encre);
+    background: var(--carte); border: 1px solid var(--bord);
+    border-radius: 18px; padding: 26px 22px;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .porte:hover { border-color: var(--or); transform: translateY(-2px); }
+  .porte .icone { font-size: 1.9rem; }
+  .porte h2 { font-family: 'Fraunces', serif; font-size: 1.35rem; margin: 10px 0 6px; }
+  .porte p { color: var(--encre-douce); font-size: 0.94rem; line-height: 1.5; }
+
+  /* ---------- grille des sujets ---------- */
+  .sujets { display: grid; gap: 12px; margin-top: 6px; }
+  @media (min-width: 560px) { .sujets { grid-template-columns: 1fr 1fr; } }
+  .sujet {
+    display: block; text-decoration: none; color: var(--encre);
+    background: var(--carte); border: 1px solid var(--bord);
+    border-radius: 14px; padding: 18px;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .sujet:hover { border-color: var(--vega); transform: translateY(-2px); }
+  .sujet .icone { font-size: 1.5rem; }
+  .sujet h3 { font-family: 'Fraunces', serif; font-size: 1.12rem; margin: 8px 0 4px; }
+  .sujet p { color: var(--encre-douce); font-size: 0.88rem; line-height: 1.45; }
+
+  /* ---------- page sujet ---------- */
+  .retour {
+    display: inline-block; color: var(--vega); text-decoration: none;
+    font-size: 0.9rem; margin-bottom: 16px;
+  }
+  .retour:hover { color: var(--or); }
+  article .icone-titre { font-size: 2.2rem; }
+  article h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 8px 0 6px; }
+  article .resume {
+    color: var(--encre-douce); font-size: 1.02rem; line-height: 1.55;
+    font-style: italic; margin-bottom: 8px;
+  }
+  article section { margin-top: 26px; }
+  article h2 {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.25rem;
+    color: var(--or); margin-bottom: 10px;
+  }
+  article p { line-height: 1.65; margin-bottom: 12px; font-size: 1rem; }
+  article ul { margin: 0 0 12px 20px; }
+  article li { line-height: 1.6; margin-bottom: 7px; }
+  article strong { color: var(--encre); }
+  article a {
+    color: var(--vega); text-decoration: none;
+    border-bottom: 1px dotted var(--vega);
+  }
+  article a:hover { color: var(--or); border-color: var(--or); }
+  .chiffre-cle {
+    border-left: 3px solid var(--or); border-radius: 0 12px 12px 0;
+    background: rgba(242,193,78,0.07);
+    padding: 13px 16px; margin: 14px 0; line-height: 1.55; font-size: 0.98rem;
+  }
+  .voir-aussi {
+    margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--bord);
+    font-size: 0.94rem; color: var(--encre-douce);
+  }
+  .voir-aussi a { margin-right: 4px; }
+
+  /* ---------- quiz ---------- */
+  .chip {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--or);
+    border: 1px solid var(--bord); border-radius: 999px;
+    padding: 5px 12px; margin-bottom: 16px;
+  }
+  .question {
+    font-family: 'Fraunces', serif; font-weight: 600;
+    font-size: 1.32rem; line-height: 1.35; margin-bottom: 20px;
+  }
+  .reponses { display: grid; gap: 10px; }
+  .reponse {
+    text-align: left; font-family: inherit; font-size: 1rem;
+    color: var(--encre); background: transparent;
+    border: 1px solid var(--bord); border-radius: 12px;
+    padding: 13px 16px; cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .reponse:hover:not(:disabled) { border-color: var(--vega); background: rgba(143,163,232,0.08); }
+  .reponse:disabled { cursor: default; opacity: 0.55; }
+  .reponse.juste { border-color: var(--juste); background: rgba(127,201,143,0.12); opacity: 1; }
+  .reponse.faux { border-color: var(--faux); background: rgba(224,122,107,0.12); opacity: 1; }
+  .explication {
+    margin-top: 18px; padding: 15px 16px;
+    border-left: 3px solid var(--or); border-radius: 0 12px 12px 0;
+    background: rgba(242,193,78,0.06);
+    font-size: 0.97rem; line-height: 1.55;
+  }
+  .explication .verdict { font-weight: 700; display: block; margin-bottom: 6px; }
+  .nav-quiz { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+  .progression { font-size: 0.85rem; color: var(--encre-douce); }
+  .suivant {
+    font-family: inherit; font-size: 1rem; font-weight: 700;
+    color: var(--ciel-haut); background: var(--or);
+    border: none; border-radius: 999px; padding: 11px 24px;
+    cursor: pointer; transition: transform 0.15s; visibility: hidden;
+  }
+  body.mode-rouge .suivant { color: #12040a; }
+  .suivant.visible { visibility: visible; }
+  .suivant:hover { transform: translateY(-1px); }
+  .final { text-align: center; }
+  .final .score {
+    font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 700;
+    color: var(--or); margin: 8px 0 4px;
+  }
+  .final p { color: var(--encre-douce); line-height: 1.6; margin-top: 10px; }
+  .rejouer {
+    margin-top: 20px; font-family: inherit; font-size: 1rem; font-weight: 700;
+    color: var(--encre); background: transparent;
+    border: 1px solid var(--bord); border-radius: 999px; padding: 11px 24px; cursor: pointer;
+  }
+  .rejouer:hover { border-color: var(--or); }
+
+  footer {
+    position: relative; z-index: 1; text-align: center;
+    padding: 0 20px 30px; font-size: 0.8rem; color: var(--encre-douce);
+  }
+</style>
+</head>
+<body>
+<div id="filtreRouge" aria-hidden="true"></div>
+<div class="etoiles" id="etoiles" aria-hidden="true"></div>
+
+<div class="barre">
+  <a class="marque" href="#/">Sous les <span class="or">étoiles</span></a>
+  <button class="bouton-rouge" id="boutonRouge" aria-pressed="false">🔴 Mode nuit</button>
+</div>
+
+<main id="app"></main>
+
+<footer>Le mode nuit rouge préserve la vision nocturne — vos yeux mettent 20 minutes à s'habituer à l'obscurité.</footer>
+
+<script>
+/* =====================================================================
+   LES SUJETS DU MÉMO
+   ---------------------------------------------------------------------
+   ➕ POUR AJOUTER UN SUJET : copiez un bloc entre accolades { ... },
+   changez le slug (l'identifiant entre guillemets, sans espaces ni
+   accents), le titre, l'icône, le résumé et les sections.
+   ➕ POUR FAIRE UN LIEN INTERNE vers un autre sujet, écrivez dans le
+   texte : <a href="#/memo/slug-du-sujet">texte du lien</a>
+   Les sections acceptent du HTML : <strong>, <ul><li>, etc.
+   La classe "chiffre-cle" met un paragraphe en évidence (encadré doré).
+   ===================================================================== */
+const SUJETS = {
+
+  "alcor-mizar": {
+    titre: "Alcor & Mizar",
+    icone: "👁️",
+    resume: "Le plus vieux test de vue de l'humanité, caché dans le manche de la Grande Casserole.",
+    sections: [
+      `<h2>Le test de vue des anciens</h2>
+       <p>Regardez la deuxième étoile du manche de la Grande Ourse : c'est <strong>Mizar</strong>. Juste à côté, une étoile plus faible : <strong>Alcor</strong>. Chez les Arabes du Moyen Âge comme chez les Romains, distinguer les deux à l'œil nu était un test de bonne vue — on l'appelait « le cavalier et son cheval ».</p>`,
+      `<h2>La surprise au télescope</h2>
+       <p>Pointez un <a href="#/memo/types-telescopes">télescope</a> sur Mizar : elle se dédouble ! Mizar fut la <strong>première étoile double découverte au télescope</strong> (vers 1617). Et ce n'est pas fini : chacune de ces deux étoiles est elle-même double, et Alcor aussi.</p>
+       <div class="chiffre-cle">Ce point de lumière est en réalité un système de <strong>6 étoiles</strong> liées par la gravité, à environ 80 années-lumière de nous.</div>`,
+      `<h2>À raconter au public</h2>
+       <ul>
+         <li>Faire faire le test à l'œil nu avant de montrer le télescope — effet garanti quand Mizar se dédouble.</li>
+         <li>La lumière qu'on reçoit ce soir est partie il y a ~80 ans : demander aux gens ce qui se passait sur Terre à l'époque.</li>
+         <li>La majorité des étoiles de la Galaxie vivent en couple ou en famille — notre Soleil solitaire est plutôt l'exception.</li>
+       </ul>`
+    ],
+    voirAussi: ["types-telescopes", "cycle-vie-etoiles"]
+  },
+
+  "iss": {
+    titre: "La Station spatiale internationale",
+    icone: "🛰️",
+    resume: "Le troisième objet le plus brillant du ciel est habité — et il passe peut-être ce soir.",
+    sections: [
+      `<h2>Une maison en orbite</h2>
+       <p>L'ISS est habitée <strong>en permanence depuis novembre 2000</strong> : depuis cette date, il y a toujours eu des humains dans l'espace. Grande comme un terrain de football, elle tourne à environ <strong>400 km</strong> d'altitude — la distance Paris–Lyon, mais à la verticale.</p>
+       <div class="chiffre-cle">Vitesse : <strong>28 000 km/h</strong>, soit un tour de la Terre en 90 minutes. Les astronautes voient <strong>16 levers de soleil par jour</strong>.</div>`,
+      `<h2>Comment la repérer</h2>
+       <ul>
+         <li>Un point très brillant qui <strong>glisse lentement</strong> et régulièrement, sans clignoter (ce qui clignote, c'est un avion).</li>
+         <li>Visible seulement en début ou fin de nuit : il faut qu'elle soit éclairée par le Soleil pendant que nous sommes dans l'ombre.</li>
+         <li>Quand elle entre dans l'ombre de la Terre, elle rougit puis <strong>s'éteint en quelques secondes</strong> — spectaculaire.</li>
+         <li>Les passages se prévoient à la minute près (heavens-above.com, appli Spot the Station) : à vérifier avant chaque soirée.</li>
+       </ul>`,
+      `<h2>Bon à savoir</h2>
+       <p>À bord, la gravité n'est pas nulle : elle vaut ~90 % de celle au sol ! Les astronautes flottent parce qu'ils sont en <strong>chute libre permanente</strong> — la station tombe autour de la Terre sans jamais la toucher. C'est aussi ce qui arrive à la Lune.</p>`
+    ],
+    voirAussi: []
+  },
+
+  "m13": {
+    titre: "Le grand amas d'Hercule (M13)",
+    icone: "✨",
+    resume: "Une boule de 300 000 étoiles presque aussi vieilles que l'Univers.",
+    sections: [
+      `<h2>Une ruche d'étoiles</h2>
+       <p>Dans la constellation d'Hercule, ce petit flocon flou au télescope est un <strong>amas globulaire</strong> : environ <strong>300 000 étoiles</strong> serrées dans une sphère de 150 années-lumière, à ~23 000 années-lumière de nous. Au centre, les étoiles sont des centaines de fois plus proches les unes des autres que dans notre voisinage : là-bas, la nuit n'existe presque pas.</p>`,
+      `<h2>Des fossiles du ciel</h2>
+       <p>Ses étoiles ont environ <strong>12 milliards d'années</strong> — presque l'âge de l'Univers. Ce sont des survivantes de la petite enfance de la Galaxie, qui n'ont jamais explosé car les étoiles peu massives <a href="#/memo/cycle-vie-etoiles">vivent très longtemps</a>. La Voie lactée compte ~150 amas globulaires en orbite autour d'elle, comme des abeilles autour de la ruche.</p>`,
+      `<h2>Le message d'Arecibo</h2>
+       <p>En 1974, le radiotélescope d'Arecibo a envoyé vers M13 un message décrivant l'humanité : notre ADN, notre système solaire, notre silhouette. Réponse au plus tôt dans… <strong>46 000 ans</strong>. C'était surtout un geste symbolique — et une belle façon de parler des distances.</p>`
+    ],
+    voirAussi: ["cycle-vie-etoiles", "types-telescopes"]
+  },
+
+  "trous-noirs": {
+    titre: "Les trous noirs",
+    icone: "🕳️",
+    resume: "Ni trous, ni aspirateurs cosmiques : des astres si denses que même la lumière n'en sort pas.",
+    sections: [
+      `<h2>C'est quoi, au juste ?</h2>
+       <p>Un trou noir, c'est de la matière tellement comprimée que sa gravité empêche tout de s'échapper, <strong>même la lumière</strong>. La frontière de non-retour s'appelle <strong>l'horizon des événements</strong>. Pour transformer la Terre en trou noir, il faudrait la compresser à la taille… d'une bille de 2 cm.</p>`,
+      `<h2>Non, ils n'aspirent pas tout</h2>
+       <p>Idée reçue tenace ! Si le Soleil devenait un trou noir de même masse, la Terre <strong>continuerait exactement la même orbite</strong> (il ferait juste très froid et très noir). Un trou noir n'attire pas plus qu'une étoile de même masse — il faut vraiment s'en approcher pour être en danger.</p>`,
+      `<h2>D'où viennent-ils ?</h2>
+       <p>Les trous noirs « ordinaires » naissent à la <a href="#/memo/cycle-vie-etoiles">mort des étoiles très massives</a>, quand le cœur s'effondre sur lui-même. Mais il existe aussi des <strong>trous noirs supermassifs</strong> au centre des galaxies : le nôtre, Sagittarius A*, pèse 4 millions de Soleils.</p>
+       <div class="chiffre-cle">On les a longtemps « vus » indirectement (étoiles qui orbitent autour de rien, gaz surchauffé). Depuis <strong>2019</strong>, on a de vraies images de leur silhouette, et depuis <strong>2015</strong> on les « entend » fusionner grâce aux ondes gravitationnelles.</div>`,
+      `<h2>La question qui revient toujours</h2>
+       <p>« Que se passe-t-il si on tombe dedans ? » Près d'un petit trou noir, la gravité tire tellement plus fort sur les pieds que sur la tête qu'on serait étiré comme un spaghetti — le terme scientifique est vraiment <strong>« spaghettification »</strong>. Vu de dehors, paradoxe : on verrait la personne ralentir et se figer pour toujours sur l'horizon.</p>`
+    ],
+    voirAussi: ["cycle-vie-etoiles"]
+  },
+
+  "cycle-vie-etoiles": {
+    titre: "Le cycle de vie d'une étoile",
+    icone: "⭐",
+    resume: "De nuage de gaz à naine blanche, étoile à neutrons ou trou noir — et nous au milieu.",
+    sections: [
+      `<h2>1. La naissance</h2>
+       <p>Tout commence par un nuage de gaz et de poussière qui s'effondre sous sa propre gravité. Quand le cœur atteint ~10 millions de degrés, la <strong>fusion de l'hydrogène s'allume</strong> : une étoile est née. La nébuleuse d'Orion, visible l'hiver, est une pouponnière où ça se passe en ce moment.</p>`,
+      `<h2>2. La vie adulte : un bras de fer</h2>
+       <p>Toute la vie d'une étoile est un équilibre entre la <strong>gravité</strong> qui la comprime et la <strong>pression de la fusion</strong> qui la gonfle. Le Soleil transforme 600 millions de tonnes d'hydrogène en hélium <em>chaque seconde</em>, et il tiendra 10 milliards d'années au total.</p>
+       <div class="chiffre-cle">Le paradoxe à retenir : <strong>plus une étoile est massive, plus elle vit court</strong>. Les géantes brûlent tout en quelques millions d'années ; les petites naines rouges vivront des centaines de milliards d'années.</div>`,
+      `<h2>3. Fin de vie des étoiles comme le Soleil</h2>
+       <p>À court d'hydrogène, l'étoile gonfle en <strong>géante rouge</strong> (le Soleil avalera Mercure et Vénus), souffle ses couches externes en une <strong>nébuleuse planétaire</strong> (M57, l'anneau de la Lyre, en est une superbe au télescope), et son cœur devient une <strong>naine blanche</strong> : une étoile morte de la taille de la Terre.</p>`,
+      `<h2>4. Fin de vie des étoiles massives</h2>
+       <p>Les plus massives finissent en <strong>supernova</strong> : pendant quelques semaines, une seule étoile brille comme une galaxie entière. Le cœur devient une <strong>étoile à neutrons</strong> (une cuillère à café pèserait un milliard de tonnes) ou, pour les plus massives, un <a href="#/memo/trous-noirs">trou noir</a>.</p>`,
+      `<h2>5. Et nous dans tout ça</h2>
+       <p>Le Big Bang n'a fabriqué que de l'hydrogène et de l'hélium. Le carbone, l'oxygène, le calcium, le fer de notre corps ont été <strong>forgés au cœur d'étoiles</strong> puis dispersés par leurs explosions, avant de former le Soleil, la Terre… et nous. <strong>Nous sommes littéralement des poussières d'étoiles.</strong></p>`
+    ],
+    voirAussi: ["trous-noirs", "m13", "alcor-mizar"]
+  },
+
+  "types-telescopes": {
+    titre: "Les types de télescopes",
+    icone: "🔭",
+    resume: "Lentilles ou miroirs ? Ce qui compte, ce n'est pas le grossissement : c'est le diamètre.",
+    sections: [
+      `<h2>Deux grandes familles</h2>
+       <ul>
+         <li><strong>La lunette (réfracteur)</strong> : des lentilles, comme celle de Galilée en 1609. Images très contrastées, idéale pour la Lune et les planètes, mais chère au-delà de 10 cm de diamètre.</li>
+         <li><strong>Le télescope (réflecteur)</strong> : un miroir au fond du tube, inventé par Newton en 1668. C'est la formule de tous les grands instruments — beaucoup de diamètre pour beaucoup moins cher.</li>
+       </ul>
+       <p>Le fameux <strong>Dobson</strong>, star des soirées publiques, est un télescope de Newton posé sur une monture ultra-simple : tout le budget passe dans le miroir.</p>`,
+      `<h2>Ce qui compte vraiment : le diamètre</h2>
+       <p>Un télescope est avant tout un <strong>entonnoir à lumière</strong>. Plus le miroir est grand, plus on capte de lumière et de détails. Le grossissement, lui, se change simplement avec l'oculaire — et trop grossir ne donne qu'une image sombre et floue.</p>
+       <div class="chiffre-cle">Un miroir de 200 mm collecte environ <strong>800 fois plus de lumière que l'œil</strong> : c'est ce qui rend visibles les nébuleuses et les <a href="#/memo/m13">amas d'étoiles</a>.</div>`,
+      `<h2>Pourquoi l'image est à l'envers ?</h2>
+       <p>Question favorite du public ! Optiquement, l'image est renversée, et on ne la redresse pas exprès : chaque lentille ajoutée mange de la lumière, et dans l'espace… il n'y a ni haut ni bas.</p>`,
+      `<h2>Et les télescopes géants</h2>
+       <p>Les observatoires professionnels utilisent des miroirs de 8 à 40 mètres, souvent en segments, installés en altitude pour fuir la turbulence de l'air. Et le télescope spatial James-Webb observe depuis l'espace, avec son miroir doré de 6,5 m, à 1,5 million de km de la Terre.</p>`
+    ],
+    voirAussi: ["alcor-mizar", "m13"]
+  }
+};
+
+/* =====================================================================
+   LES QUESTIONS DU QUIZ
+   ---------------------------------------------------------------------
+   ➕ POUR AJOUTER UNE QUESTION : copiez un bloc { ... },
+   - cat : la catégorie affichée au-dessus de la question
+   - q : la question
+   - r : les propositions (2 à 4) — pensez à en glisser une décalée !
+   - bonne : la position de la bonne réponse (0 = première, 1 = deuxième…)
+   - e : l'explication affichée après la réponse
+   ===================================================================== */
+const QUESTIONS = [
+  {
+    cat: "Lumière", q: "Combien de temps met la lumière du Soleil pour arriver jusqu'à nous ?",
+    r: ["Aucun, c'est instantané", "8 minutes", "8 heures", "Le temps de cuire une pizza"],
+    bonne: 1,
+    e: "8 minutes et 20 secondes (une pizza, c'est 12 minutes : la lumière gagne). Vous voyez donc le Soleil tel qu'il était il y a 8 minutes — regarder loin, c'est regarder dans le passé."
+  },
+  {
+    cat: "Étoiles filantes", q: "Une étoile filante, c'est…",
+    r: ["Une étoile qui tombe", "Une étoile qui a raté une marche", "Un grain de poussière qui brûle", "Un satellite pressé"],
+    bonne: 2,
+    e: "Un simple grain de poussière, souvent plus petit qu'un petit pois, qui entre dans l'atmosphère à ~60 km/s et se consume. Les grandes « pluies » ? La Terre traverse le sillage poussiéreux d'une comète."
+  },
+  {
+    cat: "Saturne", q: "Les anneaux de Saturne font 280 000 km de large. Et en épaisseur ?",
+    r: ["Quelques dizaines de mètres", "Quelques milliers de kilomètres", "C'est un disque plein", "C'est un autocollant sur le télescope"],
+    bonne: 0,
+    e: "Quelques dizaines de mètres par endroits : proportionnellement plus fins qu'une feuille de papier. Des milliards de blocs de glace en orbite, du grain de sable à la maison. Et non, ce n'est pas un autocollant — on nous pose vraiment la question."
+  },
+  {
+    cat: "La Lune", q: "Combien d'humains ont marché sur la Lune ?",
+    r: ["2", "12", "27", "Aucun, c'était un plateau de cinéma"],
+    bonne: 1,
+    e: "Douze, entre 1969 et 1972. Et pour les amateurs de plateau de cinéma : les réflecteurs laser déposés là-haut permettent encore aujourd'hui de mesurer la distance Terre-Lune au centimètre près."
+  },
+  {
+    cat: "Planètes", q: "La très brillante « étoile du Berger », c'est en fait…",
+    r: ["La planète Vénus", "Sirius", "L'étoile d'un berger nommé Gérard", "L'étoile polaire"],
+    bonne: 0,
+    e: "C'est Vénus, qui ne produit aucune lumière : elle réfléchit celle du Soleil. Si brillante qu'on la signale régulièrement comme OVNI. Sous ses jolis nuages : 460 °C et des pluies d'acide."
+  },
+  {
+    cat: "Trous noirs", q: "Si le Soleil devenait un trou noir de même masse, la Terre serait…",
+    r: ["Aspirée immédiatement", "Éjectée du système solaire", "Tranquille sur la même orbite", "Transformée en spaghetti"],
+    bonne: 2,
+    e: "Elle continuerait exactement la même orbite ! Un trou noir n'attire pas plus qu'une étoile de même masse — ce n'est pas un aspirateur. Le spaghetti, c'est réservé à ceux qui s'approchent vraiment trop près."
+  },
+  {
+    cat: "Étoiles", q: "Une étoile bleue est…",
+    r: ["Plus froide qu'une rouge", "Plus chaude qu'une rouge", "Triste", "Toujours plus petite"],
+    bonne: 1,
+    e: "Comme un métal qu'on chauffe : rouge d'abord, puis blanc, puis bleu. Une étoile bleue dépasse les 10 000 °C en surface, une rouge plafonne vers 3 000 °C. Le bleu, ici, c'est la fournaise."
+  },
+  {
+    cat: "ISS", q: "À quelle vitesse file la Station spatiale internationale ?",
+    r: ["130 km/h, elle respecte les limitations", "900 km/h, comme un avion", "28 000 km/h", "À la vitesse de la lumière"],
+    bonne: 2,
+    e: "28 000 km/h : un tour de la Terre en 90 minutes, 16 levers de soleil par jour pour les astronautes. Aucun radar ne l'a jamais flashée."
+  },
+  {
+    cat: "Nous", q: "Le fer de votre sang a été fabriqué…",
+    r: ["Au cœur d'étoiles disparues", "Dans le noyau de la Terre", "Pendant le Big Bang", "Dans une usine en Lorraine"],
+    bonne: 0,
+    e: "Le Big Bang n'a produit que de l'hydrogène et de l'hélium. Tout le reste — carbone, oxygène, calcium, fer — a été forgé dans des étoiles puis dispersé par leurs explosions. Nous sommes littéralement des poussières d'étoiles (désolé pour la Lorraine)."
+  },
+  {
+    cat: "Repères", q: "L'étoile polaire est…",
+    r: ["La plus brillante du ciel", "Environ la 50e plus brillante", "Invisible à l'œil nu", "Une ampoule très haute"],
+    bonne: 1,
+    e: "Idée reçue ! Elle n'est qu'environ 50e. Son vrai talent : l'axe de la Terre pointe vers elle, donc elle indique le nord et ne bouge presque pas de la nuit. La plus brillante, c'est Sirius."
+  },
+  {
+    cat: "Voie lactée", q: "La grande bande laiteuse qui traverse le ciel par nuit noire, c'est…",
+    r: ["Des nuages d'altitude", "Notre galaxie vue de l'intérieur", "Du lait renversé par une déesse", "La trace d'un avion géant"],
+    bonne: 1,
+    e: "Notre propre galaxie vue par la tranche : la lumière cumulée de milliards d'étoiles trop faibles pour être vues une à une. Cela dit, le lait renversé n'est pas si faux : le mythe grec raconte que c'est le lait de la déesse Héra — d'où le mot « galaxie », du grec gala, le lait."
+  },
+  {
+    cat: "Étoiles", q: "Plus une étoile est massive…",
+    r: ["Plus elle vit longtemps", "Plus elle vit court", "Plus elle est paresseuse", "Sa masse ne change rien"],
+    bonne: 1,
+    e: "Les étoiles massives dévorent leur carburant à toute vitesse : quelques millions d'années à peine avant d'exploser en supernova. Les petites naines rouges, économes, vivront des centaines de milliards d'années. Vivre vite ou vivre longtemps, il faut choisir."
+  }
+];
+
+/* ============================ MOTEUR ============================ */
+/* La navigation est gérée en JavaScript : les liens internes
+   (href="#/...") sont interceptés, donc tout fonctionne aussi bien
+   hébergé sur GitHub Pages qu'ouvert dans un environnement qui bloque
+   la navigation par liens (aperçu d'application, iframe...). */
+const app = document.getElementById("app");
+let quizEtat = { index: 0, score: 0, repondu: false };
+let routeActuelle = "";
+
+function afficher(route) {
+  routeActuelle = route;
+  window.scrollTo(0, 0);
+  if (route === "") return pageAccueil();
+  if (route === "memo") return pageMemo();
+  if (route.startsWith("memo/")) {
+    const slug = route.slice(5);
+    if (SUJETS[slug]) return pageSujet(slug);
+    return pageMemo();
+  }
+  if (route === "quiz") { quizEtat = { index: 0, score: 0, repondu: false }; return pageQuiz(); }
+  pageAccueil();
+}
+
+function naviguer(route) {
+  try {
+    if (location.hash.replace(/^#\/?/, "") !== route) {
+      history.pushState(null, "", "#/" + route);
+    }
+  } catch (e) { /* environnement qui bloque l'historique : on ignore */ }
+  afficher(route);
+}
+
+/* Intercepte les clics sur tous les liens internes href="#/..." */
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#/"]');
+  if (!a) return;
+  e.preventDefault();
+  naviguer(a.getAttribute("href").replace(/^#\/?/, ""));
+});
+
+function pageAccueil() {
+  app.innerHTML = `
+    <header class="hero">
+      <div class="surtitre">Soirée d'observation</div>
+      <h1>Sous les <span class="or">étoiles</span></h1>
+      <p class="sous-titre">Le compagnon de la soirée : des histoires du ciel à explorer,<br>et un quiz pour se tester entre deux télescopes.</p>
+    </header>
+    <div class="portes">
+      <a class="porte" href="#/memo">
+        <div class="icone">📖</div>
+        <h2>Le mémo</h2>
+        <p>Les objets et les idées du ciel, sujet par sujet : distances, records, histoires et idées reçues.</p>
+      </a>
+      <a class="porte" href="#/quiz">
+        <div class="icone">🌠</div>
+        <h2>Le quiz du ciel</h2>
+        <p>${QUESTIONS.length} questions pour tester ce que vous croyez savoir. Attention aux pièges.</p>
+      </a>
+    </div>`;
+}
+
+function pageMemo() {
+  const cartes = Object.entries(SUJETS).map(([slug, s]) => `
+    <a class="sujet" href="#/memo/${slug}">
+      <div class="icone">${s.icone}</div>
+      <h3>${s.titre}</h3>
+      <p>${s.resume}</p>
+    </a>`).join("");
+  app.innerHTML = `
+    <header class="hero">
+      <div class="surtitre">Le mémo</div>
+      <h1>Choisissez un <span class="or">sujet</span></h1>
+    </header>
+    <div class="sujets">${cartes}</div>`;
+}
+
+function pageSujet(slug) {
+  const s = SUJETS[slug];
+  const voirAussi = (s.voirAussi || []).filter(v => SUJETS[v]);
+  const liens = voirAussi.length
+    ? `<div class="voir-aussi">Voir aussi : ${voirAussi.map(v =>
+        `<a href="#/memo/${v}">${SUJETS[v].icone} ${SUJETS[v].titre}</a>`).join(" · ")}</div>`
+    : "";
+  app.innerHTML = `
+    <a class="retour" href="#/memo">← Tous les sujets</a>
+    <article class="carte">
+      <div class="icone-titre">${s.icone}</div>
+      <h1>${s.titre}</h1>
+      <p class="resume">${s.resume}</p>
+      ${s.sections.map(sec => `<section>${sec}</section>`).join("")}
+      ${liens}
+    </article>`;
+}
+
+function pageQuiz() {
+  if (quizEtat.index >= QUESTIONS.length) return pageQuizFinal();
+  const q = QUESTIONS[quizEtat.index];
+  app.innerHTML = `
+    <a class="retour" href="#/">← Accueil</a>
+    <div class="carte">
+      <span class="chip">${q.cat}</span>
+      <div class="question">${q.q}</div>
+      <div class="reponses" id="reponses"></div>
+      <div id="zoneExplication"></div>
+      <div class="nav-quiz">
+        <span class="progression">Question ${quizEtat.index + 1} / ${QUESTIONS.length}</span>
+        <button class="suivant" id="suivant">${quizEtat.index === QUESTIONS.length - 1 ? "Voir mon résultat →" : "Suivant →"}</button>
+      </div>
+    </div>`;
+  const zone = document.getElementById("reponses");
+  q.r.forEach((texte, i) => {
+    const b = document.createElement("button");
+    b.className = "reponse";
+    b.textContent = texte;
+    b.addEventListener("click", () => repondre(i, b, q));
+    zone.appendChild(b);
+  });
+  document.getElementById("suivant").addEventListener("click", () => {
+    quizEtat.index++;
+    quizEtat.repondu = false;
+    pageQuiz();
+  });
+}
+
+function repondre(i, bouton, q) {
+  if (quizEtat.repondu) return;
+  quizEtat.repondu = true;
+  document.querySelectorAll(".reponse").forEach((b, j) => {
+    b.disabled = true;
+    if (j === q.bonne) b.classList.add("juste");
+  });
+  const juste = i === q.bonne;
+  if (juste) quizEtat.score++;
+  else bouton.classList.add("faux");
+  document.getElementById("zoneExplication").innerHTML = `
+    <div class="explication" aria-live="polite">
+      <span class="verdict">${juste ? "✦ Exact !" : "✦ Pas tout à fait…"}</span>${q.e}
+    </div>`;
+  document.getElementById("suivant").classList.add("visible");
+}
+
+function pageQuizFinal() {
+  const ratio = quizEtat.score / QUESTIONS.length;
+  let c;
+  if (ratio === 1) c = "Sans faute ! Il ne vous reste plus qu'à passer de l'autre côté du télescope.";
+  else if (ratio >= 0.7) c = "Très beau score — le ciel n'a presque plus de secrets pour vous. Presque.";
+  else if (ratio >= 0.4) c = "Pas mal du tout. Le ciel est plein de pièges, c'est bien pour ça qu'il est intéressant.";
+  else c = "Le ciel est plein de surprises, n'est-ce pas ? Bonne nouvelle : les vraies réponses sont juste au-dessus de vos têtes.";
+  app.innerHTML = `
+    <div class="carte final">
+      <div class="surtitre">Résultat</div>
+      <div class="score">${quizEtat.score} / ${QUESTIONS.length}</div>
+      <p>${c}</p>
+      <button class="rejouer" id="rejouer">Rejouer</button>
+      <p style="margin-top:16px"><a class="retour" href="#/memo" style="margin:0">Explorer le mémo →</a></p>
+    </div>`;
+  document.getElementById("rejouer").addEventListener("click", () => {
+    quizEtat = { index: 0, score: 0, repondu: false };
+    pageQuiz();
+  });
+}
+
+/* ---------- mode nuit rouge ---------- */
+const btnRouge = document.getElementById("boutonRouge");
+btnRouge.addEventListener("click", () => {
+  const actif = document.body.classList.toggle("mode-rouge");
+  btnRouge.setAttribute("aria-pressed", String(actif));
+  btnRouge.textContent = actif ? "⭐ Mode normal" : "🔴 Mode nuit";
+});
+
+/* ---------- champ d'étoiles ---------- */
+(function () {
+  const conteneur = document.getElementById("etoiles");
+  for (let i = 0; i < 90; i++) {
+    const e = document.createElement("div");
+    e.className = "etoile-pt";
+    const taille = Math.random() < 0.85 ? 1.5 : 2.5;
+    e.style.width = e.style.height = taille + "px";
+    e.style.left = Math.random() * 100 + "%";
+    e.style.top = Math.random() * 100 + "%";
+    e.style.setProperty("--d", (3 + Math.random() * 5).toFixed(1) + "s");
+    e.style.setProperty("--o", (0.3 + Math.random() * 0.6).toFixed(2));
+    e.style.animationDelay = (Math.random() * 5).toFixed(1) + "s";
+    conteneur.appendChild(e);
+  }
+})();
+
+/* Boutons précédent/suivant du navigateur (sur GitHub Pages) */
+function routeDepuisUrl() { return location.hash.replace(/^#\/?/, ""); }
+window.addEventListener("hashchange", () => afficher(routeDepuisUrl()));
+window.addEventListener("popstate", () => afficher(routeDepuisUrl()));
+
+afficher(routeDepuisUrl());
+</script>
+</body>
+</html>
