@@ -224,22 +224,38 @@ const SUJETS = {
     titre: "Antarès et le Scorpion",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Antar%C3%A8s",
-    resume: "Une supergéante rouge qui rivalise avec Mars — au cœur d'une constellation en forme d'hameçon.",
+    conte: "orion-scorpion",
+    resume: "Supergéante rouge, cœur du Scorpion.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+           <polyline points="40,30 70,45 100,55 135,75 150,105 155,135 140,160 115,170 95,158 100,140"
+                     fill="none" stroke="#8fa3e8" stroke-width="1" stroke-opacity="0.5"/>
+           <circle cx="40" cy="30" r="2"/><circle cx="70" cy="45" r="2"/><circle cx="100" cy="55" r="2"/>
+           <circle cx="135" cy="75" r="4" class="etoile-phare"/>
+           <circle cx="150" cy="105" r="2"/><circle cx="155" cy="135" r="2"/>
+           <circle cx="140" cy="160" r="2"/><circle cx="115" cy="170" r="3"/>
+           <circle cx="95" cy="158" r="2"/><circle cx="100" cy="140" r="2"/>
+           <text x="135" y="70" class="etoile-nom etoile-phare" text-anchor="middle">Antarès</text>
+           <text x="112" y="182" class="etoile-nom" text-anchor="middle">Shaula</text>
+           <circle cx="40" cy="30" r="2" fill="#e9ebf7"/>
+         </svg>
+         <figcaption>Le Scorpion : Antarès (en or) au cœur, la queue recourbée jusqu'au dard.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
-       <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, avec une couleur rouge-orangé nette même à l'œil nu. La constellation se trouve dans la direction du centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
+       <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, d'une couleur rouge-orangé nette même à l'œil nu. La constellation pointe vers le centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">
          Distance : ~550 années-lumière<br>
          Température : ~3 400 °C seulement (d'où le rouge)<br>
-         Taille : ~700 fois le rayon du Soleil — à la place du Soleil, elle engloberait l'orbite de Mars<br>
-         Masse : ~15 fois celle du Soleil · Âge : ~11 millions d'années
+         Taille : ~700 fois le rayon du Soleil (à la place du Soleil, elle engloberait l'orbite de Mars)<br>
+         Masse : ~15 fois celle du Soleil. Âge : ~11 millions d'années
        </div>`,
       `<h2>Une étoile en fin de vie</h2>
-       <p>Antarès est une <strong>supergéante rouge</strong> : une étoile massive arrivée en toute fin de vie, qui a gonflé jusqu'à une taille démesurée. Malgré son volume gigantesque, sa surface est relativement froide (~3 400 °C), ce qui explique sa couleur. Elle explosera un jour en <a href="#/memo/cycle-vie-etoiles">supernova</a>, comme sa cousine Bételgeuse dans Orion. Elle possède aussi une étoile compagnon, plus petite et bleutée, ce qui en fait un système double.</p>`,
+       <p>Antarès est une <strong>supergéante rouge</strong> : une étoile massive arrivée en toute fin de vie, qui a gonflé jusqu'à une taille démesurée. Malgré son volume gigantesque, sa surface est relativement froide (~3 400 °C), ce qui explique sa couleur. Elle explosera un jour en <a href="#/memo/cycle-vie-etoiles">supernova</a>, comme sa cousine Bételgeuse dans Orion. Elle possède aussi une étoile compagnon plus petite et bleutée : c'est un système double.</p>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Son nom vient du grec <strong>« Anti-Arès »</strong> : « la rivale de Mars ». Les astronomes grecs comparaient déjà sa couleur rouge à celle de la planète, avec laquelle on peut la confondre quand Mars passe dans les parages.</li>
+         <li>Son nom vient du grec <strong>Anti-Arès</strong>, «&nbsp;la rivale de Mars&nbsp;». Les astronomes grecs comparaient déjà sa couleur rouge à celle de la planète, avec laquelle on peut la confondre quand Mars passe dans les parages.</li>
          <li>La queue recourbée du Scorpion se termine par deux étoiles, <strong>Shaula</strong> et <strong>Lesath</strong>, qui marquent le dard prêt à piquer.</li>
        </ul>`
     ],
