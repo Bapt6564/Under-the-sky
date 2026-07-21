@@ -228,19 +228,29 @@ const SUJETS = {
     resume: "Supergéante rouge, cœur du Scorpion.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-           <polyline points="40,30 70,45 100,55 135,75 150,105 155,135 140,160 115,170 95,158 100,140"
-                     fill="none" stroke="#8fa3e8" stroke-width="1" stroke-opacity="0.5"/>
-           <circle cx="40" cy="30" r="2"/><circle cx="70" cy="45" r="2"/><circle cx="100" cy="55" r="2"/>
-           <circle cx="135" cy="75" r="4" class="etoile-phare"/>
-           <circle cx="150" cy="105" r="2"/><circle cx="155" cy="135" r="2"/>
-           <circle cx="140" cy="160" r="2"/><circle cx="115" cy="170" r="3"/>
-           <circle cx="95" cy="158" r="2"/><circle cx="100" cy="140" r="2"/>
-           <text x="135" y="70" class="etoile-nom etoile-phare" text-anchor="middle">Antarès</text>
-           <text x="112" y="182" class="etoile-nom" text-anchor="middle">Shaula</text>
-           <circle cx="40" cy="30" r="2" fill="#e9ebf7"/>
+         <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg">
+           <!-- tracé du Scorpion : tête en haut, corps descendant, queue recourbée vers le dard -->
+           <polyline points="60,35 78,50 95,42 112,80 120,120 135,160 160,185 195,195 225,180 235,150 220,125 200,120"
+                     fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.45"/>
+           <!-- tête (trois étoiles alignées) -->
+           <circle cx="60" cy="35" r="2.3"/><text x="52" y="30" class="etoile-nom" text-anchor="end">Acrab</text>
+           <circle cx="78" cy="50" r="2.8"/><text x="78" y="66" class="etoile-nom" text-anchor="middle">Dschubba</text>
+           <circle cx="95" cy="42" r="2"/>
+           <!-- cœur : Antarès -->
+           <circle cx="112" cy="80" r="4.5" class="etoile-phare"/>
+           <text x="122" y="80" class="etoile-nom etoile-phare">Antarès</text>
+           <!-- corps -->
+           <circle cx="120" cy="120" r="2"/><circle cx="135" cy="160" r="2"/>
+           <!-- coude de la queue -->
+           <circle cx="160" cy="185" r="2"/><circle cx="195" cy="195" r="2"/>
+           <circle cx="225" cy="180" r="2.3"/><text x="233" y="178" class="etoile-nom">Sargas</text>
+           <!-- dard -->
+           <circle cx="235" cy="150" r="2.3"/>
+           <circle cx="220" cy="125" r="3" class="etoile-phare"/>
+           <text x="228" y="120" class="etoile-nom">Shaula</text>
+           <circle cx="200" cy="120" r="2"/><text x="198" y="112" class="etoile-nom" text-anchor="end">Lesath</text>
          </svg>
-         <figcaption>Le Scorpion : Antarès (en or) au cœur, la queue recourbée jusqu'au dard.</figcaption>
+         <figcaption>Le Scorpion : de la tête (Dschubba) au cœur rouge (Antarès), puis la queue recourbée jusqu'au dard (Shaula, Lesath).</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, d'une couleur rouge-orangé nette même à l'œil nu. La constellation pointe vers le centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
