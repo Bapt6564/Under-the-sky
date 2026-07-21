@@ -4,7 +4,7 @@ Application web pour les soirées d'observation : un **mémo** pour les
 animateurs (une fiche par sujet) et un **quiz** pour le public (10
 questions tirées au hasard à chaque partie).
 
-👉 **Voir le site en ligne :** `https://bapt6564.github.io/Under-the-sky/`
+👉 **Voir le site en ligne :** `https://VOTRE-PSEUDO.github.io/NOM-DU-DEPOT/`
 *(à activer une fois, voir plus bas)*
 
 ---
@@ -17,6 +17,7 @@ style.css       → toute l'apparence (couleurs, mise en page, mode nuit rouge)
 sujets.js       → 📖 LE CONTENU DU MÉMO — c'est ici que vous ajoutez des sujets
 questions.js    → 🌠 LA RÉSERVE DE QUESTIONS DU QUIZ — c'est ici que vous en ajoutez
 app.js          → le moteur (navigation, affichage, tirage aléatoire du quiz)
+images/         → 🖼️ vos photos/illustrations pour les fiches (à créer au besoin)
 ```
 
 **Pour ajouter du contenu, vous n'avez besoin d'ouvrir que `sujets.js`
@@ -49,6 +50,37 @@ Copiez un bloc entier, par exemple celui d'ISS, et changez :
 ```
 (`iss` étant le slug du sujet visé.)
 
+**Pour ajouter une image** dans une fiche :
+
+1. Déposez le fichier image dans un dossier `images/` à la racine du
+   dépôt (créez-le s'il n'existe pas encore) — par exemple
+   `images/nebuleuse-orion.jpg`.
+2. Dans la section concernée de `sujets.js`, ajoutez :
+   ```html
+   <figure class="illustration">
+     <img src="images/nebuleuse-orion.jpg" alt="La nébuleuse d'Orion">
+     <figcaption>Légende courte (facultative)</figcaption>
+   </figure>
+   ```
+   L'image s'adapte automatiquement à la largeur de la fiche (pas besoin
+   de préciser une taille), et reste lisible en mode nuit rouge comme le
+   reste du contenu.
+
+Conseils pratiques :
+- **Formats** : `.jpg` pour les photos, `.png` pour les captures
+  d'écran ou schémas avec du texte/transparence.
+- **Poids** : compressez vos images avant de les déposer (visez moins
+  de 300-500 Ko chacune) pour que le site reste rapide à charger,
+  surtout sur le terrain avec une connexion mobile. Des outils comme
+  [squoosh.app](https://squoosh.app) font ça gratuitement en
+  glisser-déposer.
+- **Droits d'auteur** : préférez des images libres de droits — NASA/ESA
+  (la plupart de leurs photos sont libres d'usage), Wikimedia Commons,
+  ou vos propres photos/captures Stellarium.
+- `alt="..."` (la description textuelle) n'est pas qu'un détail
+  technique : elle s'affiche si l'image ne charge pas (mauvaise
+  connexion sur le terrain) et sert aux personnes malvoyantes.
+
 ### Ajouter une question au quiz (`questions.js`)
 
 Copiez un bloc entier et changez :
@@ -75,12 +107,13 @@ modifiez la constante `NB_QUESTIONS_QUIZ` tout en haut de `app.js`.
 ## Héberger le site avec GitHub Pages
 
 1. Déposez ces 5 fichiers (`index.html`, `style.css`, `sujets.js`,
-   `questions.js`, `app.js`) à la racine du dépôt GitHub.
+   `questions.js`, `app.js`) à la racine du dépôt GitHub, et un dossier
+   `images/` si vous illustrez des fiches.
 2. Dans le dépôt : **Settings → Pages**.
 3. Sous « Build and deployment » → Source : **Deploy from a branch**.
 4. Branch : `main`, dossier `/ (root)` → **Save**.
 5. Après 1 à 2 minutes, l'URL du site apparaît en haut de cette même
-   page (`https://bapt6564.github.io/Under-the-sky/`).
+   page (`https://votre-pseudo.github.io/nom-du-depot/`).
 
 C'est cette URL que vous pouvez partager ou mettre en QR code pour le
 public — accessible sans compte GitHub.
@@ -91,4 +124,5 @@ public — accessible sans compte GitHub.
 
 Le bouton 🔴 en haut à droite bascule tout l'écran en rouge (texte,
 étoiles, boutons) pour préserver la vision nocturne pendant les
-observations. Réglages dans `style.css`, section *« filtre rouge intégral »*.
+observations — comme les applications d'astronomie. Réglages dans
+`style.css`, section *« filtre rouge intégral »*.
