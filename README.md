@@ -4,7 +4,7 @@ Application web pour les soirées d'observation : un **mémo** pour les
 animateurs (une fiche par sujet) et un **quiz** pour le public (10
 questions tirées au hasard à chaque partie).
 
-👉 **Voir le site en ligne :** `https://VOTRE-PSEUDO.github.io/NOM-DU-DEPOT/`
+👉 **Voir le site en ligne :** `https://bapt6564.github.io/Under-the-sky/`
 *(à activer une fois, voir plus bas)*
 
 ---
