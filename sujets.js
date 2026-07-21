@@ -40,7 +40,8 @@ const SUJETS = {
        Les cratères se voient bien mieux au <strong>terminateur</strong> (limite jour/nuit) : les ombres rasantes révèlent le relief. 
        La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
       `<h2>Phases, marées, mouvement</h2>
-       <p>Les phases suivent l'angle Terre-Soleil-Lune sur <strong>29,5 jours</strong> — ce n'est pas l'ombre de la Terre (ça, c'est une <a href="#/memo/eclipses">éclipse</a>, un phénomène différent et bien plus rare). La Lune provoque l'essentiel des marées, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps que son tour de Terre.</p>
+       <p>Les phases   
+       suivent l'angle Terre-Soleil-Lune sur <strong>29,5 jours</strong> — ce n'est pas l'ombre de la Terre (ça, c'est une <a href="#/memo/eclipses">éclipse</a>, un phénomène différent et bien plus rare). La Lune provoque l'essentiel des marées, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps que son tour de Terre.</p>
        <div class="chiffre-cle">Âge : <strong>4,5 milliards d'années</strong> (née d'un impact géant peu après la Terre) · Distance : <strong>384 400 km</strong> (1,3 s-lumière) · Température : de +127 °C en plein jour à −173 °C la nuit, faute d'atmosphère.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
