@@ -172,6 +172,25 @@
     margin-top: 8px; font-size: 0.85rem; font-style: italic;
     color: var(--encre-douce); text-align: center;
   }
+  article figure.constellation {
+    margin: 18px 0; padding: 16px;
+    background: rgba(10, 14, 35, 0.5);
+    border: 1px solid var(--bord); border-radius: 14px;
+  }
+  article figure.constellation svg {
+    display: block; width: 100%; height: auto;
+  }
+  article figure.constellation figcaption {
+    margin-top: 10px; font-size: 0.85rem; font-style: italic;
+    color: var(--encre-douce); text-align: center;
+  }
+  article figure.constellation .etoile-nom {
+    fill: var(--encre-douce); font-size: 11px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+  }
+  article figure.constellation .etoile-phare {
+    fill: var(--or);
+  }
   .chiffre-cle {
     border-left: 3px solid var(--or); border-radius: 0 12px 12px 0;
     background: rgba(242,193,78,0.07);
