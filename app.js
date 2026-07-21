@@ -79,7 +79,7 @@ function pageAccueil() {
       <a class="porte" href="#/quiz">
         <div class="icone">🌠</div>
         <h2>Le quiz du ciel</h2>
-        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard à chaque partie. Attention aux pièges.</p>
+        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard parmi ${QUESTIONS_POOL.length}, à chaque partie. Attention aux pièges.</p>
       </a>
     </div>`;
 }
@@ -87,7 +87,7 @@ function pageAccueil() {
 function pageMemo() {
   const cartes = Object.entries(SUJETS).map(([slug, s]) => `
     <a class="sujet" href="#/memo/${slug}">
-      <div class="icone">${s.icone}</div>
+      ${s.icone ? `<div class="icone">${s.icone}</div>` : ""}
       <h3>${s.titre}</h3>
       <p>${s.resume}</p>
     </a>`).join("");
@@ -104,12 +104,12 @@ function pageSujet(slug) {
   const voirAussi = (s.voirAussi || []).filter(v => SUJETS[v]);
   const liens = voirAussi.length
     ? `<div class="voir-aussi">Voir aussi : ${voirAussi.map(v =>
-        `<a href="#/memo/${v}">${SUJETS[v].icone} ${SUJETS[v].titre}</a>`).join(" · ")}</div>`
+        `<a href="#/memo/${v}">${SUJETS[v].icone ? SUJETS[v].icone + " " : ""}${SUJETS[v].titre}</a>`).join(" · ")}</div>`
     : "";
   app.innerHTML = `
     <a class="retour" href="#/memo">← Tous les sujets</a>
     <article class="carte">
-      <div class="icone-titre">${s.icone}</div>
+      ${s.icone ? `<div class="icone-titre">${s.icone}</div>` : ""}
       <h1>${s.titre}</h1>
       <p class="resume">${s.resume}</p>
       ${s.sections.map(sec => `<section>${sec}</section>`).join("")}
