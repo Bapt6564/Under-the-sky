@@ -29,49 +29,54 @@ const SUJETS = {
   /* ===================== SYSTÈME SOLAIRE ===================== */
 
   "lune": {
-    titre: "La Lune",
-    icone: "",
-    resume: "Le seul astre où l'on distingue du relief à l'œil nu — et le meilleur objet pour débuter.",
-    sections: [
-      `<h2>Surface</h2>
-       <p>
-       <strong>Cratères :</strong> essentiellement des résidus d'impacts de météorites.<br>
-       <strong>Mers et océans :</strong> anciennes coulées de lave, preuve de l'activité volcanique de la Lune.<br>
-       Les cratères se voient bien mieux au <strong>terminateur</strong> (limite jour/nuit) : les ombres rasantes révèlent le relief. 
-       La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
-      `<h2>Phases, marées, mouvement</h2>
-       <p>Les phases ne sont pas la projection de l'ombre de le Terre(ça, c'est une <a href="#/memo/eclipses">éclipse</a>), 
-       mais simplement le fait que seule une partie de la Lune est éclairée par le Soleil.
-       La Lune provoque l'essentiel des <strong>marées</strong>, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps 
-       qu'une révolution autour de la Terre.</p>
-       <div class="chiffre-cle">
-        Âge : <strong>4,5 milliards d'années</strong> (née d'un impact géant peu après la Terre)<br>
-        Distance : <strong>384 400 km</strong> (1,3 s-lumière) <br>
-        Température : de +127 °C en plein jour à −173 °C la nuit, faute d'atmosphère.
-       </div>`,
-      `<h2>Anecdotes</h2>
-       <ul>
-         <li>Elle s'éloigne de nous de <strong>3,8 cm par an</strong>, mesuré au laser grâce aux réflecteurs laissés par les missions Apollo.</li>
-         <li>Là où l'Occident voit un visage (« l'homme dans la Lune »), la Chine, le Japon et la Corée voient un <strong>lapin</strong> en train de piler le riz dans les mêmes taches sombres.</li>
-       </ul>`
-    ],
-    voirAussi: ["types-telescopes", "eclipses"]
+      titre: "La Lune",
+      icone: "",
+      resume: "Le satelite naturel de la Terre.",
+      sections: [
+        `<h2>Surface</h2>
+        <p>
+        <strong>Cratères :</strong> essentiellement des résidus d'impacts de météorites.<br>
+        <strong>Mers et océans :</strong> anciennes coulées de lave (pas d'eau !), preuves de l'activité volcanique de la Lune.<br>
+        Les cratères se voient bien mieux au <strong>terminateur</strong> (limite jour/nuit) : les ombres rasantes révèlent le relief. 
+        La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
+        `<h2>Phases, marées, mouvement</h2>
+        <p>Les phases ne sont pas la projection de l'ombre de la Terre (ça, c'est une <a href="#/memo/eclipses">éclipse</a>), 
+        mais simplement le fait que seule une partie de la Lune est éclairée par le Soleil.
+        La Lune provoque l'essentiel des <strong>marées</strong>, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps 
+        qu'une révolution autour de la Terre.</p>
+        <div class="chiffre-cle">
+          Âge : <strong>4,5 milliards d'années</strong> (née d'un impact géant peu après la Terre)<br>
+          Distance : <strong>384 400 km</strong> (1,3 s-lumière) <br>
+          Température : de +127 °C en plein jour à −173 °C la nuit, faute d'atmosphère.
+        </div>`,
+        `<h2>Anecdotes</h2>
+        <ul>
+          <li>Elle s'éloigne de nous de <strong>3,8 cm par an</strong>, mesuré au laser grâce aux réflecteurs laissés par les missions Apollo. 
+          Cela cause entre autres une augmentation lente de la durée du jour.</li>
+          <li>La Chine, le Japon et la Corée voient un <strong>lapin</strong> en train de piler le riz dans les formes créées par les mers et océans lunaires.</li>
+          <li>Il y a 1,8 milliards d'années, et pendant 1 milliard d'années, la distance Terre–Lune est restée constante : l'activité géologique, 
+          climatique et biologique de la Terre ont très peu évolué. C'est le « Boring billion ».</li>
+        </ul>`
+      ],
+      voirAussi: ["types-telescopes", "eclipses"]
   },
 
   "venus": {
     titre: "Vénus",
     icone: "",
-    resume: "« L'étoile du Berger » n'est pas une étoile — et cache un enfer sous ses jolis nuages.",
+    resume: "L'étoile du Berger.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Toujours proche du Soleil dans le ciel : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), jamais en pleine nuit. Très brillante, blanc-jaunâtre, elle <strong>ne scintille presque pas</strong> — bon moyen de la distinguer d'une étoile.</p>`,
+       <p>Toujours proche du Soleil dans le ciel : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), 
+       jamais en pleine nuit. 
+       Très brillante, blanc-jaunâtre, elle ne scintille presque pas.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Âge : <strong>4,6 milliards d'années</strong> · Distance à la Terre : variable, de 40 à 260 millions de km · Température de surface : <strong>~465 °C</strong>, sous une atmosphère de CO₂ et des nuages d'acide sulfurique.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Si brillante qu'on la signale régulièrement comme <strong>OVNI</strong> à la police.</li>
          <li>Elle tourne « à l'envers » (rotation rétrograde), et si lentement qu'un <strong>jour vénusien dure plus longtemps qu'une année vénusienne</strong>.</li>
-         <li>Au <a href="#/memo/types-telescopes">télescope</a>, elle montre des phases comme la Lune — c'est en les observant que Galilée a achevé de démontrer que Vénus tourne autour du Soleil.</li>
+         <li>Au <a href="#/memo/types-telescopes">télescope</a>, elle montre des phases comme la Lune. 
+         C'est en les observant que Galilée a achevé de démontrer que Vénus tourne autour du Soleil.</li>
        </ul>`
     ],
     voirAussi: ["types-telescopes"]
@@ -80,17 +85,26 @@ const SUJETS = {
   "jupiter": {
     titre: "Jupiter et ses lunes",
     icone: "",
-    resume: "La plus grosse planète du système solaire — et un petit système solaire à elle seule, avec ses quatre lunes visibles aux jumelles.",
+    resume: "La plus grosse planète du système solaire.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Très brillante, blanc-jaunâtre, elle ne scintille presque pas. Aux <strong>jumelles</strong> ou au petit télescope : jusqu'à 4 points alignés de part et d'autre de la planète, les <strong>lunes galiléennes</strong> (Io, Europe, Ganymède, Callisto) — leur position change d'heure en heure, une bonne raison de faire revenir le public plus tard dans la soirée.</p>`,
+       <p>Très brillante, blanc-jaunâtre, elle ne scintille presque pas. <br>
+       Aux jumelles ou au petit télescope : jusqu'à 4 points alignés de part et d'autre de la planète, les <strong>lunes galiléennes</strong> 
+       (Io, Europe, Ganymède, Callisto). 
+       Leur position change rapidement, une bonne raison de faire revenir le public plus tard dans la soirée.<br>
+       Avec un grossissement suffisant, o peut distinguer les bandes de nuages, voir la grosse tache rouge.     
+       </p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance à la Terre : 4 à 6 UA selon les positions · Température au sommet des nuages : ~−110 °C · Diamètre : 11 fois celui de la Terre.</div>`,
+       <div class="chiffre-cle">
+       Distance à la Terre : 4 à 6 UA selon les positions <br>
+       Température au sommet des nuages : ~−110 °C <br>
+       Diamètre : 11 fois celui de la Terre.</div>`,
       `<h2>Anecdotes</h2>
        <ul>
          <li>C'est en observant ces 4 lunes tourner autour de Jupiter, en 1610, que <strong>Galilée</strong> a compris que tout ne tourne pas autour de la Terre.</li>
          <li>La <strong>Grande Tache rouge</strong>, une tempête plus grande que la Terre entière, est observée depuis plus de 350 ans.</li>
-         <li><strong>Europe</strong> cache un océan d'eau liquide sous sa croûte de glace — l'une des meilleures pistes pour chercher la vie ailleurs dans le système solaire.</li>
+         <li><strong>Europe</strong> cache un océan d'eau liquide sous sa croûte de glace. 
+         C'est l'une des meilleures pistes pour chercher la vie ailleurs dans le système solaire.</li>
        </ul>`
     ],
     voirAussi: ["types-telescopes", "saturne"]
@@ -99,16 +113,19 @@ const SUJETS = {
   "saturne": {
     titre: "Saturne",
     icone: "",
-    resume: "L'objet qui fait dire « waouh » — le public croit souvent voir un autocollant sur le télescope.",
+    resume: "Les plus beaux anneaux.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Jaune pâle à l'œil nu, sans rien de spécial. Mais dès un petit télescope, ses <strong>anneaux</strong> apparaissent nettement — l'un des spectacles les plus sûrs d'une soirée d'observation.</p>`,
+       <p>Jaune pâle à l'œil nu. 
+       Avec un petit télescope, ses <strong>anneaux</strong> apparaissent nettement.</p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~9 à 10 UA · Les anneaux s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur — proportionnellement plus fins qu'une feuille de papier.</div>`,
+       <div class="chiffre-cle">
+       Distance : ~9 à 10 UA <br>
+       Les anneaux s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur (proportionnellement plus fins qu'une feuille de papier).</div>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Les anneaux sont faits de <strong>milliards de blocs de glace</strong>, du grain de sable à la maison, chacun en orbite indépendante.</li>
-         <li>Saturne est <strong>moins dense que l'eau</strong> : elle flotterait dans une baignoire géante.</li>
+         <li>Les anneaux sont faits de milliards de blocs de glace, du grain de sable à la taille d'une maison, chacun en orbite indépendante.</li>
+         <li>Saturne est moins dense que l'eau : elle flotterait dans une baignoire géante.</li>
          <li>Tous les <strong>~15 ans</strong>, les anneaux se présentent exactement par la tranche et semblent disparaître, vus depuis la Terre.</li>
        </ul>`
     ],
@@ -450,7 +467,7 @@ const SUJETS = {
     resume: "Cassiopée, Andromède, Persée, Pégase : plusieurs constellations d'automne qui racontent une seule et même histoire.",
     sections: [
       `<h2>L'histoire</h2>
-       <p>La reine <strong>Cassiopée</strong> se vante d'être plus belle que les Néréides ; Poséidon envoie le monstre marin Cétus se venger. Pour l'apaiser, la princesse <strong>Andromède</strong> est enchaînée à un rocher en sacrifice. <strong>Persée</strong>, revenant tout juste avec la tête de la Gorgone Méduse, la découvre, tue le monstre et la libère — puis l'épouse. Tous les personnages de cette histoire se retrouvent aujourd'hui côte à côte dans le ciel d'automne.</p>`,
+       <p>La reine <strong>Cassiopée</strong> se vante d'être plus belle que les Néréides ; Poséidon envoie le monstre marin Cétus se venger. Pour l'apaiser, la princesse <strong>Andromède</strong> est enchaînée à un rocher en sacrifice. <strong>Persée</strong>, revenant tout juste avec la tête de la Gorgone Méduse, la découvre, tue le monstre et la libère — puis l'épouse. Tous les personnages de cette histoire se retrouvent aujourd'hui côte à côte dans le ciel d'automne. Le récit complet est à retrouver dans les <a href="#/contes/saga-persee">Contes du ciel</a>.</p>`,
       `<h2>Repérage</h2>
        <p>Cassiopée (le grand « W »), <a href="#/memo/andromede">Andromède</a> et Persée se suivent dans le ciel du soir en automne, non loin l'une de l'autre — une bonne trame pour enchaîner plusieurs objets d'une même soirée (dont l'<a href="#/memo/amas-et">amas E.T.</a> et le <a href="#/memo/double-amas-perse">double amas de Persée</a>, tous deux dans ce coin de ciel).</p>`,
       `<h2>Anecdote</h2>
