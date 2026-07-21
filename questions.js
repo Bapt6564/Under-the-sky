@@ -7,7 +7,7 @@
    POUR AJOUTER UNE QUESTION : copiez un bloc { ... },
    - cat : la catégorie affichée au-dessus de la question
    - q : la question
-   - r : les propositions (2 à 4) — pensez à en glisser une u peu fun !
+   - r : les propositions (2 à 4) — pensez à en glisser une un peu fun !
    - bonne : la position de la bonne réponse (0 = première, 1 = deuxième…)
    - e : l'explication affichée après la réponse
    ===================================================================== */
@@ -70,7 +70,7 @@ const QUESTIONS_POOL = [
     cat: "Nous", q: "Le fer de votre sang a été fabriqué…",
     r: ["Au cœur d'étoiles disparues", "Dans le noyau de la Terre", "Pendant le Big Bang", "Dans une usine en Lorraine"],
     bonne: 0,
-    e: "Le Big Bang n'a produit que de l'hydrogène et de l'hélium. Tout le reste — carbone, oxygène, calcium, fer — a été forgé dans des étoiles puis dispersé par leurs explosions. Nous sommes littéralement des poussières d'étoiles (désolé pour la Lorraine)."
+    e: "Le Big Bang n'a produit que de l'hydrogène et de l'hélium. Tout le reste (carbone, oxygène, calcium, fer, ...) a été forgé dans des étoiles puis dispersé par leurs explosions. Nous sommes littéralement des poussières d'étoiles (désolé pour la Lorraine)."
   },
   {
     cat: "Repères", q: "L'étoile polaire est…",
@@ -86,7 +86,7 @@ const QUESTIONS_POOL = [
   },
   {
     cat: "Étoiles", q: "Plus une étoile est massive…",
-    r: ["Plus elle vit longtemps", "Plus elle vit court", "Plus elle est paresseuse", "Sa masse ne change rien"],
+    r: ["Plus elle vit longtemps", "Moins elle vit longtemps", "Plus elle est paresseuse", "Sa masse ne change rien"],
     bonne: 1,
     e: "Les étoiles massives dévorent leur carburant à toute vitesse : quelques millions d'années à peine avant d'exploser en supernova. Les petites naines rouges, économes, vivront des centaines de milliards d'années. Vivre vite ou vivre longtemps, il faut choisir."
   }
