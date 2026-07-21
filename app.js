@@ -41,6 +41,12 @@ function afficher(route) {
     if (SUJETS[slug]) return pageSujet(slug);
     return pageMemo();
   }
+  if (route === "contes") return pageContes();
+  if (route.startsWith("contes/")) {
+    const slug = route.slice(7);
+    if (CONTES[slug]) return pageConte(slug);
+    return pageContes();
+  }
   if (route === "quiz") { demarrerQuiz(); return pageQuiz(); }
   pageAccueil();
 }
@@ -67,16 +73,22 @@ function pageAccueil() {
   app.innerHTML = `
     <header class="hero">
       <h1>Sous les <span class="or">étoiles</span></h1>
-      <p class="sous-titre">Pour une soirée d'astronomie réussie : le ciel à explorer,<br>et un quiz pour se tester !</p>
+      <p class="sous-titre">Le compagnon de la soirée : des histoires du ciel à explorer,<br>et un quiz pour se tester entre deux télescopes.</p>
     </header>
     <div class="portes">
       <a class="porte" href="#/memo">
+        <div class="icone">📖</div>
         <h2>Le mémo</h2>
         <p>Les objets et les idées du ciel, sujet par sujet : distances, records, histoires et idées reçues.</p>
       </a>
       <a class="porte" href="#/quiz">
+        <div class="icone">🌠</div>
         <h2>Le quiz du ciel</h2>
-        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard à chaque partie. Attention aux pièges.</p>
+        <p>${NB_QUESTIONS_QUIZ} questions tirées au hasard parmi ${QUESTIONS_POOL.length}, à chaque partie. Attention aux pièges.</p>
+      </a>
+      <a class="porte" href="#/contes">
+        <h2>Contes du ciel</h2>
+        <p>Les mythes qui ont donné leur nom aux constellations, racontés comme de vraies histoires.</p>
       </a>
     </div>`;
 }
@@ -110,6 +122,40 @@ function pageSujet(slug) {
       <h1>${s.titre}</h1>
       <p class="resume">${s.resume}</p>
       ${s.sections.map(sec => `<section>${sec}</section>`).join("")}
+      ${liens}
+    </article>`;
+}
+
+function pageContes() {
+  const cartes = Object.entries(CONTES).map(([slug, c]) => `
+    <a class="sujet" href="#/contes/${slug}">
+      <h3>${c.titre}</h3>
+      <p>${c.resume}</p>
+    </a>`).join("");
+  app.innerHTML = `
+    <header class="hero">
+      <h1>Contes du ciel</h1>
+      <p class="sous-titre">Les mythes racontés en entier, à lire d'une traite.</p>
+    </header>
+    <div class="sujets">${cartes}</div>`;
+}
+
+function pageConte(slug) {
+  const c = CONTES[slug];
+  const voirAussi = (c.voirAussi || []).filter(v => SUJETS[v] || CONTES[v]);
+  const liens = voirAussi.length
+    ? `<div class="voir-aussi">Voir aussi : ${voirAussi.map(v =>
+        SUJETS[v]
+          ? `<a href="#/memo/${v}">${SUJETS[v].icone ? SUJETS[v].icone + " " : ""}${SUJETS[v].titre}</a>`
+          : `<a href="#/contes/${v}">${CONTES[v].titre}</a>`
+      ).join(" · ")}</div>`
+    : "";
+  app.innerHTML = `
+    <a class="retour" href="#/contes">← Tous les contes</a>
+    <article class="carte">
+      <h1>${c.titre}</h1>
+      <p class="resume">${c.resume}</p>
+      ${c.texte.join("")}
       ${liens}
     </article>`;
 }
