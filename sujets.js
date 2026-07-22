@@ -34,6 +34,7 @@ const SUJETS = {
 
   "lune": {
     titre: "La Lune",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Lune",
     conte: "lune",
@@ -69,6 +70,7 @@ const SUJETS = {
 
   "venus": {
     titre: "Vénus",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/V%C3%A9nus_(plan%C3%A8te)",
     resume: "L'étoile du Berger.",
@@ -93,6 +95,7 @@ const SUJETS = {
 
   "jupiter": {
     titre: "Jupiter et ses lunes",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Jupiter_(plan%C3%A8te)",
     resume: "La plus grosse planète du système solaire.",
@@ -122,6 +125,7 @@ const SUJETS = {
 
   "saturne": {
     titre: "Saturne",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)",
     resume: "Les plus beaux anneaux.",
@@ -147,6 +151,7 @@ const SUJETS = {
 
   "voie-lactee": {
     titre: "La Voie lactée",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Voie_lact%C3%A9e",
     conte: "voie-lactee",
@@ -171,6 +176,7 @@ const SUJETS = {
 
   "triangle-ete": {
     titre: "Le Triangle d'été",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Triangle_de_l%27%C3%A9t%C3%A9",
     conte: "triangle-ete",
@@ -209,6 +215,7 @@ const SUJETS = {
 
   "etoile-polaire": {
     titre: "L'étoile polaire",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/%C3%89toile_polaire",
     resume: "Pas la plus brillante du ciel, juste celle qui a la bonne adresse, et pour un temps limité.",
@@ -243,6 +250,7 @@ const SUJETS = {
 
   "couronne-boreale": {
     titre: "La Couronne boréale & Gemma",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Couronne_bor%C3%A9ale",
     conte: "couronne-boreale",
@@ -278,6 +286,7 @@ const SUJETS = {
 
   "pleiades": {
     titre: "Les Pléiades (M45)",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Pl%C3%A9iades_(astronomie)",
     conte: "pleiades",
@@ -325,6 +334,7 @@ const SUJETS = {
 
   "antares-scorpion": {
     titre: "Antarès et le Scorpion",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Antar%C3%A8s",
     conte: "orion-scorpion",
@@ -388,6 +398,7 @@ const SUJETS = {
 
   "cintre": {
     titre: "L'astérisme du Cintre",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Amas_de_Brocchi",
     resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles, et qui n'ont presque rien à voir entre elles.",
@@ -424,6 +435,7 @@ const SUJETS = {
 
   "alcor-mizar": {
     titre: "Alcor & Mizar",
+    cat: "Étoiles doubles & multiples",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Mizar_(%C3%A9toile)",
     conte: "deux-ourses",
@@ -472,6 +484,7 @@ const SUJETS = {
 
   "epsilon-lyre": {
     titre: "Epsilon de la Lyre, la « Double-Double »",
+    cat: "Étoiles doubles & multiples",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Epsilon_Lyrae",
     resume: "Une étoile, puis deux, puis quatre : ça dépend juste de la puissance de votre instrument.",
@@ -510,6 +523,7 @@ const SUJETS = {
 
   "albireo": {
     titre: "Albireo",
+    cat: "Étoiles doubles & multiples",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Albireo",
     resume: "Une étoile dorée et une étoile bleue, côte à côte, l'une des plus belles doubles du ciel.",
@@ -547,6 +561,7 @@ const SUJETS = {
 
   "double-amas-perse": {
     titre: "Le double amas de Persée",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Double_amas_de_Pers%C3%A9e",
     resume: "Deux amas d'étoiles jeunes, côte à côte, connus depuis l'Antiquité et spectaculaires aux jumelles.",
@@ -586,6 +601,7 @@ const SUJETS = {
 
   "amas-et": {
     titre: "L'amas E.T. (NGC 457)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/NGC_457",
     resume: "Un amas d'étoiles qui dessine un petit bonhomme, rebaptisé E.T. pour sa bouille extraterrestre.",
@@ -623,6 +639,7 @@ const SUJETS = {
 
   "types-nebuleuses": {
     titre: "Les types de nébuleuses",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse",
     resume: "Même mot, familles très différentes : pouponnières d'étoiles, poussière éclairée, ou cadavres stellaires.",
@@ -643,6 +660,7 @@ const SUJETS = {
 
   "nebuleuse-orion": {
     titre: "La nébuleuse d'Orion (M42)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_d%27Orion",
     resume: "Une pouponnière d'étoiles à l'œil nu, juste sous la ceinture d'Orion.",
@@ -696,6 +714,7 @@ const SUJETS = {
 
   "nebuleuse-lyre": {
     titre: "La nébuleuse de la Lyre (M57)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_la_Lyre",
     resume: "Un petit anneau de fumée cosmique, l'avenir du Soleil, dans environ 5 milliards d'années.",
@@ -734,6 +753,7 @@ const SUJETS = {
 
   "nebuleuse-haltere": {
     titre: "La nébuleuse de l'Haltère (M27)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_l%27Halt%C3%A8re",
     resume: "La toute première nébuleuse planétaire jamais découverte, en forme de sablier de sport.",
@@ -768,6 +788,7 @@ const SUJETS = {
 
   "types-amas": {
     titre: "Les types d'amas d'étoiles",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Amas_stellaire",
     resume: "Amas ouverts : des crèches d'étoiles jeunes. Amas globulaires : plutôt des maisons de retraite.",
@@ -784,6 +805,7 @@ const SUJETS = {
 
   "m13": {
     titre: "Le grand amas d'Hercule (M13)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Amas_globulaire_d%27Hercule",
     conte: "hercule-dragon",
@@ -815,6 +837,7 @@ const SUJETS = {
 
   "andromede": {
     titre: "La galaxie d'Andromède (M31)",
+    cat: "Ciel profond",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Galaxie_d%27Androm%C3%A8de",
     conte: "saga-persee",
@@ -860,6 +883,7 @@ const SUJETS = {
 
   "mythe-persee": {
     titre: "La saga de Persée",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Pers%C3%A9e_(constellation)",
     conte: "saga-persee",
@@ -896,6 +920,7 @@ const SUJETS = {
 
   "eclipses": {
     titre: "Les éclipses",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/%C3%89clipse",
     conte: "eclipses",
@@ -916,6 +941,7 @@ const SUJETS = {
 
   "cometes-etoiles-filantes": {
     titre: "Comètes et étoiles filantes",
+    cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/%C3%89toile_filante",
     resume: "Un grain de poussière qui brûle, ou un vrai vagabond glacé venu des confins du système solaire, deux choses bien différentes.",
@@ -935,6 +961,7 @@ const SUJETS = {
 
   "big-bang": {
     titre: "Le Big Bang et l'expansion de l'Univers",
+    cat: "Comprendre l'Univers",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Big_Bang",
     resume: "Pas une explosion dans l'espace : une expansion de l'espace lui-même, depuis 13,8 milliards d'années.",
@@ -951,6 +978,7 @@ const SUJETS = {
 
   "redshift": {
     titre: "Le décalage vers le rouge (redshift)",
+    cat: "Comprendre l'Univers",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/D%C3%A9calage_vers_le_rouge",
     resume: "Le même effet qui change le son d'une sirène qui s'éloigne, appliqué à la lumière des galaxies.",
@@ -967,6 +995,7 @@ const SUJETS = {
 
   "trous-noirs": {
     titre: "Les trous noirs",
+    cat: "Comprendre l'Univers",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Trou_noir",
     resume: "Ni trous, ni aspirateurs cosmiques : des astres si denses que même la lumière n'en sort pas.",
@@ -989,6 +1018,7 @@ const SUJETS = {
 
   "cycle-vie-etoiles": {
     titre: "Le cycle de vie d'une étoile",
+    cat: "Comprendre l'Univers",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/%C3%89volution_stellaire",
     resume: "De nuage de gaz à naine blanche, étoile à neutrons ou trou noir, et nous au milieu.",
@@ -1012,6 +1042,7 @@ const SUJETS = {
 
   "exoplanetes": {
     titre: "Les exoplanètes",
+    cat: "Comprendre l'Univers",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
     resume: "Des milliers de mondes découverts autour d'autres étoiles, et une histoire qui commence en France.",
@@ -1030,6 +1061,7 @@ const SUJETS = {
 
   "types-telescopes": {
     titre: "Les types de télescopes",
+    cat: "Pratique & matériel",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/T%C3%A9lescope",
     resume: "Lentilles ou miroirs ? Ce qui compte, ce n'est pas le grossissement : c'est le diamètre.",
@@ -1053,6 +1085,7 @@ const SUJETS = {
 
   "pollution-lumineuse": {
     titre: "La pollution lumineuse",
+    cat: "Pratique & matériel",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Pollution_lumineuse",
     resume: "Le plus grand obstacle à l'observation n'est pas dans le ciel : il est au sol.",
@@ -1071,6 +1104,7 @@ const SUJETS = {
 
   "iss": {
     titre: "La Station spatiale internationale",
+    cat: "Pratique & matériel",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Station_spatiale_internationale",
     resume: "Le troisième objet le plus brillant du ciel est habité, et il passe peut-être ce soir.",
@@ -1095,6 +1129,7 @@ const SUJETS = {
 
   "sagittaire": {
     titre: "Le Sagittaire et le centre galactique",
+    cat: "Constellations & repères",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Sagittaire_(constellation)",
     conte: "sagittaire",

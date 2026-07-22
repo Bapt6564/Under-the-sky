@@ -92,18 +92,43 @@ function pageAccueil() {
 }
 
 function pageMemo() {
-  const cartes = Object.entries(SUJETS).map(([slug, s]) => `
-    <a class="sujet" href="#/memo/${slug}">
-      ${s.icone ? `<div class="icone">${s.icone}</div>` : ""}
-      <h3>${s.titre}</h3>
-      <p>${s.resume}</p>
-    </a>`).join("");
+  // Ordre d'affichage des catégories
+  const ordreCategories = [
+    "Système solaire",
+    "Constellations & repères",
+    "Étoiles doubles & multiples",
+    "Ciel profond",
+    "Comprendre l'Univers",
+    "Pratique & matériel"
+  ];
+  // Regrouper les fiches par catégorie
+  const groupes = {};
+  Object.entries(SUJETS).forEach(([slug, s]) => {
+    const cat = s.cat || "Autres";
+    (groupes[cat] = groupes[cat] || []).push([slug, s]);
+  });
+  // Construire les catégories dans l'ordre défini, puis les éventuelles non prévues
+  const categories = ordreCategories.filter(c => groupes[c])
+    .concat(Object.keys(groupes).filter(c => !ordreCategories.includes(c)));
+
+  const blocs = categories.map(cat => {
+    const cartes = groupes[cat].map(([slug, s]) => `
+      <a class="sujet" href="#/memo/${slug}">
+        ${s.icone ? `<div class="icone">${s.icone}</div>` : ""}
+        <h3>${s.titre}</h3>
+        <p>${s.resume}</p>
+      </a>`).join("");
+    return `
+      <h2 class="cat-titre">${cat}</h2>
+      <div class="sujets">${cartes}</div>`;
+  }).join("");
+
   app.innerHTML = `
     <header class="hero">
       <h1>Choisissez un sujet</h1>
       <p class="sous-titre">Toutes les fiches, classées par thème.</p>
     </header>
-    <div class="sujets">${cartes}</div>`;
+    ${blocs}`;
 }
 
 function pageSujet(slug) {
