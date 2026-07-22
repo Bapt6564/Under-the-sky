@@ -177,14 +177,14 @@ const SUJETS = {
     resume: "Trois étoiles brillantes de trois constellations différentes, le meilleur point de départ pour s'orienter en été.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="275.0,91.2 65.0,42.0 150.4,318.0 275.0,91.2" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="275.0" cy="91.2" r="4.0" class="etoile-phare"/>
-             <text x="267.0" y="94.2" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
-             <circle cx="65.0" cy="42.0" r="3.4"/>
-             <text x="73.0" y="45.0" class="etoile-nom" text-anchor="start">Deneb</text>
-             <circle cx="150.4" cy="318.0" r="3.6"/>
-             <text x="158.4" y="321.0" class="etoile-nom" text-anchor="start">Altaïr</text>
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="261.8,92.9 78.2,44.0 144.4,336.0 261.8,92.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="261.8" cy="92.9" r="4.0" class="etoile-phare"/>
+             <text x="253.8" y="95.9" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
+             <circle cx="78.2" cy="44.0" r="3.4"/>
+             <text x="86.2" y="47.0" class="etoile-nom" text-anchor="start">Deneb</text>
+             <circle cx="144.4" cy="336.0" r="3.6"/>
+             <text x="144.4" y="352.0" class="etoile-nom" text-anchor="middle">Altaïr</text>
            </svg>
          <figcaption>Le Triangle d'été, d'après les positions réelles : Véga (Lyre), Deneb (Cygne) et Altaïr (Aigle).</figcaption>
        </figure>`,
@@ -209,8 +209,24 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/%C3%89toile_polaire",
     resume: "Pas la plus brillante du ciel, juste celle qui a la bonne adresse, et pour un temps limité.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="231.6,44.0 187.4,90.5 148.7,155.7 151.0,236.9 108.4,251.9 140.9,336.0 184.3,308.2 151.0,236.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="231.6" cy="44.0" r="3.2" class="etoile-phare"/>
+             <text x="223.6" y="47.0" class="etoile-nom etoile-phare" text-anchor="end">Polaris</text>
+             <circle cx="187.4" cy="90.5" r="1.9"/>
+             <circle cx="148.7" cy="155.7" r="1.8"/>
+             <circle cx="151.0" cy="236.9" r="1.9"/>
+             <circle cx="108.4" cy="251.9" r="1.7"/>
+             <circle cx="184.3" cy="308.2" r="2.7"/>
+             <text x="192.3" y="311.2" class="etoile-nom" text-anchor="start">Kochab</text>
+             <circle cx="140.9" cy="336.0" r="2.2"/>
+             <text x="140.9" y="351.0" class="etoile-nom" text-anchor="middle">Pherkad</text>
+           </svg>
+         <figcaption>La Petite Ourse, d'après les positions réelles : une petite casserole dont le bout du manche est Polaris, l'étoile polaire. Les deux « gardiennes du pôle », Kochab et Pherkad, forment le bord du bol.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
-       <p>Prolongez environ 5 fois la distance entre les deux étoiles du bord de la « casserole » de la Grande Ourse (les « pointeurs ») : vous tombez sur Polaris. Contrairement à une idée reçue, ce <strong>n'est pas l'étoile la plus brillante</strong> du ciel, elle n'arrive qu'en ~50e position. Son seul talent : l'axe de la Terre pointe presque exactement vers elle, donc elle ne bouge quasiment pas de la nuit.</p>`,
+       <p>Prolongez environ 5 fois la distance entre les deux étoiles du bord de la « casserole » de la Grande Ourse (les « pointeurs ») : vous tombez sur Polaris, au bout du manche de la Petite Ourse. Les deux étoiles du bord de son bol, <strong>Kochab</strong> et <strong>Pherkad</strong>, sont surnommées les « gardiennes du pôle ». Contrairement à une idée reçue, ce <strong>n'est pas l'étoile la plus brillante</strong> du ciel, elle n'arrive qu'en ~50e position. Son seul talent : l'axe de la Terre pointe presque exactement vers elle, donc elle ne bouge quasiment pas de la nuit.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~433 années-lumière<br>
          Température : ~6 000 °C, jaune-blanc (une supergéante)<br>
@@ -229,19 +245,19 @@ const SUJETS = {
     resume: "Un petit demi-cercle discret entre le Bouvier et Hercule, surnommé sans façon « le bol des pauvres ».",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 267" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="258.8,42.0 297.5,119.9 245.5,202.6 184.3,217.1 132.4,225.0 71.9,197.0 42.5,94.2" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="258.8" cy="42.0" r="1.9"/>
-             <circle cx="297.5" cy="119.9" r="2.1"/>
-             <text x="289.5" y="122.9" class="etoile-nom" text-anchor="end">Nusakan</text>
-             <circle cx="245.5" cy="202.6" r="3.4" class="etoile-phare"/>
-             <text x="237.5" y="205.6" class="etoile-nom etoile-phare" text-anchor="end">Alphecca</text>
-             <circle cx="184.3" cy="217.1" r="2.0"/>
-             <circle cx="132.4" cy="225.0" r="1.9"/>
-             <circle cx="71.9" cy="197.0" r="2.0"/>
-             <circle cx="42.5" cy="94.2" r="1.9"/>
+         <svg viewBox="0 0 340 270" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="255.3,44.0 295.3,120.1 245.6,203.4 183.9,218.5 131.1,226.0 70.5,197.0 44.7,94.2" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="255.3" cy="44.0" r="1.9"/>
+             <circle cx="295.3" cy="120.1" r="2.1"/>
+             <text x="287.3" y="123.1" class="etoile-nom" text-anchor="end">Nusakan</text>
+             <circle cx="245.6" cy="203.4" r="3.4" class="etoile-phare"/>
+             <text x="245.6" y="219.4" class="etoile-nom etoile-phare" text-anchor="middle">Alphecca</text>
+             <circle cx="183.9" cy="218.5" r="2.0"/>
+             <circle cx="131.1" cy="226.0" r="1.9"/>
+             <circle cx="70.5" cy="197.0" r="2.0"/>
+             <circle cx="44.7" cy="94.2" r="1.9"/>
            </svg>
-         <figcaption>La Couronne boréale, d'après les positions réelles : un arc de sept étoiles ouvert vers le nord. La plus brillante, Alphecca (Gemma), au centre ; Nusakan à ses côtés.</figcaption>
+         <figcaption>La Couronne boréale, d'après les positions réelles : un arc de sept étoiles ouvert vers le nord. La plus brillante : Alphecca (Gemma) ; à ses côtés, Nusakan.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>Un arc de 7 étoiles en demi-cercle, entre <strong>Arcturus</strong> (Bouvier) et <a href="#/memo/m13">Hercule</a>. Discrète mais reconnaissable une fois repérée : une vraie petite couronne dans le ciel.</p>`,
@@ -264,25 +280,25 @@ const SUJETS = {
     resume: "Un amas de jeunes étoiles bleues, si célèbre qu'il a donné son nom à une marque de voitures.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 239" xmlns="http://www.w3.org/2000/svg">
-             <circle cx="141.7" cy="156.8" r="3.0" class="etoile-phare"/>
-             <text x="149.7" y="159.8" class="etoile-nom etoile-phare" text-anchor="start">Alcyone</text>
-             <circle cx="44.0" cy="170.1" r="2.4"/>
-             <text x="52.0" y="173.1" class="etoile-nom" text-anchor="start">Atlas</text>
-             <circle cx="42.3" cy="148.9" r="1.8"/>
-             <text x="50.3" y="151.9" class="etoile-nom" text-anchor="start">Pléioné</text>
-             <circle cx="209.1" cy="197.0" r="2.2"/>
-             <text x="201.1" y="200.0" class="etoile-nom" text-anchor="end">Mérope</text>
-             <circle cx="293.7" cy="154.8" r="2.2"/>
-             <text x="285.7" y="157.8" class="etoile-nom" text-anchor="end">Électre</text>
-             <circle cx="238.2" cy="89.6" r="2.2"/>
-             <text x="230.2" y="92.6" class="etoile-nom" text-anchor="end">Maia</text>
-             <circle cx="274.4" cy="64.3" r="2.0"/>
-             <text x="266.4" y="67.3" class="etoile-nom" text-anchor="end">Taygète</text>
-             <circle cx="297.7" cy="109.8" r="1.6"/>
-             <text x="289.7" y="112.8" class="etoile-nom" text-anchor="end">Célaeno</text>
-             <circle cx="233.8" cy="42.0" r="1.5"/>
-             <text x="225.8" y="45.0" class="etoile-nom" text-anchor="end">Astérope</text>
+         <svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg">
+             <circle cx="142.2" cy="156.6" r="3.0" class="etoile-phare"/>
+             <text x="150.2" y="166.6" class="etoile-nom etoile-phare" text-anchor="start">Alcyone</text>
+             <circle cx="46.3" cy="169.3" r="2.4"/>
+             <text x="46.3" y="183.3" class="etoile-nom" text-anchor="middle">Atlas</text>
+             <circle cx="44.8" cy="148.5" r="1.8"/>
+             <text x="44.8" y="139.5" class="etoile-nom" text-anchor="middle">Pléioné</text>
+             <circle cx="208.4" cy="196.0" r="2.2"/>
+             <text x="208.4" y="210.0" class="etoile-nom" text-anchor="middle">Mérope</text>
+             <circle cx="291.5" cy="154.5" r="2.2"/>
+             <text x="283.5" y="164.5" class="etoile-nom" text-anchor="end">Électre</text>
+             <circle cx="236.9" cy="90.6" r="2.2"/>
+             <text x="236.9" y="81.6" class="etoile-nom" text-anchor="middle">Maia</text>
+             <circle cx="272.3" cy="65.7" r="2.0"/>
+             <text x="264.3" y="65.7" class="etoile-nom" text-anchor="end">Taygète</text>
+             <circle cx="295.2" cy="110.3" r="1.6"/>
+             <text x="287.2" y="114.3" class="etoile-nom" text-anchor="end">Célaeno</text>
+             <circle cx="232.5" cy="44.0" r="1.5"/>
+             <text x="238.5" y="37.0" class="etoile-nom" text-anchor="start">Astérope</text>
            </svg>
          <figcaption>Les Pléiades, d'après les positions réelles des Sept Sœurs et de leurs parents Atlas et Pléioné. La plus brillante : Alcyone.</figcaption>
        </figure>`,
@@ -311,39 +327,39 @@ const SUJETS = {
     resume: "Supergéante rouge, cœur du Scorpion.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 328" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="283.0,42.0 294.3,71.3 297.6,107.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="294.3,71.3 248.0,102.3 229.8,111.0 215.4,129.6 183.7,192.9 179.9,231.9 173.9,276.9 134.9,286.0 79.1,283.5 67.6,242.2 87.3,222.1" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="87.3,222.1 93.6,224.1" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="283.0" cy="42.0" r="2.4"/>
-             <text x="275.0" y="45.0" class="etoile-nom" text-anchor="end">Acrab</text>
-             <circle cx="294.3" cy="71.3" r="2.8"/>
-             <text x="286.3" y="74.3" class="etoile-nom" text-anchor="end">Dschubba</text>
-             <circle cx="297.6" cy="107.7" r="2.0"/>
-             <text x="289.6" y="110.7" class="etoile-nom" text-anchor="end">Fang</text>
-             <circle cx="248.0" cy="102.3" r="1.8"/>
-             <circle cx="229.8" cy="111.0" r="4.5" class="etoile-phare"/>
-             <text x="221.8" y="114.0" class="etoile-nom etoile-phare" text-anchor="end">Antarès</text>
-             <circle cx="215.4" cy="129.6" r="1.8"/>
-             <circle cx="183.7" cy="192.9" r="2.2"/>
-             <circle cx="179.9" cy="231.9" r="1.8"/>
-             <circle cx="173.9" cy="276.9" r="1.8"/>
-             <circle cx="134.9" cy="286.0" r="1.8"/>
-             <circle cx="79.1" cy="283.5" r="2.4"/>
-             <text x="87.1" y="286.5" class="etoile-nom" text-anchor="start">Sargas</text>
-             <circle cx="67.6" cy="242.2" r="1.8"/>
-             <circle cx="87.3" cy="222.1" r="3.0" class="etoile-phare"/>
-             <text x="95.3" y="225.1" class="etoile-nom etoile-phare" text-anchor="start">Shaula</text>
-             <circle cx="93.6" cy="224.1" r="2.0"/>
-             <text x="101.6" y="227.1" class="etoile-nom" text-anchor="start">Lesath</text>
-             <circle cx="242.7" cy="112.0" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
-             <text x="234.7" y="115.0" class="etoile-nom" text-anchor="end">M4</text>
-             <circle cx="72.5" cy="171.6" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
-             <text x="80.5" y="174.6" class="etoile-nom" text-anchor="start">M6</text>
-             <circle cx="42.4" cy="198.1" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
-             <text x="50.4" y="201.1" class="etoile-nom" text-anchor="start">M7</text>
+         <svg viewBox="0 0 340 322" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="286.4,44.0 296.0,73.8 295.8,109.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="296.0,73.8 245.5,98.8 226.1,106.0 210.6,123.5 177.5,185.1 173.5,223.6 167.9,267.6 134.9,277.2 87.8,278.0 72.8,238.9 88.2,217.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="88.2,217.4 94.1,218.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="286.4" cy="44.0" r="2.4"/>
+             <text x="278.4" y="47.0" class="etoile-nom" text-anchor="end">Acrab</text>
+             <circle cx="296.0" cy="73.8" r="2.8"/>
+             <text x="288.0" y="76.8" class="etoile-nom" text-anchor="end">Dschubba</text>
+             <circle cx="295.8" cy="109.6" r="2.0"/>
+             <text x="287.8" y="112.6" class="etoile-nom" text-anchor="end">Fang</text>
+             <circle cx="245.5" cy="98.8" r="1.8"/>
+             <circle cx="226.1" cy="106.0" r="4.5" class="etoile-phare"/>
+             <text x="226.1" y="95.0" class="etoile-nom etoile-phare" text-anchor="middle">Antarès</text>
+             <circle cx="210.6" cy="123.5" r="1.8"/>
+             <circle cx="177.5" cy="185.1" r="2.2"/>
+             <circle cx="173.5" cy="223.6" r="1.8"/>
+             <circle cx="167.9" cy="267.6" r="1.8"/>
+             <circle cx="134.9" cy="277.2" r="1.8"/>
+             <circle cx="87.8" cy="278.0" r="2.4"/>
+             <text x="87.8" y="292.0" class="etoile-nom" text-anchor="middle">Sargas</text>
+             <circle cx="72.8" cy="238.9" r="1.8"/>
+             <circle cx="88.2" cy="217.4" r="3.0" class="etoile-phare"/>
+             <text x="94.2" y="209.4" class="etoile-nom etoile-phare" text-anchor="start">Shaula</text>
+             <circle cx="94.1" cy="218.9" r="2.0"/>
+             <text x="100.1" y="231.9" class="etoile-nom" text-anchor="start">Lesath</text>
+             <circle cx="239.4" cy="107.9" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="247.4" y="120.9" class="etoile-nom" text-anchor="start">M4</text>
+             <circle cx="69.1" cy="169.1" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="77.1" y="173.1" class="etoile-nom" text-anchor="start">M6</text>
+             <circle cx="44.0" cy="198.6" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="52.0" y="202.6" class="etoile-nom" text-anchor="start">M7</text>
            </svg>
-         <figcaption>Le Scorpion, tracé d'après les positions réelles des étoiles : la tête (Acrab, Dschubba, Fang), le cœur Antarès, la longue queue plongeante remontant en hameçon vers le dard (Shaula, Lesath). Cercles dorés : amas M4, M6, M7.</figcaption>
+         <figcaption>Le Scorpion, d'après les positions réelles : la tête (Acrab, Dschubba, Fang), le cœur Antarès, la longue queue plongeante remontant en hameçon vers le dard (Shaula, Lesath). Cercles dorés : amas M4, M6, M7.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>En été, cherchez bas sur l'horizon sud une longue courbe d'étoiles en <strong>hameçon</strong> : le Scorpion, l'une des rares constellations qui ressemble vraiment à son nom. Antarès brille en son cœur, d'une couleur rouge-orangé nette même à l'œil nu. La constellation pointe vers le centre de la Galaxie, dans une région très riche de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
@@ -373,21 +389,21 @@ const SUJETS = {
     resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles, et qui n'ont presque rien à voir entre elles.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 182" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="297.6,48.1 243.8,58.3 194.0,42.0 144.1,54.3 90.4,50.2 42.4,42.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="194.0,42.0 167.1,89.0 157.5,113.5 153.7,140.0 119.2,78.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="297.6" cy="48.1" r="2.0"/>
-             <circle cx="243.8" cy="58.3" r="2.0"/>
-             <circle cx="194.0" cy="42.0" r="2.0"/>
-             <circle cx="144.1" cy="54.3" r="2.0"/>
-             <circle cx="90.4" cy="50.2" r="2.0"/>
-             <circle cx="42.4" cy="42.0" r="2.0"/>
-             <circle cx="167.1" cy="89.0" r="2.0"/>
-             <circle cx="157.5" cy="113.5" r="2.0"/>
-             <circle cx="153.7" cy="140.0" r="2.2"/>
-             <circle cx="119.2" cy="78.7" r="2.2"/>
+         <svg viewBox="0 0 340 185" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="295.8,50.0 242.8,60.2 193.6,44.2 144.4,56.3 91.5,52.2 44.2,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="91.5,52.2 119.8,80.5 129.3,114.8 153.9,141.0 182.3,118.8" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="295.8" cy="50.0" r="2.0"/>
+             <circle cx="242.8" cy="60.2" r="2.0"/>
+             <circle cx="193.6" cy="44.2" r="2.0"/>
+             <circle cx="144.4" cy="56.3" r="2.0"/>
+             <circle cx="91.5" cy="52.2" r="2.0"/>
+             <circle cx="44.2" cy="44.0" r="2.0"/>
+             <circle cx="119.8" cy="80.5" r="2.2"/>
+             <circle cx="129.3" cy="114.8" r="2.0"/>
+             <circle cx="153.9" cy="141.0" r="2.2"/>
+             <circle cx="182.3" cy="118.8" r="2.0"/>
            </svg>
-         <figcaption>Le Cintre (amas de Brocchi), d'après sa géométrie réelle : une barre de six étoiles sur 1,3 degré, et le crochet qui descend vers le sud (sa pointe est l'étoile 4 Vulpeculae).</figcaption>
+         <figcaption>Le Cintre (amas de Brocchi), d'après sa géométrie réelle : une barre de six étoiles sur 1,3 degré, et le crochet suspendu sous la barre, dont la pointe sud est l'étoile 4 Vulpeculae.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>Aux jumelles, entre le <a href="#/memo/triangle-ete">Cygne et l'Aigle</a>, près de la petite constellation de la Flèche : dix étoiles dessinent un <strong>cintre</strong> (ou une pipe, selon les yeux) étonnamment net. Connu aussi sous le nom d'amas de Brocchi.</p>`,
@@ -410,27 +426,27 @@ const SUJETS = {
     resume: "Le test de vue caché dans la Grande Ourse.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 219" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="294.3,42.0 297.2,100.3 217.4,129.4 184.2,93.2 294.3,42.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="184.2,93.2 124.9,104.9 79.0,116.1 42.8,177.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="294.3" cy="42.0" r="2.8"/>
-             <text x="286.3" y="45.0" class="etoile-nom" text-anchor="end">Dubhe</text>
-             <circle cx="297.2" cy="100.3" r="2.5"/>
-             <text x="289.2" y="103.3" class="etoile-nom" text-anchor="end">Merak</text>
-             <circle cx="217.4" cy="129.4" r="2.3"/>
-             <text x="209.4" y="132.4" class="etoile-nom" text-anchor="end">Phecda</text>
-             <circle cx="184.2" cy="93.2" r="2.0"/>
-             <text x="192.2" y="96.2" class="etoile-nom" text-anchor="start">Megrez</text>
-             <circle cx="124.9" cy="104.9" r="2.6"/>
-             <text x="132.9" y="107.9" class="etoile-nom" text-anchor="start">Alioth</text>
-             <circle cx="79.0" cy="116.1" r="3.0" class="etoile-phare"/>
-             <text x="87.0" y="119.1" class="etoile-nom etoile-phare" text-anchor="start">Mizar</text>
-             <circle cx="77.0" cy="115.4" r="1.6" class="etoile-phare"/>
-             <text x="85.0" y="118.4" class="etoile-nom etoile-phare" text-anchor="start">Alcor</text>
-             <circle cx="42.8" cy="177.0" r="2.5"/>
-             <text x="50.8" y="180.0" class="etoile-nom" text-anchor="start">Alkaïd</text>
+         <svg viewBox="0 0 340 213" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="276.2,44.0 295.9,95.9 227.6,139.5 193.1,107.8 276.2,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="193.1,107.8 137.9,117.5 93.2,121.7 44.1,169.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="276.2" cy="44.0" r="2.8"/>
+             <text x="268.2" y="47.0" class="etoile-nom" text-anchor="end">Dubhe</text>
+             <circle cx="295.9" cy="95.9" r="2.5"/>
+             <text x="287.9" y="98.9" class="etoile-nom" text-anchor="end">Merak</text>
+             <circle cx="227.6" cy="139.5" r="2.3"/>
+             <text x="219.6" y="142.5" class="etoile-nom" text-anchor="end">Phecda</text>
+             <circle cx="193.1" cy="107.8" r="2.0"/>
+             <text x="185.1" y="110.8" class="etoile-nom" text-anchor="end">Megrez</text>
+             <circle cx="137.9" cy="117.5" r="2.6"/>
+             <text x="145.9" y="120.5" class="etoile-nom" text-anchor="start">Alioth</text>
+             <circle cx="93.2" cy="121.7" r="3.0" class="etoile-phare"/>
+             <text x="93.2" y="137.7" class="etoile-nom etoile-phare" text-anchor="middle">Mizar</text>
+             <circle cx="91.4" cy="120.7" r="1.6" class="etoile-phare"/>
+             <text x="91.4" y="111.7" class="etoile-nom etoile-phare" text-anchor="middle">Alcor</text>
+             <circle cx="44.1" cy="169.0" r="2.5"/>
+             <text x="52.1" y="172.0" class="etoile-nom" text-anchor="start">Alkaïd</text>
            </svg>
-         <figcaption>La Grande Casserole, d'après les positions réelles : le bol (Dubhe, Merak, Phecda, Megrez) et le manche (Alioth, Mizar et sa compagne Alcor, Alkaïd).</figcaption>
+         <figcaption>La Grande Casserole, d'après les positions réelles : le bol (Dubhe, Merak, Phecda, Megrez) et le manche (Alioth, Mizar et sa compagne Alcor juste au-dessus, Alkaïd).</figcaption>
        </figure>`,
       `<h2>Le test de vue des anciens</h2>
        <p>Regardez la deuxième étoile du manche de la Grande Ourse : c'est <strong>Mizar</strong>. Juste à côté, une étoile plus faible : <strong>Alcor</strong>. Distinguer les deux à l'œil nu demande une bonne vue, et servait de test dans de nombreuses cultures : chez les Romains, chez les Arabes (qui appelaient Alcor «&nbsp;l'Oubliée&nbsp;»), et au Japon pour évaluer la vue des archers samouraïs.</p>`,
@@ -456,6 +472,24 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/Epsilon_Lyrae",
     resume: "Une étoile, puis deux, puis quatre : ça dépend juste de la puissance de votre instrument.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="263.6,80.0 202.6,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="263.6,80.0 200.0,130.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="200.0,130.7 154.9,309.0 76.4,336.0 118.5,160.1 200.0,130.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="263.6" cy="80.0" r="4.0" class="etoile-phare"/>
+             <text x="255.6" y="83.0" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
+             <circle cx="200.0" cy="130.7" r="1.9"/>
+             <circle cx="154.9" cy="309.0" r="2.2"/>
+             <text x="146.9" y="313.0" class="etoile-nom" text-anchor="end">Sheliak</text>
+             <circle cx="76.4" cy="336.0" r="2.3"/>
+             <text x="84.4" y="340.0" class="etoile-nom" text-anchor="start">Sulafat</text>
+             <circle cx="118.5" cy="160.1" r="1.8"/>
+             <circle cx="202.6" cy="44.0" r="2.4" class="etoile-phare"/>
+             <text x="210.6" y="44.0" class="etoile-nom etoile-phare" text-anchor="start">ε, la Double-Double</text>
+           </svg>
+         <figcaption>La Lyre, d'après les positions réelles. La Double-Double (ε, en or) se trouve juste à côté de Véga ; en dessous, le parallélogramme avec Sheliak et Sulafat.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>Juste à côté de Véga (<a href="#/memo/triangle-ete">Triangle d'été</a>). À l'œil nu, une seule étoile ; aux <strong>jumelles</strong>, elle se sépare déjà en deux ; au <strong>télescope</strong> avec un bon grossissement, chacune de ces deux étoiles se sépare à son tour en deux, quatre étoiles en tout, d'où son surnom.</p>`,
       `<h2>Chiffres clés</h2>
@@ -476,6 +510,23 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/Albireo",
     resume: "Une étoile dorée et une étoile bleue, côte à côte, l'une des plus belles doubles du ciel.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 351" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="73.5,44.0 123.7,124.6 295.7,307.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="44.3,217.9 123.7,124.6 227.9,46.3" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="73.5" cy="44.0" r="3.4"/>
+             <text x="81.5" y="47.0" class="etoile-nom" text-anchor="start">Deneb</text>
+             <circle cx="123.7" cy="124.6" r="2.6"/>
+             <text x="131.7" y="118.6" class="etoile-nom" text-anchor="start">Sadr</text>
+             <circle cx="44.3" cy="217.9" r="2.2"/>
+             <text x="52.3" y="220.9" class="etoile-nom" text-anchor="start">Gienah</text>
+             <circle cx="227.9" cy="46.3" r="2.2"/>
+             <text x="219.9" y="49.3" class="etoile-nom" text-anchor="end">Fawaris</text>
+             <circle cx="295.7" cy="307.0" r="3.0" class="etoile-phare"/>
+             <text x="287.7" y="310.0" class="etoile-nom etoile-phare" text-anchor="end">Albireo</text>
+           </svg>
+         <figcaption>Le Cygne (la Croix du Nord), d'après les positions réelles : Deneb à la queue, Sadr au croisement, les ailes (Gienah, Fawaris), et Albireo (en or) à la tête, tout au bout du long cou.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>À la tête du Cygne, à l'opposé de Deneb (<a href="#/memo/triangle-ete">Triangle d'été</a>). Au télescope, même à faible grossissement, elle se sépare en deux couleurs franches : une étoile <strong>orangée</strong> et une étoile <strong>bleue</strong>, l'un des contrastes les plus spectaculaires du ciel, même pour un œil non entraîné.</p>`,
       `<h2>Chiffres clés</h2>
@@ -496,6 +547,26 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/Double_amas_de_Pers%C3%A9e",
     resume: "Deux amas d'étoiles jeunes, côte à côte, connus depuis l'Antiquité et spectaculaires aux jumelles.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 192" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="295.5,63.0 267.4,97.8 239.7,64.9 207.9,74.1 175.6,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="103.0,107.4 79.9,124.3 44.5,148.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="295.5" cy="63.0" r="2.4"/>
+             <circle cx="267.4" cy="97.8" r="2.6"/>
+             <text x="267.4" y="112.8" class="etoile-nom" text-anchor="middle">Schedar</text>
+             <circle cx="239.7" cy="64.9" r="2.4"/>
+             <circle cx="207.9" cy="74.1" r="2.2"/>
+             <text x="207.9" y="64.1" class="etoile-nom" text-anchor="middle">Ruchbah</text>
+             <circle cx="175.6" cy="44.0" r="2.0"/>
+             <circle cx="103.0" cy="107.4" r="1.9"/>
+             <circle cx="79.9" cy="124.3" r="2.0"/>
+             <circle cx="44.5" cy="148.0" r="2.9"/>
+             <text x="52.5" y="151.0" class="etoile-nom" text-anchor="start">Mirfak</text>
+             <circle cx="142.1" cy="102.3" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="142.1" y="91.3" class="etoile-nom" text-anchor="middle">double amas</text>
+           </svg>
+         <figcaption>Entre le W de Cassiopée et Persée (Mirfak), le double amas (cercle doré) se trouve à mi-chemin : suivre la ligne Ruchbah-Segin et prolonger vers Persée.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>Entre les constellations de Persée et Cassiopée : une tache floue visible à l'œil nu sous un ciel correct, qui explose en centaines d'étoiles aux <strong>jumelles</strong> ou au télescope à faible grossissement, l'un des plus beaux champs du ciel d'automne-hiver.</p>`,
       `<h2>Chiffres clés</h2>
@@ -516,20 +587,20 @@ const SUJETS = {
     resume: "Un amas d'étoiles qui dessine un petit bonhomme, rebaptisé E.T. pour sa bouille extraterrestre.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 223" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="297.7,130.1 221.7,181.0 182.3,99.6 111.7,108.9 42.3,42.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="297.7" cy="130.1" r="2.6"/>
-             <text x="289.7" y="133.1" class="etoile-nom" text-anchor="end">Caph</text>
-             <circle cx="221.7" cy="181.0" r="2.8"/>
-             <text x="213.7" y="184.0" class="etoile-nom" text-anchor="end">Schedar</text>
-             <circle cx="182.3" cy="99.6" r="2.6"/>
-             <text x="190.3" y="102.6" class="etoile-nom" text-anchor="start">Navi</text>
-             <circle cx="111.7" cy="108.9" r="2.4"/>
-             <text x="119.7" y="111.9" class="etoile-nom" text-anchor="start">Ruchbah</text>
-             <circle cx="42.3" cy="42.0" r="2.2"/>
-             <text x="50.3" y="45.0" class="etoile-nom" text-anchor="start">Segin</text>
-             <circle cx="126.8" cy="146.9" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
-             <text x="134.8" y="149.9" class="etoile-nom" text-anchor="start">amas E.T.</text>
+         <svg viewBox="0 0 340 239" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="295.9,130.7 221.0,195.0 173.7,113.6 101.4,121.4 44.1,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="295.9" cy="130.7" r="2.6"/>
+             <text x="287.9" y="133.7" class="etoile-nom" text-anchor="end">Caph</text>
+             <circle cx="221.0" cy="195.0" r="2.8"/>
+             <text x="213.0" y="198.0" class="etoile-nom" text-anchor="end">Schedar</text>
+             <circle cx="173.7" cy="113.6" r="2.6"/>
+             <text x="173.7" y="104.6" class="etoile-nom" text-anchor="middle">Navi</text>
+             <circle cx="101.4" cy="121.4" r="2.4"/>
+             <text x="101.4" y="111.4" class="etoile-nom" text-anchor="middle">Ruchbah</text>
+             <circle cx="44.1" cy="44.0" r="2.2"/>
+             <text x="52.1" y="47.0" class="etoile-nom" text-anchor="start">Segin</text>
+             <circle cx="114.7" cy="161.6" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="114.7" y="176.6" class="etoile-nom" text-anchor="middle">amas E.T.</text>
            </svg>
          <figcaption>Le W de Cassiopée, d'après les positions réelles (Caph, Schedar, Navi, Ruchbah, Segin). Cercle doré : l'amas E.T. (NGC 457), sous Ruchbah.</figcaption>
        </figure>`,
@@ -573,36 +644,36 @@ const SUJETS = {
     resume: "Une pouponnière d'étoiles à l'œil nu, juste sous la ceinture d'Orion.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="98.5,77.6 204.2,92.5" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="169.0,42.0 98.5,77.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="169.0,42.0 204.2,92.5" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="98.5,77.6 149.2,209.2" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="204.2,92.5 180.0,177.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="149.2,209.2 165.2,198.8 180.0,177.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="149.2,209.2 124.6,318.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="180.0,177.6 241.5,297.3" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="124.6,318.0 241.5,297.3" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="98.5" cy="77.6" r="4.0" style="fill:#e0794a"/>
-             <text x="106.5" y="80.6" class="etoile-nom" text-anchor="start">Bételgeuse</text>
-             <circle cx="204.2" cy="92.5" r="2.6"/>
-             <text x="196.2" y="95.5" class="etoile-nom" text-anchor="end">Bellatrix</text>
-             <circle cx="169.0" cy="42.0" r="1.8"/>
-             <text x="177.0" y="45.0" class="etoile-nom" text-anchor="start">Meissa</text>
-             <circle cx="149.2" cy="209.2" r="2.6"/>
-             <text x="157.2" y="212.2" class="etoile-nom" text-anchor="start">Alnitak</text>
-             <circle cx="165.2" cy="198.8" r="2.6"/>
-             <text x="173.2" y="201.8" class="etoile-nom" text-anchor="start">Alnilam</text>
-             <circle cx="180.0" cy="177.6" r="2.6"/>
-             <text x="188.0" y="180.6" class="etoile-nom" text-anchor="start">Mintaka</text>
-             <circle cx="124.6" cy="318.0" r="2.4"/>
-             <text x="132.6" y="321.0" class="etoile-nom" text-anchor="start">Saiph</text>
-             <circle cx="241.5" cy="297.3" r="4.0" class="etoile-phare"/>
-             <text x="233.5" y="300.3" class="etoile-nom etoile-phare" text-anchor="end">Rigel</text>
-             <circle cx="168.5" cy="257.8" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
-             <text x="176.5" y="260.8" class="etoile-nom" text-anchor="start">M42</text>
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="94.8,81.4 206.2,97.1" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="169.0,44.0 94.8,81.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="169.0,44.0 206.2,97.1" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="94.8,81.4 148.0,221.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="206.2,97.1 180.8,187.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="148.0,221.0 165.0,209.9 180.8,187.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="148.0,221.0 122.5,336.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="180.8,187.4 245.2,314.3" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="122.5,336.0 245.2,314.3" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="94.8" cy="81.4" r="4.0" style="fill:#e0794a"/>
+             <text x="102.8" y="84.4" class="etoile-nom" text-anchor="start">Bételgeuse</text>
+             <circle cx="206.2" cy="97.1" r="2.6"/>
+             <text x="198.2" y="100.1" class="etoile-nom" text-anchor="end">Bellatrix</text>
+             <circle cx="169.0" cy="44.0" r="1.8"/>
+             <text x="169.0" y="35.0" class="etoile-nom" text-anchor="middle">Meissa</text>
+             <circle cx="148.0" cy="221.0" r="2.6"/>
+             <text x="156.0" y="231.0" class="etoile-nom" text-anchor="start">Alnitak</text>
+             <circle cx="165.0" cy="209.9" r="2.6"/>
+             <text x="165.0" y="199.9" class="etoile-nom" text-anchor="middle">Alnilam</text>
+             <circle cx="180.8" cy="187.4" r="2.6"/>
+             <text x="172.8" y="181.4" class="etoile-nom" text-anchor="end">Mintaka</text>
+             <circle cx="122.5" cy="336.0" r="2.4"/>
+             <text x="130.5" y="339.0" class="etoile-nom" text-anchor="start">Saiph</text>
+             <circle cx="245.2" cy="314.3" r="4.0" class="etoile-phare"/>
+             <text x="237.2" y="317.3" class="etoile-nom etoile-phare" text-anchor="end">Rigel</text>
+             <circle cx="168.5" cy="272.5" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="176.5" y="276.5" class="etoile-nom" text-anchor="start">M42</text>
            </svg>
-         <figcaption>Orion, d'après les positions réelles : les épaules (Bételgeuse en orange, Bellatrix), la tête (Meissa), la ceinture (Alnitak, Alnilam, Mintaka), les pieds (Saiph, Rigel). Cercle doré : la nébuleuse M42, dans l'épée sous la ceinture.</figcaption>
+         <figcaption>Orion, d'après les positions réelles : les épaules (Bételgeuse en orange, Bellatrix), la tête (Meissa), la ceinture (Alnitak, Alnilam, Mintaka), les pieds (Saiph, Rigel). Cercle doré : la nébuleuse M42, dans l'épée.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>En hiver, sous les trois étoiles alignées de la <strong>ceinture d'Orion</strong> : une petite tache floue, visible à l'œil nu dans « l'épée » du chasseur. Aux jumelles ou au télescope, elle devient une vaste nébulosité aux volutes bien visibles.</p>`,
@@ -625,8 +696,27 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_la_Lyre",
     resume: "Un petit anneau de fumée cosmique, l'avenir du Soleil, dans environ 5 milliards d'années.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="263.3,79.8 202.3,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="263.3,79.8 199.8,130.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="199.8,130.6 155.1,308.9 76.7,336.0 118.4,160.2 199.8,130.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="263.3" cy="79.8" r="4.0" class="etoile-phare"/>
+             <text x="255.3" y="82.8" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
+             <circle cx="202.3" cy="44.0" r="1.8"/>
+             <circle cx="199.8" cy="130.6" r="1.9"/>
+             <circle cx="155.1" cy="308.9" r="2.2"/>
+             <text x="147.1" y="312.9" class="etoile-nom" text-anchor="end">Sheliak</text>
+             <circle cx="76.7" cy="336.0" r="2.3"/>
+             <text x="84.7" y="340.0" class="etoile-nom" text-anchor="start">Sulafat</text>
+             <circle cx="118.4" cy="160.2" r="1.8"/>
+             <circle cx="124.3" cy="322.6" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="124.3" y="338.6" class="etoile-nom" text-anchor="middle">M57</text>
+           </svg>
+         <figcaption>La Lyre, d'après les positions réelles : Véga et le petit parallélogramme (Sheliak, Sulafat…). Cercle doré : la nébuleuse M57, presque à mi-chemin entre Sheliak et Sulafat.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
-       <p>Entre les deux étoiles inférieures du petit parallélogramme de la Lyre, près de <a href="#/memo/triangle-ete">Véga</a>. Nécessite un télescope : un tout petit anneau flou, difficile à grossir davantage.</p>`,
+       <p>Entre les deux étoiles inférieures du petit parallélogramme de la Lyre (<strong>Sheliak</strong> et <strong>Sulafat</strong>), près de <a href="#/memo/triangle-ete">Véga</a>. Nécessite un télescope : un tout petit anneau flou, difficile à grossir davantage.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~2 600 années-lumière<br>
          Âge : quelques milliers d'années seulement depuis l'éjection du gaz, une <a href="#/memo/types-nebuleuses">nébuleuse planétaire</a>, donc un cadavre d'étoile toute récente à l'échelle cosmique.</div>`,
@@ -644,6 +734,21 @@ const SUJETS = {
     wiki: "https://fr.wikipedia.org/wiki/N%C3%A9buleuse_de_l%27Halt%C3%A8re",
     resume: "La toute première nébuleuse planétaire jamais découverte, en forme de sablier de sport.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 377" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="295.6,303.2 200.2,275.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="283.5,333.0 200.2,275.4" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="200.2,275.4 52.6,221.8" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="295.6" cy="303.2" r="2.2"/>
+             <text x="287.6" y="306.2" class="etoile-nom" text-anchor="end">Sham</text>
+             <circle cx="283.5" cy="333.0" r="2.0"/>
+             <circle cx="200.2" cy="275.4" r="2.0"/>
+             <circle cx="52.6" cy="221.8" r="2.3"/>
+             <circle cx="44.4" cy="44.0" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="52.4" y="48.0" class="etoile-nom" text-anchor="start">M27</text>
+           </svg>
+         <figcaption>La petite constellation de la Flèche (Sham à l'empenne), d'après les positions réelles. Cercle doré : la nébuleuse M27, juste au nord de la pointe de la Flèche, dans le Petit Renard.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>Dans la petite constellation du Petit Renard, non loin de la <a href="#/memo/cintre">Flèche et du Cygne</a>. Plus grande et plus lumineuse que <a href="#/memo/nebuleuse-lyre">M57</a> : un des objets les plus faciles de sa catégorie, même en petit télescope.</p>`,
       `<h2>Chiffres clés</h2>
@@ -680,6 +785,18 @@ const SUJETS = {
     conte: "hercule-dragon",
     resume: "Une boule de 300 000 étoiles presque aussi vieilles que l'Univers.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="277.0,44.0 295.9,310.8 147.7,336.0 44.1,117.1 277.0,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="277.0" cy="44.0" r="2.2"/>
+             <circle cx="295.9" cy="310.8" r="2.4"/>
+             <circle cx="147.7" cy="336.0" r="2.2"/>
+             <circle cx="44.1" cy="117.1" r="2.0"/>
+             <circle cx="288.2" cy="133.6" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="296.2" y="137.6" class="etoile-nom" text-anchor="start">M13</text>
+           </svg>
+         <figcaption>Le Trapèze d'Hercule (la « clé de voûte »), d'après les positions réelles de ses quatre étoiles. Cercle doré : M13, sur le côté ouest du trapèze, aux deux tiers vers le haut.</figcaption>
+       </figure>`,
       `<h2>Une ruche d'étoiles</h2>
        <p>Dans la constellation d'Hercule, ce petit flocon flou au télescope est un <a href="#/memo/types-amas">amas globulaire</a> : environ <strong>300 000 étoiles</strong> serrées dans une sphère de 150 années-lumière, à ~23 000 années-lumière de nous. Au centre, les étoiles sont des centaines de fois plus proches les unes des autres que dans notre voisinage : là-bas, la nuit n'existe presque pas.</p>`,
       `<h2>Des fossiles du ciel</h2>
@@ -699,6 +816,24 @@ const SUJETS = {
     conte: "saga-persee",
     resume: "L'objet le plus lointain visible à l'œil nu, et notre future compagne de fusion.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 239" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="295.2,195.0 220.7,181.8 150.4,129.7 44.8,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="150.4,129.7 179.6,98.5 194.1,70.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="295.2" cy="195.0" r="2.8"/>
+             <text x="295.2" y="210.0" class="etoile-nom" text-anchor="middle">Alpheratz</text>
+             <circle cx="220.7" cy="181.8" r="1.9"/>
+             <circle cx="150.4" cy="129.7" r="2.8"/>
+             <text x="150.4" y="144.7" class="etoile-nom" text-anchor="middle">Mirach</text>
+             <circle cx="179.6" cy="98.5" r="1.8"/>
+             <circle cx="194.1" cy="70.0" r="1.7"/>
+             <circle cx="44.8" cy="44.0" r="2.6"/>
+             <text x="52.8" y="47.0" class="etoile-nom" text-anchor="start">Almach</text>
+             <circle cx="208.8" cy="67.5" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="208.8" y="57.5" class="etoile-nom" text-anchor="middle">M31</text>
+           </svg>
+         <figcaption>Andromède, d'après les positions réelles : la chaîne Alpheratz, Mirach, Almach. Depuis Mirach, deux étoiles servent de marches d'escalier pour monter jusqu'à la galaxie M31 (cercle doré).</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>Sous un ciel bien noir, dans la constellation d'Andromède, près de Cassiopée : une petite tache floue et allongée à l'œil nu. C'est l'objet le plus lointain que l'œil humain peut voir sans instrument.</p>`,
       `<h2>Chiffres clés</h2>
@@ -726,6 +861,23 @@ const SUJETS = {
     conte: "saga-persee",
     resume: "Cassiopée, Andromède, Persée, Pégase : plusieurs constellations d'automne qui racontent une seule et même histoire.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="208.4,72.8 173.8,115.7 118.7,178.2 61.9,209.6" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="118.7,178.2 159.7,267.8 163.4,336.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="208.4" cy="72.8" r="1.9"/>
+             <circle cx="173.8" cy="115.7" r="2.0"/>
+             <circle cx="118.7" cy="178.2" r="3.0"/>
+             <text x="126.7" y="181.2" class="etoile-nom" text-anchor="start">Mirfak</text>
+             <circle cx="61.9" cy="209.6" r="2.0"/>
+             <circle cx="159.7" cy="267.8" r="1.8"/>
+             <circle cx="163.4" cy="336.0" r="2.7" class="etoile-phare"/>
+             <text x="171.4" y="339.0" class="etoile-nom etoile-phare" text-anchor="start">Algol</text>
+             <circle cx="278.1" cy="44.0" r="3.2" fill="none" stroke="#c9a54a" stroke-width="1"/>
+             <text x="278.1" y="34.0" class="etoile-nom" text-anchor="middle">double amas</text>
+           </svg>
+         <figcaption>Persée, d'après les positions réelles : Mirfak la plus brillante, et Algol (en or), « l'œil du démon » dans la tête de Méduse. Cercle doré : le double amas, sur le chemin vers Cassiopée.</figcaption>
+       </figure>`,
       `<h2>L'histoire</h2>
        <p>La reine <strong>Cassiopée</strong> se vante d'être plus belle que les Néréides ; Poséidon envoie le monstre marin Cétus se venger. Pour l'apaiser, la princesse <strong>Andromède</strong> est enchaînée à un rocher en sacrifice. <strong>Persée</strong>, revenant tout juste avec la tête de la Gorgone Méduse, la découvre, tue le monstre et la libère, puis l'épouse. Tous les personnages de cette histoire se retrouvent aujourd'hui côte à côte dans le ciel d'automne. Le récit complet est à retrouver dans les <a href="#/contes/saga-persee">Contes du ciel</a>.</p>`,
       `<h2>Repérage</h2>
@@ -944,6 +1096,28 @@ const SUJETS = {
     conte: "sagittaire",
     resume: "La direction du cœur de la Voie lactée.",
     sections: [
+      `<figure class="constellation">
+         <svg viewBox="0 0 340 215" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="233.1,117.1 187.1,106.8 176.1,171.0 59.5,109.9 110.3,66.7 187.1,106.8" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="187.1,106.8 166.3,44.0 110.3,66.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="110.3,66.7 79.6,58.0 44.2,79.6 59.5,109.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="233.1" cy="117.1" r="2.2"/>
+             <text x="225.1" y="120.1" class="etoile-nom" text-anchor="end">Alnasl</text>
+             <circle cx="187.1" cy="106.8" r="2.4"/>
+             <circle cx="176.1" cy="171.0" r="2.8"/>
+             <text x="176.1" y="186.0" class="etoile-nom" text-anchor="middle">Kaus Australis</text>
+             <circle cx="166.3" cy="44.0" r="2.2"/>
+             <text x="166.3" y="34.0" class="etoile-nom" text-anchor="middle">Kaus Borealis</text>
+             <circle cx="110.3" cy="66.7" r="1.9"/>
+             <circle cx="79.6" cy="58.0" r="2.6"/>
+             <text x="79.6" y="48.0" class="etoile-nom" text-anchor="middle">Nunki</text>
+             <circle cx="59.5" cy="109.9" r="2.2"/>
+             <circle cx="44.2" cy="79.6" r="1.8"/>
+             <path d="M 291.8,101.9 L 299.8,101.9 M 295.8,97.9 L 295.8,105.9" stroke="#c9a54a" stroke-width="1.4"/>
+             <text x="295.8" y="91.9" class="etoile-nom" text-anchor="middle">Sgr A*</text>
+           </svg>
+         <figcaption>La Théière du Sagittaire, d'après les positions réelles : le bec (Alnasl), le couvercle (Kaus Borealis), l'anse (Nunki). La croix dorée marque Sagittarius A*, le trou noir central de la Galaxie, juste au-dessus du bec : la « vapeur » de la théière est la Voie lactée.</figcaption>
+       </figure>`,
       `<h2>Repérage</h2>
        <p>Constellation d'été, basse sur l'horizon sud. Son astérisme le plus reconnaissable est <strong>la Théière</strong> : un motif d'étoiles évoquant une théière de profil (bec, couvercle, anse), dont la «&nbsp;vapeur&nbsp;» sortant du bec correspond justement à la bande la plus dense de la <a href="#/memo/voie-lactee">Voie lactée</a>.</p>`,
       `<h2>Pourquoi c'est important</h2>
