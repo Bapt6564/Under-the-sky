@@ -1,31 +1,26 @@
 /* =====================================================================
    SUJETS.JS, le contenu du mémo
    ---------------------------------------------------------------------
-   Ce fichier ne contient QUE les fiches du mémo : aucun code technique
-   ici, vous pouvez modifier ou ajouter un sujet sans rien casser.
+   Ce fichier ne contient que les fiches du mémo.
 
-   ➕ POUR AJOUTER UN SUJET : copiez un bloc entre accolades { ... },
-   changez le slug (l'identifiant entre guillemets, sans espaces ni
-   accents), le titre, l'icône, le résumé et les sections.
-   ➕ POUR FAIRE UN LIEN INTERNE vers un autre sujet, écrivez dans le
-   texte : <a href="#/memo/slug-du-sujet">texte du lien</a>
+   POUR AJOUTER UN SUJET : copiez un bloc entre accolades { ... }, changez le slug (l'identifiant entre guillemets, sans espaces ni accents), 
+   le titre, l'icône, le résumé et les sections.
+   
+   POUR FAIRE UN LIEN INTERNE vers un autre sujet, écrivez dans le texte : <a href="#/memo/slug-du-sujet">texte du lien</a>
    Les sections acceptent du HTML : <strong>, <ul><li>, etc.
    La classe "chiffre-cle" met un paragraphe en évidence (encadré doré).
 
-   🖼️ POUR AJOUTER UNE IMAGE dans une fiche, déposez le fichier image
-   dans le dossier /images du dépôt, puis écrivez dans une section :
+   POUR AJOUTER UNE IMAGE dans une fiche, déposez le fichier image dans le dossier /images du dépôt, puis écrivez dans une section :
      <figure class="illustration">
        <img src="images/nom-du-fichier.jpg" alt="description de l'image">
        <figcaption>Légende courte (facultative)</figcaption>
      </figure>
-   L'image s'adapte automatiquement à la largeur de la fiche. Voir le
-   README.md du dépôt pour plus de détails (formats, poids conseillé).
+   L'image s'adapte automatiquement à la largeur de la fiche. Voir le README.md du dépôt pour plus de détails (formats, poids conseillé).
 
-   📏 GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) :
-   la plupart des fiches ci-dessous suivent 3 sections courtes :
-   1. Repérage, comment trouver l'objet dans le ciel
-   2. Chiffres clés, distance / âge / température-couleur en un bloc
-   3. Anecdotes, 1 ou 2 faits qui marquent les esprits
+   GABARIT CONSEILLÉ (pour rester rapide à lire sur le terrain) : la plupart des fiches ci-dessous suivent 3 sections courtes :
+      1. Repérage, comment trouver l'objet dans le ciel
+      2. Chiffres clés, distance / âge / température-couleur en un bloc
+      3. Anecdotes, 1 ou 2 faits qui marquent les esprits
    Libre à vous de vous en écarter si un sujet s'y prête mal.
    ===================================================================== */
 const SUJETS = {
