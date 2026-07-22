@@ -178,15 +178,19 @@ const SUJETS = {
     sections: [
       `<figure class="constellation">
          <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="261.8,92.9 78.2,44.0 144.4,336.0 261.8,92.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="261.8" cy="92.9" r="4.0" class="etoile-phare"/>
-             <text x="253.8" y="95.9" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
-             <circle cx="78.2" cy="44.0" r="3.4"/>
-             <text x="86.2" y="47.0" class="etoile-nom" text-anchor="start">Deneb</text>
-             <circle cx="144.4" cy="336.0" r="3.6"/>
-             <text x="144.4" y="352.0" class="etoile-nom" text-anchor="middle">Altaïr</text>
+             <polyline points="262.5,90.9 77.5,44.0 147.3,336.0 262.5,90.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="262.5" cy="90.9" r="4.0" class="etoile-phare"/>
+             <text x="254.5" y="93.9" class="etoile-nom etoile-phare" text-anchor="end">Véga</text>
+             <circle cx="77.5" cy="44.0" r="3.4"/>
+             <text x="85.5" y="47.0" class="etoile-nom" text-anchor="start">Deneb</text>
+             <circle cx="147.3" cy="336.0" r="3.6"/>
+             <text x="147.3" y="352.0" class="etoile-nom" text-anchor="middle">Altaïr</text>
+             <circle cx="100.2" cy="86.4" r="2.4"/>
+             <text x="108.2" y="80.4" class="etoile-nom" text-anchor="start">Sadr</text>
+             <circle cx="183.5" cy="186.6" r="2.6"/>
+             <text x="191.5" y="190.6" class="etoile-nom" text-anchor="start">Albireo</text>
            </svg>
-         <figcaption>Le Triangle d'été, d'après les positions réelles : Véga (Lyre), Deneb (Cygne) et Altaïr (Aigle).</figcaption>
+         <figcaption>Le Triangle d'été (Véga, Deneb, Altaïr), d'après les positions réelles. Sont aussi repérées, sans être reliées, Sadr (au cœur du Cygne) et Albireo (à sa tête), utiles pour se guider vers les objets de la région.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>Formé par <strong>Véga</strong> (Lyre), <strong>Deneb</strong> (Cygne) et <strong>Altaïr</strong> (Aigle) : un vaste triangle très haut dans le ciel les soirées d'été. Ce n'est pas une constellation officielle, juste un repère bien pratique, un <em>astérisme</em>.</p>`,
@@ -389,21 +393,21 @@ const SUJETS = {
     resume: "Dix étoiles qui dessinent un cintre parfait aux jumelles, et qui n'ont presque rien à voir entre elles.",
     sections: [
       `<figure class="constellation">
-         <svg viewBox="0 0 340 185" xmlns="http://www.w3.org/2000/svg">
-             <polyline points="295.8,50.0 242.8,60.2 193.6,44.2 144.4,56.3 91.5,52.2 44.2,44.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <polyline points="91.5,52.2 119.8,80.5 129.3,114.8 153.9,141.0 182.3,118.8" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
-             <circle cx="295.8" cy="50.0" r="2.0"/>
-             <circle cx="242.8" cy="60.2" r="2.0"/>
-             <circle cx="193.6" cy="44.2" r="2.0"/>
-             <circle cx="144.4" cy="56.3" r="2.0"/>
-             <circle cx="91.5" cy="52.2" r="2.0"/>
-             <circle cx="44.2" cy="44.0" r="2.0"/>
-             <circle cx="119.8" cy="80.5" r="2.2"/>
-             <circle cx="129.3" cy="114.8" r="2.0"/>
-             <circle cx="153.9" cy="141.0" r="2.2"/>
-             <circle cx="182.3" cy="118.8" r="2.0"/>
+         <svg viewBox="0 0 340 184" xmlns="http://www.w3.org/2000/svg">
+             <polyline points="294.9,134.0 242.3,124.0 193.5,140.0 144.6,128.0 92.1,132.0 45.1,140.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <polyline points="193.5,140.0 182.2,66.0 154.0,44.0 129.6,70.0 120.2,104.0 92.1,132.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+             <circle cx="294.9" cy="134.0" r="2.0"/>
+             <circle cx="242.3" cy="124.0" r="2.0"/>
+             <circle cx="193.5" cy="140.0" r="2.0"/>
+             <circle cx="144.6" cy="128.0" r="2.0"/>
+             <circle cx="92.1" cy="132.0" r="2.0"/>
+             <circle cx="45.1" cy="140.0" r="2.0"/>
+             <circle cx="120.2" cy="104.0" r="2.0"/>
+             <circle cx="129.6" cy="70.0" r="2.0"/>
+             <circle cx="154.0" cy="44.0" r="2.0"/>
+             <circle cx="182.2" cy="66.0" r="2.0"/>
            </svg>
-         <figcaption>Le Cintre (amas de Brocchi), d'après sa géométrie réelle : une barre de six étoiles sur 1,3 degré, et le crochet suspendu sous la barre, dont la pointe sud est l'étoile 4 Vulpeculae.</figcaption>
+         <figcaption>Le Cintre (amas de Brocchi), orienté comme le porte-manteau qu'il évoque : la barre droite en bas, le crochet qui remonte au-dessus. Un astérisme de dix étoiles, superbe aux jumelles.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
        <p>Aux jumelles, entre le <a href="#/memo/triangle-ete">Cygne et l'Aigle</a>, près de la petite constellation de la Flèche : dix étoiles dessinent un <strong>cintre</strong> (ou une pipe, selon les yeux) étonnamment net. Connu aussi sous le nom d'amas de Brocchi.</p>`,
@@ -491,7 +495,7 @@ const SUJETS = {
          <figcaption>La Lyre, d'après les positions réelles. La Double-Double (ε, en or) se trouve juste à côté de Véga ; en dessous, le parallélogramme avec Sheliak et Sulafat.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
-       <p>Juste à côté de Véga (<a href="#/memo/triangle-ete">Triangle d'été</a>). À l'œil nu, une seule étoile ; aux <strong>jumelles</strong>, elle se sépare déjà en deux ; au <strong>télescope</strong> avec un bon grossissement, chacune de ces deux étoiles se sépare à son tour en deux, quatre étoiles en tout, d'où son surnom.</p>`,
+       <p>Juste à côté de Véga (<a href="#/memo/triangle-ete">Triangle d'été</a>), à l'opposé du petit parallélogramme de la Lyre où se niche la <a href="#/memo/nebuleuse-lyre">nébuleuse M57</a>. À l'œil nu, une seule étoile ; aux <strong>jumelles</strong>, elle se sépare déjà en deux ; au <strong>télescope</strong> avec un bon grossissement, chacune de ces deux étoiles se sépare à son tour en deux, quatre étoiles en tout, d'où son surnom.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">
          Distance : ~160 années-lumière<br>
@@ -501,7 +505,7 @@ const SUJETS = {
       `<h2>Anecdote</h2>
        <p>Les quatre étoiles sont réellement liées par la gravité : un vrai système à quatre, comme <a href="#/memo/alcor-mizar">Mizar et Alcor</a> un peu plus loin dans le ciel, de bons doublons pour comparer les deux tests de résolution en une même soirée.</p>`
     ],
-    voirAussi: ["triangle-ete", "alcor-mizar"]
+    voirAussi: ["triangle-ete", "alcor-mizar", "nebuleuse-lyre"]
   },
 
   "albireo": {
@@ -716,7 +720,7 @@ const SUJETS = {
          <figcaption>La Lyre, d'après les positions réelles : Véga et le petit parallélogramme (Sheliak, Sulafat…). Cercle doré : la nébuleuse M57, presque à mi-chemin entre Sheliak et Sulafat.</figcaption>
        </figure>`,
       `<h2>Repérage</h2>
-       <p>Entre les deux étoiles inférieures du petit parallélogramme de la Lyre (<strong>Sheliak</strong> et <strong>Sulafat</strong>), près de <a href="#/memo/triangle-ete">Véga</a>. Nécessite un télescope : un tout petit anneau flou, difficile à grossir davantage.</p>`,
+       <p>Entre les deux étoiles inférieures du petit parallélogramme de la Lyre (<strong>Sheliak</strong> et <strong>Sulafat</strong>), près de <a href="#/memo/triangle-ete">Véga</a>. De l'autre côté de Véga se trouve <a href="#/memo/epsilon-lyre">Epsilon Lyrae, la Double-Double</a>, à observer dans la même soirée. Nécessite un télescope : un tout petit anneau flou, difficile à grossir davantage.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Distance : ~2 600 années-lumière<br>
          Âge : quelques milliers d'années seulement depuis l'éjection du gaz, une <a href="#/memo/types-nebuleuses">nébuleuse planétaire</a>, donc un cadavre d'étoile toute récente à l'échelle cosmique.</div>`,
@@ -725,7 +729,7 @@ const SUJETS = {
       `<h2>Anecdote</h2>
        <p>C'est exactement ce à quoi devrait ressembler notre <a href="#/memo/cycle-vie-etoiles">Soleil</a> dans environ 5 milliards d'années : ses couches externes soufflées en un bel anneau, autour d'un cœur devenu naine blanche.</p>`
     ],
-    voirAussi: ["triangle-ete", "cycle-vie-etoiles", "types-nebuleuses", "nebuleuse-haltere"]
+    voirAussi: ["triangle-ete", "cycle-vie-etoiles", "types-nebuleuses", "nebuleuse-haltere", "epsilon-lyre"]
   },
 
   "nebuleuse-haltere": {
@@ -1101,6 +1105,7 @@ const SUJETS = {
              <polyline points="233.1,117.1 187.1,106.8 176.1,171.0 59.5,109.9 110.3,66.7 187.1,106.8" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
              <polyline points="187.1,106.8 166.3,44.0 110.3,66.7" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
              <polyline points="110.3,66.7 79.6,58.0 44.2,79.6 59.5,109.9" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
+           <polyline points="233.1,117.1 176.1,171.0" fill="none" stroke="#8fa3e8" stroke-width="1.2" stroke-opacity="0.4"/>
              <circle cx="233.1" cy="117.1" r="2.2"/>
              <text x="225.1" y="120.1" class="etoile-nom" text-anchor="end">Alnasl</text>
              <circle cx="187.1" cy="106.8" r="2.4"/>
@@ -1128,34 +1133,10 @@ const SUJETS = {
        </div>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>C'est de cette direction qu'est venu le mystérieux <a href="#/memo/signal-wow">Signal Wow</a>, en 1977.</li>
+         <li>C'est de cette direction qu'a été capté, le 15 août 1977, le mystérieux <strong>Signal Wow</strong> : une émission radio puissante et brève (72 secondes) détectée par le radiotélescope Big Ear, à 1420 MHz (la « fréquence de l'hydrogène »). L'astronome Jerry Ehman entoura la trace au stylo rouge en écrivant « Wow! » dans la marge. Jamais recapté, longtemps considéré comme un candidat sérieux de signal extraterrestre, il s'expliquerait plutôt, selon une réanalyse récente, par un bref sursaut naturel d'un nuage d'hydrogène froid.</li>
          <li>Balayer cette zone aux jumelles sous un ciel noir montre une profusion d'objets : amas ouverts, amas globulaires et nébuleuses se succèdent le long de la Voie lactée.</li>
        </ul>`
     ],
-    voirAussi: ["voie-lactee", "trous-noirs", "signal-wow"]
-  },
-
-  "signal-wow": {
-    titre: "Le Signal Wow",
-    icone: "",
-    wiki: "https://fr.wikipedia.org/wiki/Signal_Wow!",
-    resume: "Le signal radio le plus intrigant jamais capté.",
-    sections: [
-      `<h2>Que s'est-il passé ?</h2>
-       <p>Le 15 août 1977, le radiotélescope <strong>Big Ear</strong> de l'université de l'Ohio capte un signal radio puissant et bref, venu de la direction du <a href="#/memo/sagittaire">Sagittaire</a>. Quelques jours plus tard, l'astronome Jerry Ehman découvre la trace sur les impressions papier, l'entoure au stylo rouge et écrit dans la marge un seul mot : «&nbsp;<strong>Wow!</strong>&nbsp;». Le nom est resté.</p>`,
-      `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">
-         Durée : <strong>72 secondes</strong> (le maximum que le télescope fixe pouvait observer au passage)<br>
-         Fréquence : ~<strong>1420 MHz</strong>, la «&nbsp;raie de l'hydrogène&nbsp;»<br>
-         Intensité : jusqu'à ~30 fois le bruit de fond<br>
-         Jamais recapté depuis, malgré de nombreuses tentatives
-       </div>`,
-      `<h2>Pourquoi il intrigue autant</h2>
-       <p>La fréquence de 1420 MHz est celle qu'émet naturellement l'hydrogène, l'élément le plus répandu de l'Univers. C'est aussi une bande protégée, interdite aux émissions terrestres. Beaucoup pensaient qu'une civilisation cherchant à se signaler choisirait logiquement cette «&nbsp;fréquence universelle&nbsp;», ce qui a fait du Signal Wow un candidat célèbre pour un message extraterrestre.</p>`,
-      `<h2>Les explications récentes</h2>
-       <p>Le mystère reste ouvert, mais des pistes naturelles ont été proposées. En 2017, l'hypothèse d'un nuage d'hydrogène autour de comètes de passage a fait débat, avant d'être largement contestée. Une réanalyse des archives (2024-2025) suggère plutôt un <strong>bref sursaut d'un petit nuage d'hydrogène froid</strong>, brièvement éclairé par un événement violent (une éruption d'étoile à neutrons, par exemple). Un phénomène rare, mais naturel. Aucune conclusion n'est définitive : l'origine artificielle n'est pas formellement exclue, mais elle n'est plus la piste privilégiée.</p>`
-    ],
-    voirAussi: ["sagittaire", "voie-lactee", "exoplanetes"]
+    voirAussi: ["voie-lactee", "trous-noirs"]
   }
-
 };
