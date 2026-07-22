@@ -23,12 +23,13 @@
       3. Anecdotes, 1 ou 2 faits qui marquent les esprits
    Libre à vous de vous en écarter si un sujet s'y prête mal.
    ===================================================================== */
+
 const SUJETS = {
 
   /* ===================== SYSTÈME SOLAIRE ===================== */
 
   "lune": {
-    titre: "La Lune",
+    titre: "La Lune, ou Terre I",
     cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/Lune",
@@ -43,46 +44,65 @@ const SUJETS = {
        La pleine lune, trop frontale, est paradoxalement le pire moment pour observer.</p>`,
       `<h2>Phases, marées, mouvement</h2>
        <p>Les phases ne sont pas la projection de l'ombre de la Terre (ça, c'est une <a href="#/memo/eclipses">éclipse</a>), 
-       mais simplement le fait que seule une partie de la Lune est éclairée par le Soleil.
+       mais simplement le fait que seule une partie de la Lune est éclairée par le Soleil. <br>
        La Lune provoque l'essentiel des <strong>marées</strong>, et elle nous montre toujours la même face : sa rotation sur elle-même dure exactement aussi longtemps 
-       qu'une révolution autour de la Terre.</p>
+       qu'une révolution autour de la Terre. On parle de <strong>rotation synchrone</strong>.</p>
        <div class="chiffre-cle">
          Âge : <strong>4,5 milliards d'années</strong> (née d'un impact géant peu après la Terre)<br>
          Distance : <strong>384 400 km</strong> (1,3 s-lumière) <br>
-         Température : de +127 °C en plein jour à −173 °C la nuit, faute d'atmosphère.
+         Température : de +127 °C en plein jour à -173 °C la nuit, faute d'atmosphère. <br>
+         Densité : <strong>3,34 g/cm³</strong>. <br>
+         Vitesse orbitale : <strong>1 km/s</strong> (3 600 km/h). <br>
+         Masse : 7,35 × 10²² kg (1/81 de la Terre). <br>
+         Rayon : 1 737 km (1/4 de la Terre). <br>
        </div>`,
       `<h2>Anecdotes</h2>
        <ul>
+         <li>La Lune est le seul corps céleste visité par l'homme : 12 astronautes y ont marché entre 1969 et 1972, tous américains.</li>
+         <li>Elle est la 5e plus grosse lune du système solaire, mais la plus grosse par rapport à sa planète.</li>
          <li>Elle s'éloigne de nous de <strong>3,8 cm par an</strong>, mesuré au laser grâce aux réflecteurs laissés par les missions Apollo. 
          Cela cause entre autres une augmentation lente de la durée du jour.</li>
          <li>La Chine, le Japon et la Corée voient un <strong>lapin</strong> en train de piler le riz dans les formes créées par les mers et océans lunaires.</li>
          <li>Il y a 1,8 milliards d'années, et pendant 1 milliard d'années, la distance Terre–Lune est restée constante : l'activité géologique, 
          climatique et biologique de la Terre ont très peu évolué. C'est le « Boring billion ».</li>
+         <li>La Lune est <strong>environ 400 fois plus petite que le Soleil</strong>, mais aussi <strong>400 fois plus proche</strong> : c'est pourquoi les éclipses de Soleil sont possibles.</li>
+         <li> Le Lune est le deuxième satellite le plus dense du système solaire après Io, lune de Jupiter. Sa densité est de 3,34 g/cm³, contre 3,93 g/cm³ pour Io.</li>
        </ul>`
     ],
         voirAussi: ["types-telescopes", "eclipses"]
   },
 
   "venus": {
-    titre: "Vénus",
+    titre: "Vénus, l'étoile du Berger",
     cat: "Système solaire",
     icone: "",
     wiki: "https://fr.wikipedia.org/wiki/V%C3%A9nus_(plan%C3%A8te)",
-    resume: "L'étoile du Berger.",
+    resume: "La planète la plus brillante du ciel, mais un enfer sous les nuages.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Toujours proche du Soleil dans le ciel : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), jamais en pleine nuit. Très brillante, blanc-jaunâtre, elle <strong>ne scintille presque pas</strong>, bon moyen de la distinguer d'une étoile.</p>`,
+       <p>Toujours proche du Soleil dans le ciel (éloignée au maximum de 45° environ) : visible seulement en <strong>début de nuit</strong> (à l'ouest) ou à <strong>l'aube</strong> (à l'est), jamais en pleine nuit. <br> 
+       Très brillante, blanc-jaunâtre, elle <strong>ne scintille presque pas</strong>, bon moyen de la distinguer d'une étoile.</p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">Âge : <strong>4,6 milliards d'années</strong><br>
          Distance à la Terre : variable, de 40 à 260 millions de km<br>
-         Température de surface : <strong>~465 °C</strong>, sous une atmosphère de CO₂ et des nuages d'acide sulfurique.</div>`,
+         Distance au Soleil : 0,72 UA (108 millions de km).<br>
+         Température de surface : <strong>~465 °C</strong>, sous une atmosphère de CO₂ et des nuages d'acide sulfurique.
+         Durée de l'orbite : 224,7 jours terrestres (1 année vénusienne).<br>
+         Rotation : 243 jours terrestres.<br>
+         Diamètre : 12 104 km (0,95 fois celui de la Terre).
+         Masse : 4,87 × 10²⁴ kg (0,82 fois celle de la Terre).
+         </div>`,
       `<h2>Un enfer sous les nuages</h2>
-       <p>Vénus est presque la jumelle de la Terre en taille, mais son atmosphère très dense de CO₂ a déclenché un <strong>effet de serre extrême</strong> : il y fait ~465 °C en permanence, jour et nuit, pôles compris, plus chaud que sur Mercure pourtant plus proche du Soleil. La pression au sol y est ~90 fois celle de la Terre, l'équivalent de 900 m sous l'océan. C'est l'exemple parfait pour parler d'effet de serre avec le public.</p>`,
+       <p>Vénus est presque la jumelle de la Terre en taille, mais son atmosphère très dense de CO₂ a déclenché un <strong>effet de serre extrême</strong> : il y fait ~465 °C en permanence, jour et nuit, 
+       pôles compris, plus chaud que sur Mercure pourtant plus proche du Soleil. 
+       La pression au sol y est ~90 fois celle de la Terre, l'équivalent de 900 m sous l'océan.
+       </p>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Si brillante qu'on la signale régulièrement comme <strong>OVNI</strong> à la police.</li>
          <li>Elle tourne « à l'envers » (rotation rétrograde), et si lentement qu'un <strong>jour vénusien dure plus longtemps qu'une année vénusienne</strong>.</li>
          <li>Au <a href="#/memo/types-telescopes">télescope</a>, elle montre des phases comme la Lune, c'est en les observant que Galilée a achevé de démontrer que Vénus tourne autour du Soleil.</li>
+         <li>C'est la planète la plus brillante du ciel après le Soleil et la Lune, d'où son surnom d'<strong>étoile du Berger</strong>.</li>
+         <li> Vénus ne possède aucun satellite naturel.</li>
        </ul>`
     ],
     voirAussi: ["types-telescopes"]
@@ -101,18 +121,29 @@ const SUJETS = {
        (Io, Europe, Ganymède, Callisto). 
        Leur position change rapidement, une bonne raison de faire revenir le public plus tard dans la soirée.<br>
        Avec un grossissement suffisant, on peut distinguer les bandes de nuages, voir la grosse tache rouge.
+       Au télescope, on peut aussi observer les éclipses et transits des lunes sur le disque de Jupiter.
        </p>`,
       `<h2>Chiffres clés</h2>
        <div class="chiffre-cle">
        Distance à la Terre : 4 à 6 UA selon les positions <br>
+       Distance au Soleil : 5,2 UA (778 millions de km) <br>
+       Âge : <strong>4,6 milliards d'années</strong><br>
+       Durée de l'orbite : 11,9 ans terrestres (1 année jovienne)<br>
+       Période de rotation : 9 h 55 min (la plus courte du système solaire)<br>
        Température au sommet des nuages : ~−110 °C <br>
-       Diamètre : 11 fois celui de la Terre.</div>`,
+       Diamètre : 11 fois celui de la Terre.
+       Masse : 318 fois celle de la Terre.
+       Nombre de satellites connus : 115 (dont les 4 galiléennes, les plus grosses).
+       </div>`,
       `<h2>Anecdotes</h2>
        <ul>
          <li>C'est en observant ces 4 lunes tourner autour de Jupiter, en 1610, que <strong>Galilée</strong> a compris que tout ne tourne pas autour de la Terre.</li>
          <li>La <strong>Grande Tache rouge</strong>, une tempête plus grande que la Terre entière, est observée depuis plus de 350 ans.</li>
          <li><strong>Europe</strong> cache un océan d'eau liquide sous sa croûte de glace. 
          C'est l'une des meilleures pistes pour chercher la vie ailleurs dans le système solaire.</li>
+         <li> Jupiter est la planète la plus massive du système solaire : elle contient 2,5 fois plus de matière que toutes les autres planètes réunies.</li>
+         <li> Elle possède un <strong>champ magnétique</strong> 14 fois plus puissant que celui de la Terre, qui piège des particules et crée des aurores polaires.</li>
+         <li> Jupiter possède un <strong>anneau</strong> très fin et sombre, découvert par la sonde Voyager 1 en 1979. Il est composé de poussières provenant de ses lunes.</li>
        </ul>`
     ],
         voirAussi: ["types-telescopes", "saturne"]
@@ -126,15 +157,26 @@ const SUJETS = {
     resume: "Les plus beaux anneaux.",
     sections: [
       `<h2>Repérage</h2>
-       <p>Jaune pâle à l'œil nu, sans rien de spécial. Mais dès un petit télescope, ses <strong>anneaux</strong> apparaissent nettement, l'un des spectacles les plus sûrs d'une soirée d'observation.</p>`,
+       <p>Jaune pâle à l'œil nu, sans rien de spécial. Mais dès un petit télescope, ses <strong>anneaux</strong> apparaissent nettement, l'un des spectacles les plus sûrs d'une soirée d'observation.
+       </p>`,
       `<h2>Chiffres clés</h2>
-       <div class="chiffre-cle">Distance : ~9 à 10 UA<br>
-         Les anneaux s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur, proportionnellement plus fins qu'une feuille de papier.</div>`,
+       <div class="chiffre-cle">
+        Distance au Soleil : 9,5 UA (1,4 milliard de km)<br>
+        Masse : 95 fois celle de la Terre<br>
+        Durée de l'orbite : 29,5 ans terrestres (1 année saturnienne)<br>
+        Période de rotation : 10 h 34 min (la plus longue du système solaire)<br>
+        Température au sommet des nuages : ~−140 °C<br>
+        Diamètre : 9,5 fois celui de la Terre<br>
+        Nombre de satellites connus : 145 (dont Titan, le plus gros, plus grand que Mercure).
+         </div>`,
       `<h2>Sous la surface</h2>
-       <p>Saturne est une géante gazeuse : une atmosphère de <strong>96 % d'hydrogène et 4 % d'hélium</strong>, balayée par des vents jusqu'à <strong>1 800 km/h</strong>, parmi les plus rapides du système solaire. En profondeur, l'hydrogène comprimé devient métallique et conduit l'électricité, ce qui engendre son champ magnétique. Au centre, un noyau de roches et de fer d'environ deux fois le diamètre de la Terre. Près du pôle nord, les sondes ont photographié un mystérieux <strong>motif hexagonal</strong> dans les nuages, encore largement inexpliqué.</p>`,
+       <p>Saturne est une géante gazeuse : une atmosphère de <strong>96 % d'hydrogène et 4 % d'hélium</strong>, balayée par des vents jusqu'à <strong>1 800 km/h</strong>, parmi les plus rapides du système solaire. 
+       En profondeur, l'hydrogène comprimé devient métallique et conduit l'électricité, ce qui engendre son champ magnétique. 
+       Au centre, un noyau de roches et de fer d'environ deux fois le diamètre de la Terre. 
+       Près du pôle nord, les sondes ont photographié un mystérieux <strong>motif hexagonal</strong> dans les nuages, encore largement inexpliqué.</p>`,
       `<h2>Anecdotes</h2>
        <ul>
-         <li>Les anneaux sont faits de <strong>milliards de blocs de glace</strong>, du grain de sable à la maison, chacun en orbite indépendante.</li>
+         <li>Les anneaux sont faits de <strong>milliards de blocs de glace</strong>, du grain de sable à la maison, chacun en orbite indépendante. Ils s'étendent sur ~280 000 km, mais ne font que quelques dizaines de mètres d'épaisseur, proportionnellement plus fins qu'une feuille de papier.</li>
          <li>Saturne est <strong>moins dense que l'eau</strong> : elle flotterait dans une baignoire géante.</li>
          <li>Tous les <strong>~15 ans</strong>, les anneaux se présentent exactement par la tranche et semblent disparaître, vus depuis la Terre.</li>
        </ul>`
